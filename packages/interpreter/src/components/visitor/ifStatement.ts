@@ -20,7 +20,7 @@ export default class IfStatement implements Visitor {
     const parentScope = InterpreterModule.getCurrentScope();
     if (test) {
       const testResult = InterpreterModule.getVisitor(test.type).visitNode(test);
-      if (testResult === true || testResult === "sahi") {
+      if (testResult === true || testResult === "correct") {
         this.evaluateNode(node.consequent, parentScope);
       } else {
         const alternates = node.alternates;
@@ -35,7 +35,7 @@ export default class IfStatement implements Visitor {
               // Evaluate the "test" condition of the "bro otherwise if" node
               // If the condition is true, evaluate the node and break
               const testResult = InterpreterModule.getVisitor(alternateTest!.type).visitNode(alternateTest);
-              if (testResult === true || testResult === "sahi") {
+              if (testResult === true || testResult === "correct") {
                 this.evaluateNode(alternate.consequent, parentScope);
                 break;
               }

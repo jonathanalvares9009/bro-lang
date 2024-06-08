@@ -16,7 +16,7 @@ export default class VariableDeclaration implements Visitor {
 
     if (node.init.type === NodeType.NullLiteral) value = null;
     else if (node.init.type === NodeType.BooleanLiteral)
-      value = node.init.value === "sahi" ? true : false;
+      value = node.init.value === "correct" ? true : false;
     else
       value = InterpreterModule.getVisitor(node.init.type).visitNode(node.init);
 

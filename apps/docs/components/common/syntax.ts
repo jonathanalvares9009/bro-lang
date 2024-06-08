@@ -18,8 +18,8 @@ export const bhaiLangSyntax = languages.extend("clike", {
     pattern: /(["'])((?:\\\1|(?:(?!\1)).)*)(\1)/,
     greedy: true,
   },
-  keyword: /\b(?:bro listen|bro done|bro say|bro remember|nalla|bro if|bro otherwise if|bro otherwise|jab tak bhai|bas kar bhai|agla dekh bhai)\b/,
-  boolean: /\b(?:sahi|galat)\b/,
+  keyword: /\b(?:bro listen|bro done|bro say|bro remember|nothing|bro if|bro otherwise if|bro otherwise|jab tak bhai|bas kar bhai|agla dekh bhai)\b/,
+  boolean: /\b(?:correct|wrong)\b/,
   number: /(?:(?:\b\d+(?:\.\d*)?|\B\.\d+)(?:e[-+]?\d+)?)i?/i,
   operator:
     /[*/%^!=]=?|~|\+[=+]?|-[=-]?|\|[=|]?|&(?:=|&|\^=?)?|>(?:>=?|=)?|<(?:<=?|=|-)?|:=|\.\.\./,

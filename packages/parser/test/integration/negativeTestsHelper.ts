@@ -94,7 +94,7 @@ export const NegativeStatementTests = [
     name: "print statement with space separated values, should throw an exception",
     input: `
         bro listen
-        bro say sahi galat;
+        bro say correct wrong;
         bro done
       `,
     output: SyntaxError,
@@ -335,7 +335,7 @@ export const IfStatementNagativeTests = [
     name: "If statement test - nothing after if condition , should throw an exception",
     input: `
         bro listen
-        bro if (sahi)
+        bro if (correct)
       `,
     output: SyntaxError,
   },
@@ -365,7 +365,7 @@ export const IfStatementNagativeTests = [
     name: "Else-if statement test - else-if ladder without if condition first , should throw an exception",
     input: `
         bro listen
-        bro otherwise if (sahi) {
+        bro otherwise if (correct) {
         }
         bro done;
       `,
@@ -375,8 +375,8 @@ export const IfStatementNagativeTests = [
     name: "Else-if statement test - else-if ladder with multiple levels without if condition first , should throw an exception",
     input: `
         bro listen
-        bro otherwise if (sahi) {
-        } bro otherwise if (sahi) {
+        bro otherwise if (correct) {
+        } bro otherwise if (correct) {
         }
         bro done;
       `,
@@ -386,9 +386,9 @@ export const IfStatementNagativeTests = [
     name: "Else-if statement test - nothing after else-if ladder , should throw an exception",
     input: `
         bro listen
-        bro if (sahi) {
+        bro if (correct) {
 
-        } bro otherwise if (sahi)
+        } bro otherwise if (correct)
         bro done;
       `,
     output: SyntaxError,
@@ -397,11 +397,11 @@ export const IfStatementNagativeTests = [
     name: "Else-if statement test - nothing after else-if ladder with multiple levels , should throw an exception",
     input: `
         bro listen
-        bro if (sahi) {
+        bro if (correct) {
 
-        } bro otherwise if (sahi) {
+        } bro otherwise if (correct) {
 
-        } bro otherwise if (sahi)
+        } bro otherwise if (correct)
         bro done;
       `,
     output: SyntaxError,
@@ -410,7 +410,7 @@ export const IfStatementNagativeTests = [
     name: "Else-if statement test - else-if without a condition , should throw an exception",
     input: `
         bro listen
-        bro if (sahi) {
+        bro if (correct) {
 
         } bro otherwise if
         bro done;
@@ -421,9 +421,9 @@ export const IfStatementNagativeTests = [
     name: "Else-if statement test - else-if without a condition, multple levels , should throw an exception",
     input: `
         bro listen
-        bro if (sahi) {
+        bro if (correct) {
 
-        } bro otherwise if (sahi) {
+        } bro otherwise if (correct) {
 
         } bro otherwise if
         bro done;
