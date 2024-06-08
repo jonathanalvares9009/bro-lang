@@ -13,7 +13,7 @@ afterEach(() => {
 test("test eatTokenAndForwardLookahead success", () => {
   const lookahead = {
     type: TokenTypes.HI_BHAI_TYPE,
-    value: "hi bhai",
+    value: "hey bro",
   };
 
   tokenizerMock.getNextToken.mockReturnValueOnce(null);
@@ -26,7 +26,7 @@ test("test eatTokenAndForwardLookahead success", () => {
     tokenExecutor.eatTokenAndForwardLookahead(TokenTypes.HI_BHAI_TYPE)
   ).toStrictEqual({
     type: TokenTypes.HI_BHAI_TYPE,
-    value: "hi bhai",
+    value: "hey bro",
   });
 
   expect(tokenizerMock.getNextToken).toHaveBeenCalledTimes(1);

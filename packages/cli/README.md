@@ -27,7 +27,7 @@ npm i -g bhailang
 You can also try out your code on <a href="https://bhailang.js.org/#playground">Bhai Lang PlayGround</a></h4>
 
 ```
-hi bhai
+hey bro
   bol bhai "Hello bhai";
 bye bhai
 
@@ -50,13 +50,13 @@ hello bhai
 <h2 align="center">Documentation</h2>
 
 <h3 align="center">General</h3>
-<p align="center"><code>hi bhai</code> is the entrypoint for the program and all program must end with <code>bye bhai</code>. Anything outside of it will be ignored.</p>
+<p align="center"><code>hey bro</code> is the entrypoint for the program and all program must end with <code>bye bhai</code>. Anything outside of it will be ignored.</p>
 
 ```
 
 This will be ignored
 
-hi bhai
+hey bro
 // Write code here
 bye bhai
 
@@ -68,7 +68,7 @@ This too
 
 ```
 
-hi bhai
+hey bro
   bhai ye hai a = 10;
   bhai ye hai b = "two";
   bhai ye hai c = 15;
@@ -83,7 +83,7 @@ bye bhai
 
 ```
 
-hi bhai
+hey bro
   bhai ye hai a = 10;
   bhai ye hai b = 10 + (15*20);
   bhai ye hai c = "two";
@@ -99,7 +99,7 @@ bye bhai
 
 ```
 
-hi bhai
+hey bro
   bol bhai "Hello World";
   bhai ye hai a = 10;
   {
@@ -115,7 +115,7 @@ bye bhai
 
 ```
 
-hi bhai
+hey bro
   bhai ye hai a = 10;
   agar bhai (a < 25) {
    bol bhai "a is less than 25";
@@ -131,7 +131,7 @@ bye bhai
 
 ```
 
-hi bhai
+hey bro
   bhai ye hai a = 0;
   jab tak bhai (a < 10) {
    a += 1;

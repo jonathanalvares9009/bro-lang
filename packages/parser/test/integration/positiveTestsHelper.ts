@@ -3,7 +3,7 @@ export const StatementTests = [
   {
     name: "empty init statement test, should success",
     input: `
-      hi bhai
+      hey bro
       bye bhai
     `,
     output: `{"type":"Program","body":{"type":"InitStatement","body":[]}}`,
@@ -11,7 +11,7 @@ export const StatementTests = [
   {
     name: "init statement test with semi colon, should success",
     input: `
-      hi bhai;
+      hey bro;
       bye bhai;
     `,
     output: `{"type":"Program","body":{"type":"InitStatement","body":[]}}`,
@@ -19,7 +19,7 @@ export const StatementTests = [
   {
     name: "init statement test with semi colon - 2, should success",
     input: `
-      hi bhai;
+      hey bro;
       bye bhai
     `,
     output: `{"type":"Program","body":{"type":"InitStatement","body":[]}}`,
@@ -29,7 +29,7 @@ export const StatementTests = [
     input: `
       some random characters
       random random random
-      hi bhai
+      hey bro
       bye bhai;
     `,
     output: `{"type":"Program","body":{"type":"InitStatement","body":[]}}`,
@@ -38,7 +38,7 @@ export const StatementTests = [
   {
     name: "multiple empty statements test, should success",
     input: `
-      hi bhai
+      hey bro
       ;
       ;
       ;;
@@ -50,7 +50,7 @@ export const StatementTests = [
   {
     name: "block statement test with empty block, should success",
     input: `
-      hi bhai
+      hey bro
       {}
       bye bhai
     `,
@@ -59,7 +59,7 @@ export const StatementTests = [
   {
     name: "block statement test with empty block and semi colon, should success",
     input: `
-      hi bhai;
+      hey bro;
       {};
       bye bhai
     `,
@@ -68,7 +68,7 @@ export const StatementTests = [
   {
     name: "block statement test with assignment expression inside, should success",
     input: `
-      hi bhai;
+      hey bro;
       {
         naam = 4;
       }
@@ -79,7 +79,7 @@ export const StatementTests = [
   {
     name: "block statement test with variable statement inside, should success",
     input: `
-      hi bhai
+      hey bro
       {
         bhai ye hai a = 4;
       }
@@ -91,7 +91,7 @@ export const StatementTests = [
   {
     name: "print statement test with string printing, should success",
     input: `
-      hi bhai
+      hey bro
       bol bhai "puff...";
       bye bhai
     `,
@@ -100,7 +100,7 @@ export const StatementTests = [
   {
     name: "print statement test with number printing, should success",
     input: `
-      hi bhai
+      hey bro
       bol bhai 478;
       bye bhai
     `,
@@ -109,7 +109,7 @@ export const StatementTests = [
   {
     name: "print statement test with boolean printing, should success",
     input: `
-      hi bhai
+      hey bro
       bol bhai sahi, galat;
       bye bhai
     `,
@@ -118,7 +118,7 @@ export const StatementTests = [
   {
     name: "print statement test with identifier printing, should success",
     input: `
-      hi bhai
+      hey bro
       bol bhai a, b, c;
       bye bhai
     `,
@@ -127,7 +127,7 @@ export const StatementTests = [
   {
     name: "print statement test with nalla printing, should success",
     input: `
-      hi bhai
+      hey bro
       bol bhai nalla;
       bye bhai
     `,
@@ -136,7 +136,7 @@ export const StatementTests = [
   {
     name: "print statement test with variable nalla printing, should success",
     input: `
-      hi bhai
+      hey bro
       bhai ye hai a = nalla;
       bol bhai a;
       bye bhai
@@ -146,7 +146,7 @@ export const StatementTests = [
   {
     name: "print statement test with logical AND, should success",
     input: `
-      hi bhai
+      hey bro
       bol bhai a && b;
       bye bhai
     `,
@@ -155,7 +155,7 @@ export const StatementTests = [
   {
     name: "print statement test with assignment, should success",
     input: `
-      hi bhai
+      hey bro
       bol bhai a = 9;
       bye bhai
     `,
@@ -164,7 +164,7 @@ export const StatementTests = [
   {
     name: "print statement test with logical OR, should success",
     input: `
-      hi bhai
+      hey bro
       bol bhai 9 || 90;
       bye bhai
     `,
@@ -173,7 +173,7 @@ export const StatementTests = [
   {
     name: "print statement test with equality operator, should success",
     input: `
-      hi bhai
+      hey bro
       bol bhai 9 == 90;
       bye bhai
     `,
@@ -183,7 +183,7 @@ export const StatementTests = [
   {
     name: "variable statement test with basic variable declaration, should success",
     input: `
-      hi bhai
+      hey bro
       bhai ye hai a, b, c;
       bye bhai
     `,
@@ -192,7 +192,7 @@ export const StatementTests = [
   {
     name: "variable statement test with basic variable declaration and initialisation, should success",
     input: `
-      hi bhai
+      hey bro
       bhai ye hai a = 10, b;
       bye bhai
     `,
@@ -201,7 +201,7 @@ export const StatementTests = [
   {
     name: "variable statement test with multiple variable initialisation, should success",
     input: `
-      hi bhai
+      hey bro
       bhai ye hai a = 10, b = 5;
       bye bhai
     `,
@@ -210,7 +210,7 @@ export const StatementTests = [
   {
     name: "variable statement test with multiple variable initialisation with same value, should success",
     input: `
-      hi bhai
+      hey bro
       bhai ye hai a = b = 5;
       bye bhai
     `,
@@ -219,7 +219,7 @@ export const StatementTests = [
   {
     name: "variable statement test with variable initialisation with some expression, should success",
     input: `
-      hi bhai
+      hey bro
       bhai ye hai a = 7 + 90;
       bye bhai
     `,
@@ -228,7 +228,7 @@ export const StatementTests = [
   {
     name: "variable statement test with variable initialisation with nalla literal, should success",
     input: `
-      hi bhai
+      hey bro
       bhai ye hai a = nalla;
       bye bhai
     `,
@@ -237,7 +237,7 @@ export const StatementTests = [
   {
     name: "variable statement test with variable initialisation with nalla literal, should success",
     input: `
-      hi bhai
+      hey bro
       bhai ye hai a = nalla;
       bye bhai
     `,
@@ -250,7 +250,7 @@ export const ExpressionsTests = [
   {
     name: "simple assignment expression test with only one identifer, should success",
     input: `
-      hi bhai
+      hey bro
       a = 4;
       bye bhai
     `,
@@ -259,7 +259,7 @@ export const ExpressionsTests = [
   {
     name: "complex assignment expression test with only one identifer, should success",
     input: `
-      hi bhai
+      hey bro
       a *= 4;
       bye bhai
     `,
@@ -268,7 +268,7 @@ export const ExpressionsTests = [
   {
     name: "float number assignment expression test, should success",
     input: `
-      hi bhai
+      hey bro
       a = 1.2;
       bye bhai
     `,
@@ -277,7 +277,7 @@ export const ExpressionsTests = [
   {
     name: "float number assignment expression test with negative number, should success",
     input: `
-      hi bhai
+      hey bro
       a = -1.2;
       bye bhai
     `,
@@ -286,7 +286,7 @@ export const ExpressionsTests = [
   {
     name: "float number assignment expression test without digits before decimal point, should success",
     input: `
-      hi bhai
+      hey bro
       a = .6;
       bye bhai
     `,
@@ -295,7 +295,7 @@ export const ExpressionsTests = [
   {
     name: "float number assignment expression test with negative number and without digits before decimal point, should success",
     input: `
-      hi bhai
+      hey bro
       a = -.6;
       bye bhai
     `,
@@ -305,7 +305,7 @@ export const ExpressionsTests = [
   {
     name: "paranthesized expression test with one parenthesis and simple expression, should success",
     input: `
-      hi bhai
+      hey bro
       (a + 4);
       bye bhai
     `,
@@ -314,7 +314,7 @@ export const ExpressionsTests = [
   {
     name: "paranthesized expression test with one parenthesis and complex expression, should success",
     input: `
-      hi bhai
+      hey bro
       (a + 4) * 10 + (5 - 4);
       bye bhai
     `,
@@ -323,7 +323,7 @@ export const ExpressionsTests = [
   {
     name: "paranthesized expression test with multiple parenthesis, should success",
     input: `
-      hi bhai
+      hey bro
       (a * (4 + 8) + 10);
       bye bhai
     `,
@@ -332,7 +332,7 @@ export const ExpressionsTests = [
   {
     name: "paranthesized expression test with assignment expression, should success",
     input: `
-    hi bhai
+    hey bro
     (x = 9);
     bye bhai;
     `,
@@ -341,7 +341,7 @@ export const ExpressionsTests = [
   {
     name: "paranthesized expression test with assignment expression, should success",
     input: `
-    hi bhai
+    hey bro
     (x >= 9);
     bye bhai;
     `,
@@ -351,7 +351,7 @@ export const ExpressionsTests = [
   {
     name: "complex expression test with one nalla operand, should success",
     input: `
-        hi bhai
+        hey bro
         (nalla * (4 + 8 + 10));
         bye bhai
       `,
@@ -360,7 +360,7 @@ export const ExpressionsTests = [
   {
     name: "complex expression test with one nalla operand and one boolean operand, should success",
     input: `
-        hi bhai
+        hey bro
         (nalla * (sahi + 8 + 10));
         bye bhai
       `,
@@ -369,7 +369,7 @@ export const ExpressionsTests = [
   {
     name: "complex expression test with one nalla operand and one boolean operand - 2, should success",
     input: `
-        hi bhai
+        hey bro
         (sahi * (nalla + 8 + 10));
         bye bhai
       `,
@@ -378,7 +378,7 @@ export const ExpressionsTests = [
   {
     name: "complex expression test with one nalla operand and one boolean operand - 3, should success",
     input: `
-        hi bhai
+        hey bro
         (nalla + sahi);
         bye bhai
       `,
@@ -387,7 +387,7 @@ export const ExpressionsTests = [
   {
     name: "complex expression test with one boolean operand, should success",
     input: `
-        hi bhai
+        hey bro
         (sahi * (4 + 8 + 10));
         bye bhai
       `,
@@ -396,7 +396,7 @@ export const ExpressionsTests = [
   {
     name: "expression test with only boolean operand, should success",
     input: `
-        hi bhai
+        hey bro
         sahi + galat;
         bye bhai
       `,
@@ -405,7 +405,7 @@ export const ExpressionsTests = [
   {
     name: "multiplicative expression test with only boolean operand, should success",
     input: `
-        hi bhai
+        hey bro
         sahi * galat;
         bye bhai
       `,
@@ -414,7 +414,7 @@ export const ExpressionsTests = [
   {
     name: "division expression test with only boolean operand, should success",
     input: `
-        hi bhai
+        hey bro
         sahi / galat;
         bye bhai
       `,
@@ -423,7 +423,7 @@ export const ExpressionsTests = [
   {
     name: "print statement test with expression containing nalla, should success",
     input: `
-        hi bhai
+        hey bro
         bol bhai nalla + 5;
         bye bhai;
       `,
@@ -433,7 +433,7 @@ export const ExpressionsTests = [
   {
     name: `logical "&&" test with sahi galat, should success`,
     input: `
-        hi bhai
+        hey bro
         agar bhai (sahi && galat);
         bye bhai;
       `,
@@ -442,7 +442,7 @@ export const ExpressionsTests = [
   {
     name: `logical "&&" test with expression, should success`,
     input: `
-        hi bhai
+        hey bro
         agar bhai (a + b && d);
         bye bhai;
       `,
@@ -451,7 +451,7 @@ export const ExpressionsTests = [
   {
     name: `logical "&&" test in variable declaration, should success`,
     input: `
-        hi bhai
+        hey bro
         bhai ye hai a = b && d;
         bye bhai;
       `,
@@ -461,7 +461,7 @@ export const ExpressionsTests = [
   {
     name: `logical "||" test with sahi galat, should success`,
     input: `
-        hi bhai
+        hey bro
         agar bhai (sahi || galat);
         bye bhai;
       `,
@@ -470,7 +470,7 @@ export const ExpressionsTests = [
   {
     name: `logical "||" test with expression, should success`,
     input: `
-        hi bhai
+        hey bro
         agar bhai (a + b || d);
         bye bhai;
       `,
@@ -479,7 +479,7 @@ export const ExpressionsTests = [
   {
     name: `logical "||" test in variable declaration, should success`,
     input: `
-        hi bhai
+        hey bro
         bhai ye hai a = b || d;
         bye bhai;
       `,
@@ -488,7 +488,7 @@ export const ExpressionsTests = [
   {
     name: `identifier name starting with "sahi", should success`,
     input: `
-      hi bhai
+      hey bro
       bhai ye hai sahiValue = sahi;
       bye bhai
     `,
@@ -497,7 +497,7 @@ export const ExpressionsTests = [
   {
     name: `identifier name starting with "galat", should success`,
     input: `
-      hi bhai
+      hey bro
       bhai ye hai galatValue = 10;
       bye bhai
     `,
@@ -509,7 +509,7 @@ export const IfStatementTests = [
   {
     name: "if statement success test - 1: only if",
     input: `
-    hi bhai
+    hey bro
     agar bhai (sahi) {
     }
     bye bhai;
@@ -519,7 +519,7 @@ export const IfStatementTests = [
   {
     name: "if statement success test - 2: if else both",
     input: `
-    hi bhai
+    hey bro
     agar bhai (sahi) {
     } warna bhai {
 
@@ -531,7 +531,7 @@ export const IfStatementTests = [
   {
     name: "if statement success test - 3: if only with comarison condn",
     input: `
-    hi bhai
+    hey bro
     bhai ye hai x = 9;
     agar bhai (x >= 9) {
       x = 5;
@@ -543,7 +543,7 @@ export const IfStatementTests = [
   {
     name: "if statement success test - 4: if only with equality condn",
     input: `
-    hi bhai
+    hey bro
     bhai ye hai x = 9;
     agar bhai (x == 9) {
       x = 5;
@@ -555,7 +555,7 @@ export const IfStatementTests = [
   {
     name: "if statement success test - 4: if only with equality condn",
     input: `
-    hi bhai
+    hey bro
     bhai ye hai x = 9;
     agar bhai (x == 9) {
       x = 5;
@@ -567,7 +567,7 @@ export const IfStatementTests = [
   {
     name: "if statement success test - 5: if only with inequality condn",
     input: `
-    hi bhai
+    hey bro
     bhai ye hai x = 9;
     agar bhai (x != 9) {
       x = 5;
@@ -579,7 +579,7 @@ export const IfStatementTests = [
   {
     name: "if statement success test - 6: else with only expression statement",
     input: `
-    hi bhai
+    hey bro
     bhai ye hai x = 9;
     agar bhai (x != 9) {
       x = 5;
@@ -591,7 +591,7 @@ export const IfStatementTests = [
   {
     name: "if statement success test - 7: with block",
     input: `
-    hi bhai
+    hey bro
     bhai ye hai x = 9;
     agar bhai (x != 9)
       x = 5;
@@ -603,7 +603,7 @@ export const IfStatementTests = [
   {
     name: "else-if statement success test - 1: if-else-if one level ladder",
     input: `
-    hi bhai
+    hey bro
     agar bhai (sahi) {
     } nahi to bhai (sahi) {
     }
@@ -614,7 +614,7 @@ export const IfStatementTests = [
   {
     name: "else-if statement success test - 2: if-else-if one level ladder with else",
     input: `
-    hi bhai
+    hey bro
     agar bhai (sahi) {
     } nahi to bhai (sahi) {
     } warna bhai {
@@ -626,7 +626,7 @@ export const IfStatementTests = [
   {
     name: "else-if statement success test - 3: if-else-if multiple levels ladder",
     input: `
-    hi bhai
+    hey bro
     agar bhai (sahi) {
     } nahi to bhai (sahi) {
     } nahi to bhai (sahi) {
@@ -640,7 +640,7 @@ export const IfStatementTests = [
   {
     name: "else-if statement success test - 4: if-else-if multiple levels ladder with else",
     input: `
-    hi bhai
+    hey bro
     agar bhai (sahi) {
     } nahi to bhai (sahi) {
     } nahi to bhai (sahi) {
@@ -658,7 +658,7 @@ export const WhileStatementTests = [
   {
     name: "while statement success test: only if",
     input: `
-    hi bhai
+    hey bro
     jab tak bhai (sahi) {
     }
     bye bhai;
@@ -668,7 +668,7 @@ export const WhileStatementTests = [
   {
     name: "while statement success test: with some body",
     input: `
-    hi bhai
+    hey bro
     jab tak bhai (x > 9) {
       bol bhai "hello";
     }
@@ -679,7 +679,7 @@ export const WhileStatementTests = [
   {
     name: "while statement success test: with single statement",
     input: `
-    hi bhai
+    hey bro
     jab tak bhai (x > 9)
       bol bhai "hello";
     bye bhai;
@@ -689,7 +689,7 @@ export const WhileStatementTests = [
   {
     name: "while statement success test: with single statement as body and statement outside of body",
     input: `
-    hi bhai
+    hey bro
     jab tak bhai (x > 9)
       bol bhai "hello";
     bhai ye hai a = 90;
@@ -700,7 +700,7 @@ export const WhileStatementTests = [
   {
     name: "while statement success test: with break statement",
     input: `
-    hi bhai
+    hey bro
     jab tak bhai (x > 9) {
       bas kar bhai;
     }
@@ -712,7 +712,7 @@ export const WhileStatementTests = [
   {
     name: "while statement success test: with continue statement",
     input: `
-    hi bhai
+    hey bro
     jab tak bhai (x > 9) {
       agla dekh bhai;
     }
