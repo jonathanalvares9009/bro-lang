@@ -7,7 +7,7 @@ const features = [
     name: "General",
     description: (
       <>
-        <code className="language-cpp">hey bro</code> is the entrypoint for the
+        <code className="language-cpp">listen bro</code> is the entrypoint for the
         program and all program must end with{" "}
         <code className="language-cpp">bye bhai</code>. Anything outside of it
         will be ignored.
@@ -15,7 +15,7 @@ const features = [
     ),
     code: `This will be ignored
 
-hey bro
+listen bro
   // Write code here
 bye bhai
 
@@ -30,7 +30,7 @@ This too
         <code className="language-cpp">bhai ye hai</code>.
       </>
     ),
-    code: `hey bro
+    code: `listen bro
     bhai ye hai a = 10;
     bhai ye hai b = "two";
     bhai ye hai c = 15;
@@ -50,7 +50,7 @@ bye bhai
         <code className="language-cpp">galat</code> are the boolean values.
       </>
     ),
-    code: `hey bro
+    code: `listen bro
     bhai ye hai a = 10;
     bhai ye hai b = 10 + (15*20);
     bhai ye hai c = "two";
@@ -69,7 +69,7 @@ bye bhai
         console.
       </>
     ),
-    code: `hey bro
+    code: `listen bro
     bol bhai "Hello World";
     bhai ye hai a = 10;
     {
@@ -87,7 +87,7 @@ bye bhai
         Bhailang supports if-else-if ladder construct , <code className="language-cpp">agar bhai</code> block will execute if condition is <code className="language-cpp">sahi</code>, otherwise one of the subsequently added <code className="language-cpp">nahi to bhai</code> blocks will execute if their respective condition is <code className="language-cpp">sahi</code>, and the <code className="language-cpp">warna bhai</code> block will eventually execute if all of the above conditions are <code className="language-cpp">galat</code>.
       </>
     ),
-    code: `hey bro
+    code: `listen bro
     bhai ye hai a = 10;
     agar bhai (a < 20) {
       bol bhai "a is less than 20";
@@ -107,7 +107,7 @@ bye bhai
         Use <code className="language-cpp">bas kar bhai</code> to break the loop and <code className="language-cpp">agla dekh bhai</code> to continue within loop.
       </>
     ),
-    code: `hey bro
+    code: `listen bro
     bhai ye hai a = 0;
     jab tak bhai (a < 10) {
       a += 1;

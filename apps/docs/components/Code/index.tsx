@@ -9,7 +9,7 @@ import Terminal from "./Terminal";
 
 
 const initialCode = `
-hey bro
+listen bro
  bol bhai "Hello World";
  
   bhai ye hai a = 3;

@@ -6,7 +6,7 @@ export const NegativeTestCases = [
   {
     name: "interpreter assigning variable before declaration test, should throw an exception",
     input: `
-          hey bro;
+          listen bro;
           a = 4;
           bye bhai;
         `,
@@ -15,7 +15,7 @@ export const NegativeTestCases = [
   {
     name: "interpreter assigning variable before declaration test with addition, should throw an exception",
     input: `
-          hey bro;
+          listen bro;
           a += 4;
           bye bhai;
         `,
@@ -24,7 +24,7 @@ export const NegativeTestCases = [
   {
     name: "interpreter assigning variable before declaration test with subtraction, should throw an exception",
     input: `
-          hey bro;
+          listen bro;
           a -= 4;
           bye bhai;
         `,
@@ -33,7 +33,7 @@ export const NegativeTestCases = [
   {
     name: "interpreter assigning variable before declaration test with multiplication, should throw an exception",
     input: `
-          hey bro;
+          listen bro;
           a -= 4;
           bye bhai;
         `,
@@ -42,7 +42,7 @@ export const NegativeTestCases = [
   {
     name: "interpreter assigning variable before declaration test with division, should throw an exception",
     input: `
-          hey bro;
+          listen bro;
           a /= 4;
           bye bhai;
         `,
@@ -51,7 +51,7 @@ export const NegativeTestCases = [
   {
     name: "interpreter assigning variable before declaration test - 2, should throw an exception",
     input: `
-          hey bro;
+          listen bro;
           a;
           bye bhai;
         `,
@@ -60,7 +60,7 @@ export const NegativeTestCases = [
   {
     name: "interpreter adding two variables before declaration test, should throw an exception",
     input: `
-          hey bro;
+          listen bro;
           a + b;
           bye bhai;
         `,
@@ -69,7 +69,7 @@ export const NegativeTestCases = [
   {
     name: "interpreter adding variable with constant before declaration test, should throw an exception",
     input: `
-          hey bro;
+          listen bro;
           a + 4;
           bye bhai;
         `,
@@ -78,7 +78,7 @@ export const NegativeTestCases = [
   {
     name: "interpreter subtracting variable with constant before declaration test, should throw an exception",
     input: `
-          hey bro;
+          listen bro;
           a - 4;
           bye bhai;
         `,
@@ -87,7 +87,7 @@ export const NegativeTestCases = [
   {
     name: "interpreter subtracting two variables before declaration test, should throw an exception",
     input: `
-          hey bro;
+          listen bro;
           a - b;
           bye bhai;
         `,
@@ -96,7 +96,7 @@ export const NegativeTestCases = [
   {
     name: "interpreter multiplying variable with constant before declaration test, should throw an exception",
     input: `
-          hey bro;
+          listen bro;
           a * 4;
           bye bhai;
         `,
@@ -105,7 +105,7 @@ export const NegativeTestCases = [
   {
     name: "interpreter multiplying two variables before declaration test, should throw an exception",
     input: `
-          hey bro;
+          listen bro;
           a * b;
           bye bhai;
         `,
@@ -114,7 +114,7 @@ export const NegativeTestCases = [
   {
     name: "interpreter dividing variable with constant before declaration test, should throw an exception",
     input: `
-          hey bro;
+          listen bro;
           a / 4;
           bye bhai;
         `,
@@ -123,7 +123,7 @@ export const NegativeTestCases = [
   {
     name: "interpreter dividing two variables before declaration test, should throw an exception",
     input: `
-          hey bro;
+          listen bro;
           a / b;
           bye bhai;
         `,
@@ -132,7 +132,7 @@ export const NegativeTestCases = [
   {
     name: "interpreter printing variable before declaration test, should throw an exception",
     input: `
-          hey bro;
+          listen bro;
           bol bhai a;
           bye bhai;
         `,
@@ -141,7 +141,7 @@ export const NegativeTestCases = [
   {
     name: "interpreter printing multiple variables before declaration test, should throw an exception",
     input: `
-          hey bro;
+          listen bro;
           bol bhai a, b;
           bye bhai;
         `,
@@ -150,7 +150,7 @@ export const NegativeTestCases = [
   {
     name: "interpreter printing multiple variables with only one of them declared, should throw an exception",
     input: `
-          hey bro;
+          listen bro;
           bhai ye hai a = 8;
           bol bhai a, b;
           bye bhai;
@@ -160,7 +160,7 @@ export const NegativeTestCases = [
   {
     name: "interpreter declaring multiple variables with chain assignment, should throw an exception",
     input: `
-          hey bro;
+          listen bro;
           bhai ye hai a = b = 8;
           bye bhai;
         `,
@@ -169,7 +169,7 @@ export const NegativeTestCases = [
   {
     name: "interpreter re declare already declared variable, should throw an exception",
     input: `
-        hey bro;
+        listen bro;
         bhai ye hai a;
         a = 9;
         bhai ye hai a = 0;
@@ -181,7 +181,7 @@ export const NegativeTestCases = [
   {
     name: "interpreter use nalla variable in expression, should throw an exception",
     input: `
-      hey bro;
+      listen bro;
       bhai ye hai a;
       bol bhai a + 9;
       bye bhai;
@@ -191,7 +191,7 @@ export const NegativeTestCases = [
   {
     name: "interpreter use nalla variable in expression - 2, should throw an exception",
     input: `
-      hey bro;
+      listen bro;
       bhai ye hai a = nalla;
       bol bhai a + 9;
       bye bhai;
@@ -201,7 +201,7 @@ export const NegativeTestCases = [
   {
     name: "interpreter use nalla in variable initialisation expression, should throw an exception",
     input: `
-      hey bro;
+      listen bro;
       bhai ye hai a = nalla + 80;
       bye bhai;
     `,
@@ -210,7 +210,7 @@ export const NegativeTestCases = [
   {
     name: "interpreter use nalla in variable initialisation expression - 2, should throw an exception",
     input: `
-      hey bro;
+      listen bro;
       bhai ye hai a = nalla + "jam";
       bye bhai;
     `,
@@ -219,7 +219,7 @@ export const NegativeTestCases = [
   {
     name: "interpreter use nalla variable in another variable initialisation expression, should throw an exception",
     input: `
-      hey bro;
+      listen bro;
       bhai ye hai a;
       bhai ye hai b = a + "hello";
       bye bhai;
@@ -229,7 +229,7 @@ export const NegativeTestCases = [
   {
     name: "interpreter use nalla variable in complex expression, should throw an exception",
     input: `
-      hey bro;
+      listen bro;
       bhai ye hai a;
       bhai ye hai b = ((a*9) * a + "hello");
       bye bhai;
@@ -240,7 +240,7 @@ export const NegativeTestCases = [
   {
     name: "interpreter use sahi variable in expression, should throw an exception",
     input: `
-      hey bro;
+      listen bro;
       bhai ye hai a = sahi;
       bol bhai a + 9;
       bye bhai;
@@ -250,7 +250,7 @@ export const NegativeTestCases = [
   {
     name: "interpreter use galat variable in expression, should throw an exception",
     input: `
-      hey bro;
+      listen bro;
       bhai ye hai a = galat;
       bol bhai a + 9;
       bye bhai;
@@ -260,7 +260,7 @@ export const NegativeTestCases = [
   {
     name: "interpreter use sahi in variable initialisation expression, should throw an exception",
     input: `
-      hey bro;
+      listen bro;
       bhai ye hai a = sahi + 80;
       bye bhai;
     `,
@@ -269,7 +269,7 @@ export const NegativeTestCases = [
   {
     name: "interpreter use galat in variable initialisation expression, should throw an exception",
     input: `
-      hey bro;
+      listen bro;
       bhai ye hai a = galat + 80;
       bye bhai;
     `,
@@ -278,7 +278,7 @@ export const NegativeTestCases = [
   {
     name: "interpreter use sahi variable in another variable initialisation expression, should throw an exception",
     input: `
-      hey bro;
+      listen bro;
       bhai ye hai a = sahi;
       bhai ye hai b = a + "hello";
       bye bhai;
@@ -288,7 +288,7 @@ export const NegativeTestCases = [
   {
     name: "interpreter use galat variable in complex expression, should throw an exception",
     input: `
-      hey bro;
+      listen bro;
       bhai ye hai a = galat;
       bhai ye hai b = ((a*9) * a + "hello");
       bye bhai;
@@ -300,7 +300,7 @@ export const NegativeTestCases = [
   {
     name: "complex expression test with one nalla operand, should throw an exception",
     input: `
-        hey bro
+        listen bro
         (nalla * (4 + 8 + 10));
         bye bhai
       `,
@@ -309,7 +309,7 @@ export const NegativeTestCases = [
   {
     name: "complex expression test with one nalla operand and one boolean operand, should throw an exception",
     input: `
-        hey bro
+        listen bro
         (nalla * (sahi + 8 + 10));
         bye bhai
       `,
@@ -318,7 +318,7 @@ export const NegativeTestCases = [
   {
     name: "complex expression test with one nalla operand and one boolean operand - 2, should throw nalla pointer exception",
     input: `
-        hey bro
+        listen bro
         (sahi * (nalla + 8 + 10));
         bye bhai
       `,
@@ -327,7 +327,7 @@ export const NegativeTestCases = [
   {
     name: "complex expression test with one nalla operand and one boolean operand - 3, should throw nalla pointer exception",
     input: `
-        hey bro
+        listen bro
         (nalla + sahi);
         bye bhai
       `,
@@ -336,7 +336,7 @@ export const NegativeTestCases = [
   {
     name: "complex expression test with one boolean operand, should throw an exception",
     input: `
-        hey bro
+        listen bro
         (sahi * (4 + 8 + 10));
         bye bhai
       `,
@@ -345,7 +345,7 @@ export const NegativeTestCases = [
   {
     name: "additive expression test with only boolean operand, should throw an exception",
     input: `
-        hey bro
+        listen bro
         sahi + galat;
         bye bhai
       `,
@@ -354,7 +354,7 @@ export const NegativeTestCases = [
   {
     name: "additive expression test with only variable boolean operand, should throw an exception",
     input: `
-        hey bro
+        listen bro
         bhai ye hai a = sahi, b = galat;
         a + b;
         bye bhai
@@ -364,7 +364,7 @@ export const NegativeTestCases = [
   {
     name: "multiplicative expression test with only boolean operand, should throw an exception",
     input: `
-        hey bro
+        listen bro
         sahi * galat;
         bye bhai
       `,
@@ -373,7 +373,7 @@ export const NegativeTestCases = [
   {
     name: "multiplicative expression test with only variable boolean operand, should throw an exception",
     input: `
-        hey bro
+        listen bro
         bhai ye hai a = sahi, b = galat;
         a * b;
         bye bhai
@@ -383,7 +383,7 @@ export const NegativeTestCases = [
   {
     name: "division expression test with only boolean operand, should throw an exception",
     input: `
-        hey bro
+        listen bro
         sahi / galat;
         bye bhai
       `,
@@ -392,7 +392,7 @@ export const NegativeTestCases = [
   {
     name: "division expression test with only variable boolean operand, should throw an exception",
     input: `
-        hey bro
+        listen bro
         bhai ye hai a = sahi, b = galat;
         a / b;
         bye bhai
@@ -402,7 +402,7 @@ export const NegativeTestCases = [
   {
     name: "print statement test with expression containing nalla, should throw an exception",
     input: `
-        hey bro
+        listen bro
         bol bhai nalla + 5;
         bye bhai;
       `,
@@ -411,7 +411,7 @@ export const NegativeTestCases = [
   {
     name: "complex assign test with expression containing nalla, should throw an exception",
     input: `
-        hey bro
+        listen bro
         bhai ye hai a;
         a *= 5;
         bye bhai;
@@ -421,7 +421,7 @@ export const NegativeTestCases = [
   {
     name: "complex assign test with expression containing sahi, should throw an exception",
     input: `
-        hey bro
+        listen bro
         bhai ye hai a = sahi;
         a *= 5;
         bye bhai;
@@ -431,7 +431,7 @@ export const NegativeTestCases = [
   {
     name: "complex assign test with expression containing nalla - 2, should throw an exception",
     input: `
-        hey bro
+        listen bro
         bhai ye hai a = nalla;
         a /= 5;
         bye bhai;
@@ -442,7 +442,7 @@ export const NegativeTestCases = [
   {
     name: "infinite while loop, should throw an exception",
     input: `
-        hey bro
+        listen bro
         jab tak bhai (sahi) {
 
         }
@@ -453,7 +453,7 @@ export const NegativeTestCases = [
   {
     name: "infinite condition while loop, should throw an exception",
     input: `
-        hey bro
+        listen bro
         bhai ye hai a = 0;
         jab tak bhai (a < 2) {
           bol bhai "bhai";
@@ -465,7 +465,7 @@ export const NegativeTestCases = [
   {
     name: "invalid use of break, should throw an exception",
     input: `
-        hey bro
+        listen bro
         bhai ye hai a = 0;
         agar bhai (sahi)
           bas kar bhai;
@@ -477,7 +477,7 @@ export const NegativeTestCases = [
   {
     name: "use of nalla with &&, should throw an exception",
     input: `
-        hey bro
+        listen bro
         bol bhai nalla && 90;
         bye bhai;
       `,
@@ -486,7 +486,7 @@ export const NegativeTestCases = [
   {
     name: "use of nalla variable with &&, should throw an exception",
     input: `
-        hey bro
+        listen bro
         bhai ye hai a;
         bol bhai a && 90;
         bye bhai;
@@ -497,7 +497,7 @@ export const NegativeTestCases = [
   {
     name: `modulus operator test with invalid operand, should throw an exception`,
     input: `
-      hey bro;
+      listen bro;
       bol bhai "sahi" % 9;
       bye bhai;
     `,
@@ -507,7 +507,7 @@ export const NegativeTestCases = [
   {
     name: "infinite condition while loop with continue, should throw an exception",
     input: `
-        hey bro
+        listen bro
         bhai ye hai a = 0;
         jab tak bhai (a < 2) {
           agla dekh bhai;
@@ -520,7 +520,7 @@ export const NegativeTestCases = [
   {
     name: "invalid use of continue, should throw an exception",
     input: `
-        hey bro
+        listen bro
         bhai ye hai a = 0;
         agar bhai (sahi)
           agla dekh bhai
