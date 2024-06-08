@@ -103,20 +103,20 @@ bro done
     name: "Loops",
     description: (
       <>
-        Statements inside <code className="language-cpp">jab tak bhai</code> blocks are executed as long as a specified condition evaluates to <code className="language-cpp">correct</code>. If the condition becomes <code className="language-cpp">wrong</code>, statement within the loop stops executing and control passes to the statement following the loop. 
-        Use <code className="language-cpp">bas kar bhai</code> to break the loop and <code className="language-cpp">agla dekh bhai</code> to continue within loop.
+        Statements inside <code className="language-cpp">bro when</code> blocks are executed as long as a specified condition evaluates to <code className="language-cpp">correct</code>. If the condition becomes <code className="language-cpp">wrong</code>, statement within the loop stops executing and control passes to the statement following the loop. 
+        Use <code className="language-cpp">bro stop</code> to break the loop and <code className="language-cpp">bro skip</code> to continue within loop.
       </>
     ),
     code: `bro listen
     bro remember a = 0;
-    jab tak bhai (a < 10) {
+    bro when (a < 10) {
       a += 1;
       bro if (a == 5) {
         bro say "andar se bro say ", a;
-        agla dekh bhai;
+        bro skip;
       }
       bro if (a == 6) {
-        bas kar bhai;
+        bro stop;
       }
       bro say a;
     }

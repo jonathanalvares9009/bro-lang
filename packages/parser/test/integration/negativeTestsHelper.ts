@@ -174,7 +174,7 @@ export const NegativeStatementTests = [
     name: "variable statement test with no other token, should throw an exception",
     input: `
     bro listen
-    jab tak bhai (x > 9)
+    bro when (x > 9)
       `,
     output: SyntaxError,
   },
@@ -437,7 +437,7 @@ export const ContinueStatementNegativeTests = [
     name: "Continue statement test - continue outside a loop, should throw an exception",
     input: `
         bro listen
-          agla dekh bhai
+          bro skip
         bro done
       `,
     output: SyntaxError,

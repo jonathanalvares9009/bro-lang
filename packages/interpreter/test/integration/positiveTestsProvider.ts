@@ -735,7 +735,7 @@ export const WithOutputPositiveTests = [
     input: `
       bro listen;
       bro remember a = 0;
-      jab tak bhai (a < 1) {
+      bro when (a < 1) {
         bro say "bhai";
         a += 1;
       }
@@ -747,8 +747,8 @@ export const WithOutputPositiveTests = [
     name: `whileStatement test with single break statement, should success`,
     input: `
       bro listen;
-      jab tak bhai (correct) 
-        bas kar bhai;
+      bro when (correct) 
+        bro stop;
       bro say "end";
       bro done;
     `,
@@ -759,12 +759,12 @@ export const WithOutputPositiveTests = [
     input: `
       bro listen;
       bro remember a = 0;
-      jab tak bhai (a < 2) {
-        jab tak bhai (correct)
-          bas kar bhai;
+      bro when (a < 2) {
+        bro when (correct)
+          bro stop;
         bro say "hello";
         bro if (correct)
-          bas kar bhai;
+          bro stop;
       }
       bro done;
     `,
@@ -775,12 +775,12 @@ export const WithOutputPositiveTests = [
     input: `
       bro listen;
       bro remember a = 0;
-      jab tak bhai (a < 2) {
+      bro when (a < 2) {
         bro say "hello";
         bro if (correct)
-          bas kar bhai;
-        bas kar bhai;
-        bas kar bhai;
+          bro stop;
+        bro stop;
+        bro stop;
       }
       bro done;
     `,
@@ -940,11 +940,11 @@ export const WithOutputPositiveTests = [
       bro listen;
       bro remember a = 5;
       bro remember step = 0;
-      jab tak bhai (a > 0) {
+      bro when (a > 0) {
         step += 1;
         bro if (a % 2 != 0){
           a -= 2;
-          agla dekh bhai;
+          bro skip;
         }
         a -= 1;
       }
@@ -959,14 +959,14 @@ export const WithOutputPositiveTests = [
       bro listen;
       bro remember a = 5;
       bro remember step = 0;
-      jab tak bhai (a > 0) {
+      bro when (a > 0) {
         step += 1;
         bro if (a % 2 == 0){
           a -= 2;
-          agla dekh bhai;
+          bro skip;
         }
         a -= 1;
-        agla dekh bhai;
+        bro skip;
         bro say "oye oye oye.. yha tk nhi aana tha bhai";
       }
       bro say step;
@@ -982,13 +982,13 @@ export const WithOutputPositiveTests = [
       bro listen;
       bro remember a = 10;
       bro remember step = 0;
-      jab tak bhai (a > 0) {
+      bro when (a > 0) {
         bro if (a % 2 == 0){
           a -= 3;
-          agla dekh bhai;
+          bro skip;
         }
         a -= 1;
-        bro if (step == 1) agla dekh bhai
+        bro if (step == 1) bro skip
         step += 1;
       }
       bro say step;

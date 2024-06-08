@@ -443,7 +443,7 @@ export const NegativeTestCases = [
     name: "infinite while loop, should throw an exception",
     input: `
         bro listen
-        jab tak bhai (correct) {
+        bro when (correct) {
 
         }
         bro done;
@@ -455,7 +455,7 @@ export const NegativeTestCases = [
     input: `
         bro listen
         bro remember a = 0;
-        jab tak bhai (a < 2) {
+        bro when (a < 2) {
           bro say "bhai";
         }
         bro done;
@@ -468,7 +468,7 @@ export const NegativeTestCases = [
         bro listen
         bro remember a = 0;
         bro if (correct)
-          bas kar bhai;
+          bro stop;
         bro done;
       `,
     output: RuntimeException,
@@ -509,8 +509,8 @@ export const NegativeTestCases = [
     input: `
         bro listen
         bro remember a = 0;
-        jab tak bhai (a < 2) {
-          agla dekh bhai;
+        bro when (a < 2) {
+          bro skip;
           a = 5;
         }
         bro done;
@@ -523,7 +523,7 @@ export const NegativeTestCases = [
         bro listen
         bro remember a = 0;
         bro if (correct)
-          agla dekh bhai
+          bro skip
         bro done;
       `,
     output: RuntimeException,

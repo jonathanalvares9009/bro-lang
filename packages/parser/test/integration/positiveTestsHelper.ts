@@ -659,7 +659,7 @@ export const WhileStatementTests = [
     name: "while statement success test: only if",
     input: `
     bro listen
-    jab tak bhai (correct) {
+    bro when (correct) {
     }
     bro done;
       `,
@@ -669,7 +669,7 @@ export const WhileStatementTests = [
     name: "while statement success test: with some body",
     input: `
     bro listen
-    jab tak bhai (x > 9) {
+    bro when (x > 9) {
       bro say "hello";
     }
     bro done;
@@ -680,7 +680,7 @@ export const WhileStatementTests = [
     name: "while statement success test: with single statement",
     input: `
     bro listen
-    jab tak bhai (x > 9)
+    bro when (x > 9)
       bro say "hello";
     bro done;
       `,
@@ -690,7 +690,7 @@ export const WhileStatementTests = [
     name: "while statement success test: with single statement as body and statement outside of body",
     input: `
     bro listen
-    jab tak bhai (x > 9)
+    bro when (x > 9)
       bro say "hello";
     bro remember a = 90;
     bro done;
@@ -701,8 +701,8 @@ export const WhileStatementTests = [
     name: "while statement success test: with break statement",
     input: `
     bro listen
-    jab tak bhai (x > 9) {
-      bas kar bhai;
+    bro when (x > 9) {
+      bro stop;
     }
     bro remember a = 90;
     bro done;
@@ -713,8 +713,8 @@ export const WhileStatementTests = [
     name: "while statement success test: with continue statement",
     input: `
     bro listen
-    jab tak bhai (x > 9) {
-      agla dekh bhai;
+    bro when (x > 9) {
+      bro skip;
     }
     bro remember a = 90;
     bro done;

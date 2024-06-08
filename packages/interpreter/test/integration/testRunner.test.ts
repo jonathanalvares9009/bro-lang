@@ -88,7 +88,7 @@ test("whileStatement test with 2 times loop, should success", () => {
     interpreter.interpret(`
     bro listen;
     bro remember a = 0;
-    jab tak bhai (a < 2) {
+    bro when (a < 2) {
       bro say "bhai";
       a += 1;
     }
@@ -103,8 +103,8 @@ test("whileStatement test with nested loops - 2, should success", () => {
     interpreter.interpret(`
     bro listen;
     bro remember a = 0, b = 0;
-    jab tak bhai (a < 2) {
-      jab tak bhai (b < 1) {
+    bro when (a < 2) {
+      bro when (b < 1) {
         bro say "bhai";
         b += 1;
       }
@@ -121,13 +121,13 @@ test("whileStatement test with nested loops - 3, should success", () => {
     interpreter.interpret(`
     bro listen;
     bro remember a = 0;
-    jab tak bhai (a < 2) {
+    bro when (a < 2) {
       bro remember b = 0;
-      jab tak bhai (b < 2) {
+      bro when (b < 2) {
         bro say "bhai";
         b += 1;
         bro if (b == 1)
-          bas kar bhai;
+          bro stop;
       }
       a += 1;
     }
@@ -144,11 +144,11 @@ test("whileStatement test with nested loops - 4, should success", () => {
     interpreter.interpret(`
     bro listen
     bro remember a = 0;
-    jab tak bhai (a < 10) {
+    bro when (a < 10) {
       bro say a;
       a += 1;
       bro if (a == 6) {
-        bas kar bhai;
+        bro stop;
       }
     }
     bro say "done";
@@ -168,11 +168,11 @@ test("whileStatement test with nested loops - 5, should success", () => {
     interpreter.interpret(`
     bro listen
     bro remember a = 0;
-    jab tak bhai (a < 10) {
+    bro when (a < 10) {
       bro say a;
       a += 1;
       bro if (a == 6)
-        bas kar bhai;
+        bro stop;
     }
     bro say "done";
     bro done
@@ -191,11 +191,11 @@ test("whileStatement test with nested loops - 6, should success", () => {
     interpreter.interpret(`
     bro listen
     bro remember a = 0;
-    jab tak bhai (a < 10) {
+    bro when (a < 10) {
       bro say a;
       a += 1;
       bro if (a == 3) {
-        bas kar bhai;
+        bro stop;
       }
       bro say "2 baar hi chapunga";
     }
@@ -215,7 +215,7 @@ test("whileStatement test with infinite loop, should throw runtime exception aft
     interpreter.interpret(`
     bro listen
     
-    jab tak bhai (correct) {
+    bro when (correct) {
       bro say "bhai";
     }
     bro done;
@@ -254,11 +254,11 @@ test("if-else ladders one after the other, should be evaluated separately", () =
 //     interpreter.interpret(`
 //     bro listen
 //     bro remember a = 0;
-//     jab tak bhai (a < 10) {
+//     bro when (a < 10) {
 //       bro say a;
 //       a += 1;
 //       bro if (a == 3) {
-//         bas kar bhai;
+//         bro stop;
 //       }
 //       bro say "2 baar hi chapunga";
 //     }

@@ -15,7 +15,7 @@ bro listen
   bro remember a = 3;
   bro remember b = 0;
 
-  jab tak bhai (b < 5) {
+  bro when (b < 5) {
     bro say b;
 
     bro if (b == a) {

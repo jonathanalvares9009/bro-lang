@@ -15,11 +15,11 @@ export const TokenTypes = {
 
   NAHI_TO_BHAI: "bro otherwise if",
 
-  JAB_TAK_BHAI: "jab tak bhai",
+  JAB_TAK_BHAI: "bro when",
 
-  BAS_KAR_BHAI: "bas kar bhai",
+  BAS_KAR_BHAI: "bro stop",
 
-  AGLA_DEKH_BHAI: "agla dekh bhai",
+  AGLA_DEKH_BHAI: "bro skip",
 
   nothing_TYPE: "nothing",
 
@@ -87,9 +87,9 @@ export const SPEC = [
   { regex: /^\bbro otherwise if\b/, tokenType: TokenTypes.NAHI_TO_BHAI },
   { regex: /^\bbro otherwise\b/, tokenType: TokenTypes.WARNA_BHAI },
   { regex: /^\bnothing\b/, tokenType: TokenTypes.nothing_TYPE },
-  { regex: /^\bjab tak bhai\b/, tokenType: TokenTypes.JAB_TAK_BHAI },
-  { regex: /^\bbas kar bhai\b/, tokenType: TokenTypes.BAS_KAR_BHAI },
-  { regex: /^\bagla dekh bhai\b/, tokenType: TokenTypes.AGLA_DEKH_BHAI },
+  { regex: /^\bbro when\b/, tokenType: TokenTypes.JAB_TAK_BHAI },
+  { regex: /^\bbro stop\b/, tokenType: TokenTypes.BAS_KAR_BHAI },
+  { regex: /^\bbro skip\b/, tokenType: TokenTypes.AGLA_DEKH_BHAI },
 
   // Number
   { regex: /^[+-]?([\d]*[.])?[\d]+/, tokenType: TokenTypes.NUMBER_TYPE },
