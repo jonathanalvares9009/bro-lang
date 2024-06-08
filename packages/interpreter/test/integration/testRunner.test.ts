@@ -126,7 +126,7 @@ test("whileStatement test with nested loops - 3, should success", () => {
       jab tak bhai (b < 2) {
         bro say "bhai";
         b += 1;
-        agar bhai (b == 1)
+        bro if (b == 1)
           bas kar bhai;
       }
       a += 1;
@@ -147,7 +147,7 @@ test("whileStatement test with nested loops - 4, should success", () => {
     jab tak bhai (a < 10) {
       bro say a;
       a += 1;
-      agar bhai (a == 6) {
+      bro if (a == 6) {
         bas kar bhai;
       }
     }
@@ -171,7 +171,7 @@ test("whileStatement test with nested loops - 5, should success", () => {
     jab tak bhai (a < 10) {
       bro say a;
       a += 1;
-      agar bhai (a == 6)
+      bro if (a == 6)
         bas kar bhai;
     }
     bro say "done";
@@ -194,7 +194,7 @@ test("whileStatement test with nested loops - 6, should success", () => {
     jab tak bhai (a < 10) {
       bro say a;
       a += 1;
-      agar bhai (a == 3) {
+      bro if (a == 3) {
         bas kar bhai;
       }
       bro say "2 baar hi chapunga";
@@ -232,13 +232,13 @@ test("if-else ladders one after the other, should be evaluated separately", () =
     interpreter.interpret(`
     bro listen
     bro remember x = 6;
-    agar bhai (x < 5) {
+    bro if (x < 5) {
       bro say "x < 5";
-    } nahi to bhai (x < 8) {
+    } bro otherwise if (x < 8) {
       bro say "x < 8";
-    } agar bhai (x < 4) {
+    } bro if (x < 4) {
       bro say "x < 4";
-    } warna bhai {
+    } bro otherwise {
       bro say "x > 4";
     }
     bro done;
@@ -257,7 +257,7 @@ test("if-else ladders one after the other, should be evaluated separately", () =
 //     jab tak bhai (a < 10) {
 //       bro say a;
 //       a += 1;
-//       agar bhai (a == 3) {
+//       bro if (a == 3) {
 //         bas kar bhai;
 //       }
 //       bro say "2 baar hi chapunga";

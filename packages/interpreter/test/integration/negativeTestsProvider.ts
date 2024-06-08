@@ -467,7 +467,7 @@ export const NegativeTestCases = [
     input: `
         bro listen
         bro remember a = 0;
-        agar bhai (sahi)
+        bro if (sahi)
           bas kar bhai;
         bro done;
       `,
@@ -522,7 +522,7 @@ export const NegativeTestCases = [
     input: `
         bro listen
         bro remember a = 0;
-        agar bhai (sahi)
+        bro if (sahi)
           agla dekh bhai
         bro done;
       `,

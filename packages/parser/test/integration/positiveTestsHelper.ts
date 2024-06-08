@@ -434,7 +434,7 @@ export const ExpressionsTests = [
     name: `logical "&&" test with sahi galat, should success`,
     input: `
         bro listen
-        agar bhai (sahi && galat);
+        bro if (sahi && galat);
         bro done;
       `,
     output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"IfStatement","test":{"type":"LogicalExpression","operator":"&&","left":{"type":"BooleanLiteral","value":"sahi"},"right":{"type":"BooleanLiteral","value":"galat"}},"consequent":{"type":"EmptyStatement"},"alternates":[]}]}}`,
@@ -443,7 +443,7 @@ export const ExpressionsTests = [
     name: `logical "&&" test with expression, should success`,
     input: `
         bro listen
-        agar bhai (a + b && d);
+        bro if (a + b && d);
         bro done;
       `,
     output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"IfStatement","test":{"type":"LogicalExpression","operator":"&&","left":{"type":"BinaryExpression","operator":"+","left":{"type":"IdentifierExpression","name":"a"},"right":{"type":"IdentifierExpression","name":"b"}},"right":{"type":"IdentifierExpression","name":"d"}},"consequent":{"type":"EmptyStatement"},"alternates":[]}]}}`,
@@ -462,7 +462,7 @@ export const ExpressionsTests = [
     name: `logical "||" test with sahi galat, should success`,
     input: `
         bro listen
-        agar bhai (sahi || galat);
+        bro if (sahi || galat);
         bro done;
       `,
     output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"IfStatement","test":{"type":"LogicalExpression","operator":"||","left":{"type":"BooleanLiteral","value":"sahi"},"right":{"type":"BooleanLiteral","value":"galat"}},"consequent":{"type":"EmptyStatement"},"alternates":[]}]}}`,
@@ -471,7 +471,7 @@ export const ExpressionsTests = [
     name: `logical "||" test with expression, should success`,
     input: `
         bro listen
-        agar bhai (a + b || d);
+        bro if (a + b || d);
         bro done;
       `,
     output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"IfStatement","test":{"type":"LogicalExpression","operator":"||","left":{"type":"BinaryExpression","operator":"+","left":{"type":"IdentifierExpression","name":"a"},"right":{"type":"IdentifierExpression","name":"b"}},"right":{"type":"IdentifierExpression","name":"d"}},"consequent":{"type":"EmptyStatement"},"alternates":[]}]}}`,
@@ -510,7 +510,7 @@ export const IfStatementTests = [
     name: "if statement success test - 1: only if",
     input: `
     bro listen
-    agar bhai (sahi) {
+    bro if (sahi) {
     }
     bro done;
       `,
@@ -520,8 +520,8 @@ export const IfStatementTests = [
     name: "if statement success test - 2: if else both",
     input: `
     bro listen
-    agar bhai (sahi) {
-    } warna bhai {
+    bro if (sahi) {
+    } bro otherwise {
 
     }
     bro done;
@@ -533,7 +533,7 @@ export const IfStatementTests = [
     input: `
     bro listen
     bro remember x = 9;
-    agar bhai (x >= 9) {
+    bro if (x >= 9) {
       x = 5;
     } 
     bro done;
@@ -545,7 +545,7 @@ export const IfStatementTests = [
     input: `
     bro listen
     bro remember x = 9;
-    agar bhai (x == 9) {
+    bro if (x == 9) {
       x = 5;
     } 
     bro done;
@@ -557,7 +557,7 @@ export const IfStatementTests = [
     input: `
     bro listen
     bro remember x = 9;
-    agar bhai (x == 9) {
+    bro if (x == 9) {
       x = 5;
     } 
     bro done;
@@ -569,7 +569,7 @@ export const IfStatementTests = [
     input: `
     bro listen
     bro remember x = 9;
-    agar bhai (x != 9) {
+    bro if (x != 9) {
       x = 5;
     } 
     bro done;
@@ -581,9 +581,9 @@ export const IfStatementTests = [
     input: `
     bro listen
     bro remember x = 9;
-    agar bhai (x != 9) {
+    bro if (x != 9) {
       x = 5;
-    } warna bhai (x >= 9);
+    } bro otherwise (x >= 9);
     bro done;
       `,
     output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"VariableStatement","declarations":[{"type":"VariableDeclaration","id":{"type":"IdentifierExpression","name":"x"},"init":{"type":"NumericLiteral","value":9}}]},{"type":"IfStatement","test":{"type":"BinaryExpression","operator":"!=","left":{"type":"IdentifierExpression","name":"x"},"right":{"type":"NumericLiteral","value":9}},"consequent":{"type":"BlockStatement","body":[{"type":"ExpressionStatement","expression":{"type":"AssignmentExpression","operator":"=","left":{"type":"IdentifierExpression","name":"x"},"right":{"type":"NumericLiteral","value":5}}}]},"alternates":[{"type":"ExpressionStatement","expression":{"type":"BinaryExpression","operator":">=","left":{"type":"IdentifierExpression","name":"x"},"right":{"type":"NumericLiteral","value":9}}}]}]}}`,
@@ -593,9 +593,9 @@ export const IfStatementTests = [
     input: `
     bro listen
     bro remember x = 9;
-    agar bhai (x != 9)
+    bro if (x != 9)
       x = 5;
-    warna bhai (x >= 9);
+    bro otherwise (x >= 9);
     bro done;
       `,
     output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"VariableStatement","declarations":[{"type":"VariableDeclaration","id":{"type":"IdentifierExpression","name":"x"},"init":{"type":"NumericLiteral","value":9}}]},{"type":"IfStatement","test":{"type":"BinaryExpression","operator":"!=","left":{"type":"IdentifierExpression","name":"x"},"right":{"type":"NumericLiteral","value":9}},"consequent":{"type":"ExpressionStatement","expression":{"type":"AssignmentExpression","operator":"=","left":{"type":"IdentifierExpression","name":"x"},"right":{"type":"NumericLiteral","value":5}}},"alternates":[{"type":"ExpressionStatement","expression":{"type":"BinaryExpression","operator":">=","left":{"type":"IdentifierExpression","name":"x"},"right":{"type":"NumericLiteral","value":9}}}]}]}}`,
@@ -604,8 +604,8 @@ export const IfStatementTests = [
     name: "else-if statement success test - 1: if-else-if one level ladder",
     input: `
     bro listen
-    agar bhai (sahi) {
-    } nahi to bhai (sahi) {
+    bro if (sahi) {
+    } bro otherwise if (sahi) {
     }
     bro done;
       `,
@@ -615,9 +615,9 @@ export const IfStatementTests = [
     name: "else-if statement success test - 2: if-else-if one level ladder with else",
     input: `
     bro listen
-    agar bhai (sahi) {
-    } nahi to bhai (sahi) {
-    } warna bhai {
+    bro if (sahi) {
+    } bro otherwise if (sahi) {
+    } bro otherwise {
     }
     bro done;
       `,
@@ -627,11 +627,11 @@ export const IfStatementTests = [
     name: "else-if statement success test - 3: if-else-if multiple levels ladder",
     input: `
     bro listen
-    agar bhai (sahi) {
-    } nahi to bhai (sahi) {
-    } nahi to bhai (sahi) {
-    } nahi to bhai (sahi) {
-    } nahi to bhai (sahi) {
+    bro if (sahi) {
+    } bro otherwise if (sahi) {
+    } bro otherwise if (sahi) {
+    } bro otherwise if (sahi) {
+    } bro otherwise if (sahi) {
     }
     bro done;
       `,
@@ -641,12 +641,12 @@ export const IfStatementTests = [
     name: "else-if statement success test - 4: if-else-if multiple levels ladder with else",
     input: `
     bro listen
-    agar bhai (sahi) {
-    } nahi to bhai (sahi) {
-    } nahi to bhai (sahi) {
-    } nahi to bhai (sahi) {
-    } nahi to bhai (sahi) {
-    } warna bhai {
+    bro if (sahi) {
+    } bro otherwise if (sahi) {
+    } bro otherwise if (sahi) {
+    } bro otherwise if (sahi) {
+    } bro otherwise if (sahi) {
+    } bro otherwise {
     }
     bro done;
       `,

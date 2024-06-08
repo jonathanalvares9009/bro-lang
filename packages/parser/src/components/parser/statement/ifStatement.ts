@@ -44,8 +44,8 @@ export default class IfStatement extends Statement {
     const ifStatement = this.getConditionalStatement(TokenTypes.AGAR_BHAI);
     const alternates: ASTNode[] = [];
 
-    // Loop until we keep getting "nahi to bhai" or "warna bhai"
-    // Break as soon as we get the first "warna bhai" instance
+    // Loop until we keep getting "bro otherwise if" or "bro otherwise"
+    // Break as soon as we get the first "bro otherwise" instance
     for (
       let lookahead = this._tokenExecutor.getLookahead();
       lookahead !== null && HANDLED_LOOP_TOKEN_TYPES.includes(lookahead.type);

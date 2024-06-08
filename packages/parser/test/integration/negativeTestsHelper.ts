@@ -295,7 +295,7 @@ export const NegativeExpressionsTests = [
     name: "logical expression test with both operand missing, should throw an exception",
     input: `
     bro listen
-    agar bhai (&&);
+    bro if (&&);
     bro done;
       `,
     output: SyntaxError,
@@ -335,7 +335,7 @@ export const IfStatementNagativeTests = [
     name: "If statement test - nothing after if condition , should throw an exception",
     input: `
         bro listen
-        agar bhai (sahi)
+        bro if (sahi)
       `,
     output: SyntaxError,
   },
@@ -343,7 +343,7 @@ export const IfStatementNagativeTests = [
     name: "If statement test - no if condition before else , should throw an exception",
     input: `
         bro listen
-        warna bhai {
+        bro otherwise {
 
         }
         bro done;
@@ -354,7 +354,7 @@ export const IfStatementNagativeTests = [
     name: "If statement test - if without a condition , should throw an exception",
     input: `
         bro listen
-       agar bhai {
+       bro if {
 
        }
         bro done;
@@ -365,7 +365,7 @@ export const IfStatementNagativeTests = [
     name: "Else-if statement test - else-if ladder without if condition first , should throw an exception",
     input: `
         bro listen
-        nahi to bhai (sahi) {
+        bro otherwise if (sahi) {
         }
         bro done;
       `,
@@ -375,8 +375,8 @@ export const IfStatementNagativeTests = [
     name: "Else-if statement test - else-if ladder with multiple levels without if condition first , should throw an exception",
     input: `
         bro listen
-        nahi to bhai (sahi) {
-        } nahi to bhai (sahi) {
+        bro otherwise if (sahi) {
+        } bro otherwise if (sahi) {
         }
         bro done;
       `,
@@ -386,9 +386,9 @@ export const IfStatementNagativeTests = [
     name: "Else-if statement test - nothing after else-if ladder , should throw an exception",
     input: `
         bro listen
-        agar bhai (sahi) {
+        bro if (sahi) {
 
-        } nahi to bhai (sahi)
+        } bro otherwise if (sahi)
         bro done;
       `,
     output: SyntaxError,
@@ -397,11 +397,11 @@ export const IfStatementNagativeTests = [
     name: "Else-if statement test - nothing after else-if ladder with multiple levels , should throw an exception",
     input: `
         bro listen
-        agar bhai (sahi) {
+        bro if (sahi) {
 
-        } nahi to bhai (sahi) {
+        } bro otherwise if (sahi) {
 
-        } nahi to bhai (sahi)
+        } bro otherwise if (sahi)
         bro done;
       `,
     output: SyntaxError,
@@ -410,9 +410,9 @@ export const IfStatementNagativeTests = [
     name: "Else-if statement test - else-if without a condition , should throw an exception",
     input: `
         bro listen
-        agar bhai (sahi) {
+        bro if (sahi) {
 
-        } nahi to bhai
+        } bro otherwise if
         bro done;
       `,
     output: SyntaxError,
@@ -421,11 +421,11 @@ export const IfStatementNagativeTests = [
     name: "Else-if statement test - else-if without a condition, multple levels , should throw an exception",
     input: `
         bro listen
-        agar bhai (sahi) {
+        bro if (sahi) {
 
-        } nahi to bhai (sahi) {
+        } bro otherwise if (sahi) {
 
-        } nahi to bhai
+        } bro otherwise if
         bro done;
       `,
     output: SyntaxError,

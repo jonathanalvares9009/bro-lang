@@ -140,10 +140,10 @@ export const NoOutputPositiveTests = [
     input: `
     bro listen
     bro remember x = 9;
-    agar bhai (x != 9) {
+    bro if (x != 9) {
       x = 5;
       bro say x;
-    } warna bhai (x >= 9);
+    } bro otherwise (x >= 9);
     bro done;
     `,
   },
@@ -166,7 +166,7 @@ export const WithOutputPositiveTests = [
     input: `
       bro listen;
       bro remember a;
-      agar bhai (a == nalla) {
+      bro if (a == nalla) {
         bro say a;
       }
       bro done
@@ -178,9 +178,9 @@ export const WithOutputPositiveTests = [
     input: `
       bro listen;
       bro remember a;
-      agar bhai (a) {
+      bro if (a) {
         bro say a;
-      } warna bhai {
+      } bro otherwise {
         bro say "not nalla";
       }
       bro done
@@ -191,7 +191,7 @@ export const WithOutputPositiveTests = [
     name: `binaryExpression print test - comparing nalla with nalla "==", should success`,
     input: `
       bro listen;
-      agar bhai (nalla == nalla) {
+      bro if (nalla == nalla) {
         bro say "hai nalla";
       }
       bro done
@@ -203,7 +203,7 @@ export const WithOutputPositiveTests = [
     input: `
       bro listen;
       bro remember a;
-      agar bhai (nalla == a) {
+      bro if (nalla == a) {
         bro say "hai nalla";
       }
       bro done
@@ -215,7 +215,7 @@ export const WithOutputPositiveTests = [
     input: `
       bro listen;
       bro remember a = nalla;
-      agar bhai (nalla == a) {
+      bro if (nalla == a) {
         bro say "hai nalla";
       }
       bro done
@@ -227,9 +227,9 @@ export const WithOutputPositiveTests = [
     input: `
       bro listen;
       bro remember a = nalla;
-      agar bhai ("nalla" == a) {
+      bro if ("nalla" == a) {
         bro say "hai nalla";
-      } warna bhai {
+      } bro otherwise {
         bro say "not nalla";
       }
       bro done
@@ -241,9 +241,9 @@ export const WithOutputPositiveTests = [
     input: `
       bro listen;
       bro remember a = "nalla";
-      agar bhai (nalla == a) {
+      bro if (nalla == a) {
         bro say "hai nalla";
-      } warna bhai {
+      } bro otherwise {
         bro say "not nalla";
       }
       bro done
@@ -255,9 +255,9 @@ export const WithOutputPositiveTests = [
     input: `
       bro listen;
       bro remember a = "null";
-      agar bhai (nalla == a) {
+      bro if (nalla == a) {
         bro say "hai nalla";
-      } warna bhai {
+      } bro otherwise {
         bro say "not nalla";
       }
       bro done
@@ -270,9 +270,9 @@ export const WithOutputPositiveTests = [
       bro listen;
       bro remember a;
       bro remember b;
-      agar bhai (a == b) {
+      bro if (a == b) {
         bro say "hai nalla";
-      } warna bhai {
+      } bro otherwise {
         bro say "nahi nalla";
       }
       bro done
@@ -285,9 +285,9 @@ export const WithOutputPositiveTests = [
       bro listen;
       bro remember a;
       bro remember b = nalla;
-      agar bhai (a == b) {
+      bro if (a == b) {
         bro say "hai nalla";
-      } warna bhai {
+      } bro otherwise {
         bro say "nahi nalla";
       }
       bro done
@@ -300,9 +300,9 @@ export const WithOutputPositiveTests = [
       bro listen;
       bro remember a;
       bro remember b = "nalla";
-      agar bhai (a == b) {
+      bro if (a == b) {
         bro say "hai nalla";
-      } warna bhai {
+      } bro otherwise {
         bro say "nahi nalla";
       }
       bro done
@@ -315,9 +315,9 @@ export const WithOutputPositiveTests = [
     input: `
       bro listen;
       bro remember a = sahi;
-      agar bhai (sahi == a) {
+      bro if (sahi == a) {
         bro say "hai sahi";
-      } warna bhai {
+      } bro otherwise {
         bro say "nahi sahi";
       }
       bro done
@@ -329,9 +329,9 @@ export const WithOutputPositiveTests = [
     input: `
       bro listen;
       bro remember a = galat;
-      agar bhai (galat == a) {
+      bro if (galat == a) {
         bro say "hai galat";
-      } warna bhai {
+      } bro otherwise {
         bro say "nahi galat";
       }
       bro done
@@ -343,9 +343,9 @@ export const WithOutputPositiveTests = [
     input: `
       bro listen;
       bro remember a = "sahi";
-      agar bhai (sahi == a) {
+      bro if (sahi == a) {
         bro say "hai sahi";
-      } warna bhai {
+      } bro otherwise {
         bro say "nahi sahi";
       }
       bro done
@@ -357,9 +357,9 @@ export const WithOutputPositiveTests = [
     input: `
       bro listen;
       bro remember a = 7;
-      agar bhai (sahi == (a > 5)) {
+      bro if (sahi == (a > 5)) {
         bro say "hai sahi";
-      } warna bhai {
+      } bro otherwise {
         bro say "nahi sahi";
       }
       bro done
@@ -371,9 +371,9 @@ export const WithOutputPositiveTests = [
     input: `
       bro listen;
       bro remember a = 7;
-      agar bhai ("sahi" == (a > 5)) {
+      bro if ("sahi" == (a > 5)) {
         bro say "hai sahi";
-      } warna bhai {
+      } bro otherwise {
         bro say "nahi sahi";
       }
       bro done
@@ -385,9 +385,9 @@ export const WithOutputPositiveTests = [
     input: `
       bro listen;
       bro remember a = sahi;
-      agar bhai ("sahi" == (a == sahi)) {
+      bro if ("sahi" == (a == sahi)) {
         bro say "hai sahi";
-      } warna bhai {
+      } bro otherwise {
         bro say "nahi sahi";
       }
       bro done
@@ -399,9 +399,9 @@ export const WithOutputPositiveTests = [
     input: `
       bro listen;
       bro remember a = sahi;
-      agar bhai ((a == sahi) == (a == sahi)) {
+      bro if ((a == sahi) == (a == sahi)) {
         bro say "hai sahi";
-      } warna bhai {
+      } bro otherwise {
         bro say "nahi sahi";
       }
       bro done
@@ -413,9 +413,9 @@ export const WithOutputPositiveTests = [
     input: `
       bro listen;
       bro remember a;
-      agar bhai ((a == nalla) == (a == sahi)) {
+      bro if ((a == nalla) == (a == sahi)) {
         bro say "hai sahi";
-      } warna bhai {
+      } bro otherwise {
         bro say "nahi sahi";
       }
       bro done
@@ -427,9 +427,9 @@ export const WithOutputPositiveTests = [
     input: `
       bro listen;
       bro remember a;
-      agar bhai ((a == nalla) == (a == sahi)) {
+      bro if ((a == nalla) == (a == sahi)) {
         bro say "hai sahi";
-      } warna bhai {
+      } bro otherwise {
         bro say "nahi sahi";
       }
       bro done
@@ -442,9 +442,9 @@ export const WithOutputPositiveTests = [
       bro listen;
       bro remember a;
       bro remember b = galat;
-      agar bhai (a == b) {
+      bro if (a == b) {
         bro say "hai sahi";
-      } warna bhai {
+      } bro otherwise {
         bro say "nahi sahi";
       }
       bro done
@@ -457,9 +457,9 @@ export const WithOutputPositiveTests = [
       bro listen;
       bro remember a = galat;
       bro remember b = galat;
-      agar bhai (a == b) {
+      bro if (a == b) {
         bro say "hai galat";
-      } warna bhai {
+      } bro otherwise {
         bro say "nahi galat";
       }
       bro done
@@ -472,9 +472,9 @@ export const WithOutputPositiveTests = [
       bro listen;
       bro remember a = "galat";
       bro remember b = galat;
-      agar bhai (a == b) {
+      bro if (a == b) {
         bro say "hai galat";
-      } warna bhai {
+      } bro otherwise {
         bro say "nahi galat";
       }
       bro done
@@ -763,7 +763,7 @@ export const WithOutputPositiveTests = [
         jab tak bhai (sahi)
           bas kar bhai;
         bro say "hello";
-        agar bhai (sahi)
+        bro if (sahi)
           bas kar bhai;
       }
       bro done;
@@ -777,7 +777,7 @@ export const WithOutputPositiveTests = [
       bro remember a = 0;
       jab tak bhai (a < 2) {
         bro say "hello";
-        agar bhai (sahi)
+        bro if (sahi)
           bas kar bhai;
         bas kar bhai;
         bas kar bhai;
@@ -791,7 +791,7 @@ export const WithOutputPositiveTests = [
     name: `if statement success test - 1: only if, should success`,
     input: `
     bro listen
-    agar bhai (sahi) {
+    bro if (sahi) {
       bro say "bhai";
     }
     bro done;
@@ -802,9 +802,9 @@ export const WithOutputPositiveTests = [
     name: `if statement success test - 2: if else both, should success`,
     input: `
     bro listen
-    agar bhai (sahi) {
+    bro if (sahi) {
       bro say "sahi";
-    } warna bhai {
+    } bro otherwise {
       bro say "galat";
     }
     bro done;
@@ -816,7 +816,7 @@ export const WithOutputPositiveTests = [
     input: `
     bro listen
     bro remember x = 9;
-    agar bhai (x >= 9) {
+    bro if (x >= 9) {
       x = 5;
       bro say x;
     } 
@@ -829,9 +829,9 @@ export const WithOutputPositiveTests = [
     name: `else-if statement success test - 1: if with one else-if, should success`,
     input: `
     bro listen
-    agar bhai (galat) {
+    bro if (galat) {
       bro say "galat";
-    } nahi to bhai (sahi) {
+    } bro otherwise if (sahi) {
       bro say "sahi";
     }
     bro done;
@@ -843,13 +843,13 @@ export const WithOutputPositiveTests = [
     input: `
     bro listen
     bro remember x = 10;
-    agar bhai (x < 5) {
+    bro if (x < 5) {
       bro say "x < 5";
-    } nahi to bhai (x < 8) {
+    } bro otherwise if (x < 8) {
       bro say "x < 8";
-    } nahi to bhai (x < 12) {
+    } bro otherwise if (x < 12) {
       bro say "x < 12";
-    } nahi to bhai (x < 15) {
+    } bro otherwise if (x < 15) {
       bro say "x < 15";
     }
     bro done;
@@ -861,12 +861,12 @@ export const WithOutputPositiveTests = [
     input: `
     bro listen
     bro remember a = 15;
-    agar bhai (a < 0) {
+    bro if (a < 0) {
       bro say "a < 0";
-    } nahi to bhai (a > 0) {
-      agar bhai (a < 10) {
+    } bro otherwise if (a > 0) {
+      bro if (a < 10) {
         bro say "a < 10";
-      } nahi to bhai (a < 20) {
+      } bro otherwise if (a < 20) {
         bro say "a < 20";
       }
     }
@@ -879,13 +879,13 @@ export const WithOutputPositiveTests = [
     input: `
     bro listen
     bro remember x = 15;
-    agar bhai (x < 5) {
+    bro if (x < 5) {
       bro say "x < 5";
-    } nahi to bhai (x < 8) {
+    } bro otherwise if (x < 8) {
       bro say "x < 8";
-    } nahi to bhai (x < 12) {
+    } bro otherwise if (x < 12) {
       bro say "x < 12";
-    } warna bhai {
+    } bro otherwise {
       bro say "x > 12";
     }
     bro done;
@@ -897,9 +897,9 @@ export const WithOutputPositiveTests = [
     name: `logical "&&" test with sahi galat, should success`,
     input: `
         bro listen
-        agar bhai (sahi && galat) {
+        bro if (sahi && galat) {
           bro say "sahi";
-        } warna bhai {
+        } bro otherwise {
           bro say "galat";
         }
         bro done;
@@ -942,7 +942,7 @@ export const WithOutputPositiveTests = [
       bro remember step = 0;
       jab tak bhai (a > 0) {
         step += 1;
-        agar bhai (a % 2 != 0){
+        bro if (a % 2 != 0){
           a -= 2;
           agla dekh bhai;
         }
@@ -961,7 +961,7 @@ export const WithOutputPositiveTests = [
       bro remember step = 0;
       jab tak bhai (a > 0) {
         step += 1;
-        agar bhai (a % 2 == 0){
+        bro if (a % 2 == 0){
           a -= 2;
           agla dekh bhai;
         }
@@ -983,12 +983,12 @@ export const WithOutputPositiveTests = [
       bro remember a = 10;
       bro remember step = 0;
       jab tak bhai (a > 0) {
-        agar bhai (a % 2 == 0){
+        bro if (a % 2 == 0){
           a -= 3;
           agla dekh bhai;
         }
         a -= 1;
-        agar bhai (step == 1) agla dekh bhai
+        bro if (step == 1) agla dekh bhai
         step += 1;
       }
       bro say step;

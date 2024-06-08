@@ -84,16 +84,16 @@ bro done
     name: "Conditionals",
     description: (
       <>
-        Bhailang supports if-else-if ladder construct , <code className="language-cpp">agar bhai</code> block will execute if condition is <code className="language-cpp">sahi</code>, otherwise one of the subsequently added <code className="language-cpp">nahi to bhai</code> blocks will execute if their respective condition is <code className="language-cpp">sahi</code>, and the <code className="language-cpp">warna bhai</code> block will eventually execute if all of the above conditions are <code className="language-cpp">galat</code>.
+        Bhailang supports if-else-if ladder construct , <code className="language-cpp">bro if</code> block will execute if condition is <code className="language-cpp">sahi</code>, otherwise one of the subsequently added <code className="language-cpp">bro otherwise if</code> blocks will execute if their respective condition is <code className="language-cpp">sahi</code>, and the <code className="language-cpp">bro otherwise</code> block will eventually execute if all of the above conditions are <code className="language-cpp">galat</code>.
       </>
     ),
     code: `bro listen
     bro remember a = 10;
-    agar bhai (a < 20) {
+    bro if (a < 20) {
       bro say "a is less than 20";
-    } nahi to bhai ( a < 25 ) {
+    } bro otherwise if ( a < 25 ) {
       bro say "a is less than 25";
-    } warna bhai {
+    } bro otherwise {
       bro say "a is greater than or equal to 25";
     }
 bro done
@@ -111,11 +111,11 @@ bro done
     bro remember a = 0;
     jab tak bhai (a < 10) {
       a += 1;
-      agar bhai (a == 5) {
+      bro if (a == 5) {
         bro say "andar se bro say ", a;
         agla dekh bhai;
       }
-      agar bhai (a == 6) {
+      bro if (a == 6) {
         bas kar bhai;
       }
       bro say a;

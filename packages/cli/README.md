@@ -111,15 +111,15 @@ bro done
 ```
 
 <h3 align="center">Conditionals</h3>
-<p align="center">Bhailang supports simple if else construct , <code>agar bhai</code> block will execute if condition is <code>sahi</code> and <code>warna bhai</code> block will execute if condition is <code>galat</code>.</p>
+<p align="center">Bhailang supports simple if else construct , <code>bro if</code> block will execute if condition is <code>sahi</code> and <code>bro otherwise</code> block will execute if condition is <code>galat</code>.</p>
 
 ```
 
 bro listen
   bro remember a = 10;
-  agar bhai (a < 25) {
+  bro if (a < 25) {
    bro say "a is less than 25";
-  } warna bhai {
+  } bro otherwise {
    bro say "a is greater than or equal to 25";
   }
 bro done
@@ -135,11 +135,11 @@ bro listen
   bro remember a = 0;
   jab tak bhai (a < 10) {
    a += 1;
-   agar bhai (a == 5) {
+   bro if (a == 5) {
     bro say "andar se bro say ", a;
     agla dekh bhai;
    }
-   agar bhai (a == 6) {
+   bro if (a == 6) {
     bas kar bhai;
    }
    bro say a;

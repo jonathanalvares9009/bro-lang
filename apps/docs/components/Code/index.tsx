@@ -18,9 +18,9 @@ bro listen
   jab tak bhai (b < 5) {
     bro say b;
 
-    agar bhai (b == a) {
+    bro if (b == a) {
       bro say "b is equal to a";
-    } nahi to bhai (b == 0) {
+    } bro otherwise if (b == 0) {
       bro say "b is equal to zero";
     }
 
