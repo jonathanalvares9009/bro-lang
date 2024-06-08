@@ -27,9 +27,9 @@ npm i -g bhailang
 You can also try out your code on <a href="https://bhailang.js.org/#playground">Bhai Lang PlayGround</a></h4>
 
 ```
-listen bro
+bro listen
   bol bhai "Hello bhai";
-done bro
+bro done
 
 ```
 
@@ -50,15 +50,15 @@ hello bhai
 <h2 align="center">Documentation</h2>
 
 <h3 align="center">General</h3>
-<p align="center"><code>listen bro</code> is the entrypoint for the program and all program must end with <code>done bro</code>. Anything outside of it will be ignored.</p>
+<p align="center"><code>bro listen</code> is the entrypoint for the program and all program must end with <code>bro done</code>. Anything outside of it will be ignored.</p>
 
 ```
 
 This will be ignored
 
-listen bro
+bro listen
 // Write code here
-done bro
+bro done
 
 This too
 ```
@@ -68,14 +68,14 @@ This too
 
 ```
 
-listen bro
+bro listen
   bhai ye hai a = 10;
   bhai ye hai b = "two";
   bhai ye hai c = 15;
   a = a + 1;
   b = 21;
   c *= 2;
-done bro
+bro done
 ```
 
 <h3 align="center">Types</h3>
@@ -83,7 +83,7 @@ done bro
 
 ```
 
-listen bro
+bro listen
   bhai ye hai a = 10;
   bhai ye hai b = 10 + (15*20);
   bhai ye hai c = "two";
@@ -91,7 +91,7 @@ listen bro
   bhai ye hai e = nalla;
   bhai ye hai f = sahi;
   bhai ye hai g = galat;
-done bro
+bro done
 ```
 
 <h3 align="center">Built-ins</h3>
@@ -99,7 +99,7 @@ done bro
 
 ```
 
-listen bro
+bro listen
   bol bhai "Hello World";
   bhai ye hai a = 10;
   {
@@ -107,7 +107,7 @@ listen bro
     bol bhai a + b;
   }
   bol bhai 5, 'ok', nalla , sahi , galat;
-done bro
+bro done
 ```
 
 <h3 align="center">Conditionals</h3>
@@ -115,14 +115,14 @@ done bro
 
 ```
 
-listen bro
+bro listen
   bhai ye hai a = 10;
   agar bhai (a < 25) {
    bol bhai "a is less than 25";
   } warna bhai {
    bol bhai "a is greater than or equal to 25";
   }
-done bro
+bro done
 ```
 
 <h3 align="center">Loops</h3>
@@ -131,7 +131,7 @@ done bro
 
 ```
 
-listen bro
+bro listen
   bhai ye hai a = 0;
   jab tak bhai (a < 10) {
    a += 1;
@@ -145,7 +145,7 @@ listen bro
    bol bhai a;
   }
   bol bhai "done";
-done bro
+bro done
 ```
 
 

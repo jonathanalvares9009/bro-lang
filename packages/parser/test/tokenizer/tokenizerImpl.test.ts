@@ -5,20 +5,20 @@ import InvalidStateException from "../../src/exceptions/invalidStateException";
 const tokenizer = new TokenizerImpl(SPEC);
 
 test("test Tokenizer.getNextToken with HI_BHAI_TYPE should success", () => {
-  tokenizer.initTokenizer(`listen bro`);
+  tokenizer.initTokenizer(`bro listen`);
 
   expect(tokenizer.getNextToken()).toStrictEqual({
     type: TokenTypes.HI_BHAI_TYPE,
-    value: "listen bro",
+    value: "bro listen",
   });
 });
 
 test("test Tokenizer.getNextToken with BYE_BHAI_TYPE should success", () => {
-  tokenizer.initTokenizer(`done bro`);
+  tokenizer.initTokenizer(`bro done`);
 
   expect(tokenizer.getNextToken()).toStrictEqual({
     type: TokenTypes.BYE_BHAI_TYPE,
-    value: "done bro",
+    value: "bro done",
   });
 });
 

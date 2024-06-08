@@ -7,17 +7,17 @@ const features = [
     name: "General",
     description: (
       <>
-        <code className="language-cpp">listen bro</code> is the entrypoint for the
+        <code className="language-cpp">bro listen</code> is the entrypoint for the
         program and all program must end with{" "}
-        <code className="language-cpp">done bro</code>. Anything outside of it
+        <code className="language-cpp">bro done</code>. Anything outside of it
         will be ignored.
       </>
     ),
     code: `This will be ignored
 
-listen bro
+bro listen
   // Write code here
-done bro
+bro done
 
 This too
     `,
@@ -30,14 +30,14 @@ This too
         <code className="language-cpp">bhai ye hai</code>.
       </>
     ),
-    code: `listen bro
+    code: `bro listen
     bhai ye hai a = 10;
     bhai ye hai b = "two";
     bhai ye hai c = 15;
     a = a + 1;
     b = 21;
     c *= 2;
-done bro
+bro done
     `,
   },
   {
@@ -50,7 +50,7 @@ done bro
         <code className="language-cpp">galat</code> are the boolean values.
       </>
     ),
-    code: `listen bro
+    code: `bro listen
     bhai ye hai a = 10;
     bhai ye hai b = 10 + (15*20);
     bhai ye hai c = "two";
@@ -58,7 +58,7 @@ done bro
     bhai ye hai e = nalla;
     bhai ye hai f = sahi;
     bhai ye hai g = galat;
-done bro
+bro done
     `,
   },
   {
@@ -69,7 +69,7 @@ done bro
         console.
       </>
     ),
-    code: `listen bro
+    code: `bro listen
     bol bhai "Hello World";
     bhai ye hai a = 10;
     {
@@ -77,7 +77,7 @@ done bro
        bol bhai a + b;
     }
     bol bhai 5, 'ok', nalla , sahi , galat;
-done bro
+bro done
     `,
   },
   {
@@ -87,7 +87,7 @@ done bro
         Bhailang supports if-else-if ladder construct , <code className="language-cpp">agar bhai</code> block will execute if condition is <code className="language-cpp">sahi</code>, otherwise one of the subsequently added <code className="language-cpp">nahi to bhai</code> blocks will execute if their respective condition is <code className="language-cpp">sahi</code>, and the <code className="language-cpp">warna bhai</code> block will eventually execute if all of the above conditions are <code className="language-cpp">galat</code>.
       </>
     ),
-    code: `listen bro
+    code: `bro listen
     bhai ye hai a = 10;
     agar bhai (a < 20) {
       bol bhai "a is less than 20";
@@ -96,7 +96,7 @@ done bro
     } warna bhai {
       bol bhai "a is greater than or equal to 25";
     }
-done bro
+bro done
     `
   },
   {
@@ -107,7 +107,7 @@ done bro
         Use <code className="language-cpp">bas kar bhai</code> to break the loop and <code className="language-cpp">agla dekh bhai</code> to continue within loop.
       </>
     ),
-    code: `listen bro
+    code: `bro listen
     bhai ye hai a = 0;
     jab tak bhai (a < 10) {
       a += 1;
@@ -121,7 +121,7 @@ done bro
       bol bhai a;
     }
     bol bhai "done";
-done bro
+bro done
     `
   }
 
