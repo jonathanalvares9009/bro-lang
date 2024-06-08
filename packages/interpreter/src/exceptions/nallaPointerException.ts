@@ -1,6 +1,6 @@
-export default class NallaPointerException extends Error {
+export default class nothingPointerException extends Error {
   constructor(errorMessage: string) {
-    const errorName = "NallaPointerException";
+    const errorName = "nothingPointerException";
     errorMessage = errorName + ": " + errorMessage;
     super(errorMessage);
     this.name = errorName;

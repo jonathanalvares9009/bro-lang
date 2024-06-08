@@ -19,16 +19,16 @@ export default class PrimaryExpression extends Expression {
       case TokenTypes.NUMBER_TYPE:
       case TokenTypes.BOOLEAN_TYPE:
         return Literal.getLiteralImpl(token.type).getLiteral();
-      case TokenTypes.NALLA_TYPE:
-        return this._getNallaLiteral();
+      case TokenTypes.nothing_TYPE:
+        return this._getnothingLiteral();
       default:
         return this._getLeftHandSideExpression();
     }
   }
 
-  private _getNallaLiteral() {
-    this._tokenExecutor.eatTokenAndForwardLookahead(TokenTypes.NALLA_TYPE);
-    return Literal.getLiteralImpl(TokenTypes.NALLA_TYPE).getLiteral();
+  private _getnothingLiteral() {
+    this._tokenExecutor.eatTokenAndForwardLookahead(TokenTypes.nothing_TYPE);
+    return Literal.getLiteralImpl(TokenTypes.nothing_TYPE).getLiteral();
   }
 
   private _getLeftHandSideExpression() {

@@ -92,7 +92,7 @@ export const NoOutputPositiveTests = [
     name: "simple assignment expression test with only one identifer, should success",
     input: `
       bro listen
-      bro remember a = sahi;
+      bro remember a = correct;
       a = 4;
       bro done
     `,
@@ -162,324 +162,324 @@ export const WithOutputPositiveTests = [
     output: "60 60",
   },
   {
-    name: `binaryExpression print test with nalla and "==", should success`,
+    name: `binaryExpression print test with nothing and "==", should success`,
     input: `
       bro listen;
       bro remember a;
-      bro if (a == nalla) {
+      bro if (a == nothing) {
         bro say a;
       }
       bro done
     `,
-    output: "nalla",
+    output: "nothing",
   },
   {
-    name: `binaryExpression print test with nalla without any operator, should success`,
+    name: `binaryExpression print test with nothing without any operator, should success`,
     input: `
       bro listen;
       bro remember a;
       bro if (a) {
         bro say a;
       } bro otherwise {
-        bro say "not nalla";
+        bro say "not nothing";
       }
       bro done
     `,
-    output: "not nalla",
+    output: "not nothing",
   },
   {
-    name: `binaryExpression print test - comparing nalla with nalla "==", should success`,
+    name: `binaryExpression print test - comparing nothing with nothing "==", should success`,
     input: `
       bro listen;
-      bro if (nalla == nalla) {
-        bro say "hai nalla";
+      bro if (nothing == nothing) {
+        bro say "hai nothing";
       }
       bro done
     `,
-    output: "hai nalla",
+    output: "hai nothing",
   },
   {
-    name: `binaryExpression print test with comparing nalla with var "a", should success`,
+    name: `binaryExpression print test with comparing nothing with var "a", should success`,
     input: `
       bro listen;
       bro remember a;
-      bro if (nalla == a) {
-        bro say "hai nalla";
+      bro if (nothing == a) {
+        bro say "hai nothing";
       }
       bro done
     `,
-    output: "hai nalla",
+    output: "hai nothing",
   },
   {
-    name: `binaryExpression print test with comparing nalla with var "a" explicit initialization, should success`,
+    name: `binaryExpression print test with comparing nothing with var "a" explicit initialization, should success`,
     input: `
       bro listen;
-      bro remember a = nalla;
-      bro if (nalla == a) {
-        bro say "hai nalla";
+      bro remember a = nothing;
+      bro if (nothing == a) {
+        bro say "hai nothing";
       }
       bro done
     `,
-    output: "hai nalla",
+    output: "hai nothing",
   },
   {
-    name: `binaryExpression print test with comparing nalla with string nalla, should success`,
+    name: `binaryExpression print test with comparing nothing with string nothing, should success`,
     input: `
       bro listen;
-      bro remember a = nalla;
-      bro if ("nalla" == a) {
-        bro say "hai nalla";
+      bro remember a = nothing;
+      bro if ("nothing" == a) {
+        bro say "hai nothing";
       } bro otherwise {
-        bro say "not nalla";
+        bro say "not nothing";
       }
       bro done
     `,
-    output: "not nalla",
+    output: "not nothing",
   },
   {
-    name: `binaryExpression print test with comparing nalla with string nalla, should success`,
+    name: `binaryExpression print test with comparing nothing with string nothing, should success`,
     input: `
       bro listen;
-      bro remember a = "nalla";
-      bro if (nalla == a) {
-        bro say "hai nalla";
+      bro remember a = "nothing";
+      bro if (nothing == a) {
+        bro say "hai nothing";
       } bro otherwise {
-        bro say "not nalla";
+        bro say "not nothing";
       }
       bro done
     `,
-    output: "not nalla",
+    output: "not nothing",
   },
   {
-    name: `binaryExpression print test with comparing nalla with string null, should success`,
+    name: `binaryExpression print test with comparing nothing with string null, should success`,
     input: `
       bro listen;
       bro remember a = "null";
-      bro if (nalla == a) {
-        bro say "hai nalla";
+      bro if (nothing == a) {
+        bro say "hai nothing";
       } bro otherwise {
-        bro say "not nalla";
+        bro say "not nothing";
       }
       bro done
     `,
-    output: "not nalla",
+    output: "not nothing",
   },
   {
-    name: `binaryExpression print test with nalla var "a" & "b" - 0, should success`,
+    name: `binaryExpression print test with nothing var "a" & "b" - 0, should success`,
     input: `
       bro listen;
       bro remember a;
       bro remember b;
       bro if (a == b) {
-        bro say "hai nalla";
+        bro say "hai nothing";
       } bro otherwise {
-        bro say "nahi nalla";
+        bro say "nahi nothing";
       }
       bro done
     `,
-    output: "hai nalla",
+    output: "hai nothing",
   },
   {
-    name: `binaryExpression print test with nalla var "a" & "b" - 1, should success`,
+    name: `binaryExpression print test with nothing var "a" & "b" - 1, should success`,
     input: `
       bro listen;
       bro remember a;
-      bro remember b = nalla;
+      bro remember b = nothing;
       bro if (a == b) {
-        bro say "hai nalla";
+        bro say "hai nothing";
       } bro otherwise {
-        bro say "nahi nalla";
+        bro say "nahi nothing";
       }
       bro done
     `,
-    output: "hai nalla",
+    output: "hai nothing",
   },
   {
-    name: `binaryExpression print test with nalla var "a" & "b" -2, should success`,
+    name: `binaryExpression print test with nothing var "a" & "b" -2, should success`,
     input: `
       bro listen;
       bro remember a;
-      bro remember b = "nalla";
+      bro remember b = "nothing";
       bro if (a == b) {
-        bro say "hai nalla";
+        bro say "hai nothing";
       } bro otherwise {
-        bro say "nahi nalla";
+        bro say "nahi nothing";
       }
       bro done
     `,
-    output: "nahi nalla",
+    output: "nahi nothing",
   },
   // Boolean test
   {
-    name: `binaryExpression print test with boolean expression - sahi, should success`,
+    name: `binaryExpression print test with boolean expression - correct, should success`,
     input: `
       bro listen;
-      bro remember a = sahi;
-      bro if (sahi == a) {
-        bro say "hai sahi";
+      bro remember a = correct;
+      bro if (correct == a) {
+        bro say "hai correct";
       } bro otherwise {
-        bro say "nahi sahi";
+        bro say "nahi correct";
       }
       bro done
     `,
-    output: "hai sahi",
+    output: "hai correct",
   },
   {
-    name: `binaryExpression print test with boolean expression - galat, should success`,
+    name: `binaryExpression print test with boolean expression - wrong, should success`,
     input: `
       bro listen;
-      bro remember a = galat;
-      bro if (galat == a) {
-        bro say "hai galat";
+      bro remember a = wrong;
+      bro if (wrong == a) {
+        bro say "hai wrong";
       } bro otherwise {
-        bro say "nahi galat";
+        bro say "nahi wrong";
       }
       bro done
     `,
-    output: "hai galat",
+    output: "hai wrong",
   },
   {
-    name: `binaryExpression print test with boolean expression - sahi with string sahi, should success`,
+    name: `binaryExpression print test with boolean expression - correct with string correct, should success`,
     input: `
       bro listen;
-      bro remember a = "sahi";
-      bro if (sahi == a) {
-        bro say "hai sahi";
+      bro remember a = "correct";
+      bro if (correct == a) {
+        bro say "hai correct";
       } bro otherwise {
-        bro say "nahi sahi";
+        bro say "nahi correct";
       }
       bro done
     `,
-    output: "nahi sahi",
+    output: "nahi correct",
   },
   {
-    name: `binaryExpression print test with boolean expression - sahi expression, should success`,
+    name: `binaryExpression print test with boolean expression - correct expression, should success`,
     input: `
       bro listen;
       bro remember a = 7;
-      bro if (sahi == (a > 5)) {
-        bro say "hai sahi";
+      bro if (correct == (a > 5)) {
+        bro say "hai correct";
       } bro otherwise {
-        bro say "nahi sahi";
+        bro say "nahi correct";
       }
       bro done
     `,
-    output: "hai sahi",
+    output: "hai correct",
   },
   {
-    name: `binaryExpression print test with boolean expression - sahi expression & string "sahi", should success`,
+    name: `binaryExpression print test with boolean expression - correct expression & string "correct", should success`,
     input: `
       bro listen;
       bro remember a = 7;
-      bro if ("sahi" == (a > 5)) {
-        bro say "hai sahi";
+      bro if ("correct" == (a > 5)) {
+        bro say "hai correct";
       } bro otherwise {
-        bro say "nahi sahi";
+        bro say "nahi correct";
       }
       bro done
     `,
-    output: "nahi sahi",
+    output: "nahi correct",
   },
   {
-    name: `binaryExpression print test with boolean expression - sahi expression & two expressions, should success`,
+    name: `binaryExpression print test with boolean expression - correct expression & two expressions, should success`,
     input: `
       bro listen;
-      bro remember a = sahi;
-      bro if ("sahi" == (a == sahi)) {
-        bro say "hai sahi";
+      bro remember a = correct;
+      bro if ("correct" == (a == correct)) {
+        bro say "hai correct";
       } bro otherwise {
-        bro say "nahi sahi";
+        bro say "nahi correct";
       }
       bro done
     `,
-    output: "nahi sahi",
+    output: "nahi correct",
   },
   {
-    name: `binaryExpression print test with boolean expression - sahi expression -3, should success`,
+    name: `binaryExpression print test with boolean expression - correct expression -3, should success`,
     input: `
       bro listen;
-      bro remember a = sahi;
-      bro if ((a == sahi) == (a == sahi)) {
-        bro say "hai sahi";
+      bro remember a = correct;
+      bro if ((a == correct) == (a == correct)) {
+        bro say "hai correct";
       } bro otherwise {
-        bro say "nahi sahi";
+        bro say "nahi correct";
       }
       bro done
     `,
-    output: "hai sahi",
+    output: "hai correct",
   },
   {
-    name: `binaryExpression print test with boolean expression - sahi expression - 4, should success`,
-    input: `
-      bro listen;
-      bro remember a;
-      bro if ((a == nalla) == (a == sahi)) {
-        bro say "hai sahi";
-      } bro otherwise {
-        bro say "nahi sahi";
-      }
-      bro done
-    `,
-    output: "nahi sahi",
-  },
-  {
-    name: `binaryExpression print test with boolean expression - sahi expression - 5, should success`,
+    name: `binaryExpression print test with boolean expression - correct expression - 4, should success`,
     input: `
       bro listen;
       bro remember a;
-      bro if ((a == nalla) == (a == sahi)) {
-        bro say "hai sahi";
+      bro if ((a == nothing) == (a == correct)) {
+        bro say "hai correct";
       } bro otherwise {
-        bro say "nahi sahi";
+        bro say "nahi correct";
       }
       bro done
     `,
-    output: "nahi sahi",
+    output: "nahi correct",
   },
   {
-    name: `binaryExpression print test with boolean expression - sahi expression - 5, should success`,
+    name: `binaryExpression print test with boolean expression - correct expression - 5, should success`,
     input: `
       bro listen;
       bro remember a;
-      bro remember b = galat;
-      bro if (a == b) {
-        bro say "hai sahi";
+      bro if ((a == nothing) == (a == correct)) {
+        bro say "hai correct";
       } bro otherwise {
-        bro say "nahi sahi";
+        bro say "nahi correct";
       }
       bro done
     `,
-    output: "nahi sahi",
+    output: "nahi correct",
   },
   {
-    name: `binaryExpression print test with boolean expression - galat variables comparison, should success`,
+    name: `binaryExpression print test with boolean expression - correct expression - 5, should success`,
     input: `
       bro listen;
-      bro remember a = galat;
-      bro remember b = galat;
+      bro remember a;
+      bro remember b = wrong;
       bro if (a == b) {
-        bro say "hai galat";
+        bro say "hai correct";
       } bro otherwise {
-        bro say "nahi galat";
+        bro say "nahi correct";
       }
       bro done
     `,
-    output: "hai galat",
+    output: "nahi correct",
   },
   {
-    name: `binaryExpression print test with boolean expression - galat variables comparison with string galat, should success`,
+    name: `binaryExpression print test with boolean expression - wrong variables comparison, should success`,
     input: `
       bro listen;
-      bro remember a = "galat";
-      bro remember b = galat;
+      bro remember a = wrong;
+      bro remember b = wrong;
       bro if (a == b) {
-        bro say "hai galat";
+        bro say "hai wrong";
       } bro otherwise {
-        bro say "nahi galat";
+        bro say "nahi wrong";
       }
       bro done
     `,
-    output: "nahi galat",
+    output: "hai wrong",
+  },
+  {
+    name: `binaryExpression print test with boolean expression - wrong variables comparison with string wrong, should success`,
+    input: `
+      bro listen;
+      bro remember a = "wrong";
+      bro remember b = wrong;
+      bro if (a == b) {
+        bro say "hai wrong";
+      } bro otherwise {
+        bro say "nahi wrong";
+      }
+      bro done
+    `,
+    output: "nahi wrong",
   },
   {
     name: "float value addition with integer value test, should success",
@@ -527,28 +527,28 @@ export const WithOutputPositiveTests = [
     name: "printStatement test with multiple expressions & without any variables, should success",
     input: `
       bro listen;
-      bro say "hello", sahi, galat;
+      bro say "hello", correct, wrong;
       bro done
     `,
-    output: "hello sahi galat",
+    output: "hello correct wrong",
   },
   {
-    name: "printStatement test with nalla, should success",
+    name: "printStatement test with nothing, should success",
     input: `
       bro listen;
-      bro say nalla;
+      bro say nothing;
       bro done;
     `,
-    output: "nalla",
+    output: "nothing",
   },
   {
-    name: "printStatement test with nalla as second parameter, should success",
+    name: "printStatement test with nothing as second parameter, should success",
     input: `
       bro listen;
-      bro say 10, nalla;
+      bro say 10, nothing;
       bro done;
     `,
-    output: "10 nalla",
+    output: "10 nothing",
   },
   {
     name: "printStatement test with string concatenation, should success",
@@ -560,24 +560,24 @@ export const WithOutputPositiveTests = [
     output: "hellocrap",
   },
   {
-    name: "printStatement test with multiple expresions including nalla, should success",
+    name: "printStatement test with multiple expresions including nothing, should success",
     input: `
       bro listen;
       bro remember a = 70;
-      bro say 6*5, nalla, "jamtara", a;
+      bro say 6*5, nothing, "jamtara", a;
       bro done;
     `,
-    output: "30 nalla jamtara 70",
+    output: "30 nothing jamtara 70",
   },
   {
-    name: "printStatement test with nalla variable, should success",
+    name: "printStatement test with nothing variable, should success",
     input: `
       bro listen;
       bro remember a;
       bro say a;
       bro done;
     `,
-    output: "nalla",
+    output: "nothing",
   },
   {
     name: `printStatement test with string "undefined", should success`,
@@ -589,34 +589,34 @@ export const WithOutputPositiveTests = [
     output: "undefined",
   },
   {
-    name: `printStatement test with nalla variable, should success`,
+    name: `printStatement test with nothing variable, should success`,
     input: `
       bro listen;
       bro remember a;
       bro say a;
       bro done;
     `,
-    output: "nalla",
+    output: "nothing",
   },
   {
-    name: `printStatement test with sahi variable, should success`,
+    name: `printStatement test with correct variable, should success`,
     input: `
       bro listen;
-      bro remember a = sahi;
+      bro remember a = correct;
       bro say a;
       bro done;
     `,
-    output: "sahi",
+    output: "correct",
   },
   {
-    name: `printStatement test with galat variable, should success`,
+    name: `printStatement test with wrong variable, should success`,
     input: `
       bro listen;
-      bro remember a = galat;
+      bro remember a = wrong;
       bro say a;
       bro done;
     `,
-    output: "galat",
+    output: "wrong",
   },
   {
     name: `printStatement test with assignment expression, should success`,
@@ -650,30 +650,30 @@ export const WithOutputPositiveTests = [
     name: `printStatement test with logical - 1, should success`,
     input: `
       bro listen;
-      bro say galat && sahi;
+      bro say wrong && correct;
       bro done;
     `,
-    output: "galat",
+    output: "wrong",
   },
   {
     name: `printStatement test with logical - 2, should success`,
     input: `
     bro listen;
-    bro remember a = sahi;
-    bro say a && galat;
+    bro remember a = correct;
+    bro say a && wrong;
     bro done;
     `,
-    output: "galat",
+    output: "wrong",
   },
   {
     name: `printStatement test with logical - 3, should success`,
     input: `
     bro listen;
-    bro remember a = sahi;
-    bro say a && sahi;
+    bro remember a = correct;
+    bro say a && correct;
     bro done;
     `,
-    output: "sahi",
+    output: "correct",
   },
   {
     name: `printStatement test with equality, should success`,
@@ -682,7 +682,7 @@ export const WithOutputPositiveTests = [
       bro say 9 == 10;
       bro done;
     `,
-    output: "galat",
+    output: "wrong",
   },
   {
     name: `printStatement test with inequality, should success`,
@@ -691,7 +691,7 @@ export const WithOutputPositiveTests = [
       bro say 9 != 10;
       bro done;
     `,
-    output: "sahi",
+    output: "correct",
   },
   {
     name: `printStatement test with logical OR, should success`,
@@ -706,28 +706,28 @@ export const WithOutputPositiveTests = [
     name: `printStatement test with logical OR - 2, should success`,
     input: `
       bro listen;
-      bro say galat || sahi;
+      bro say wrong || correct;
       bro done;
     `,
-    output: "sahi",
+    output: "correct",
   },
   {
-    name: `printStatement test with boolean sahi galat and logical, should success`,
+    name: `printStatement test with boolean correct wrong and logical, should success`,
     input: `
       bro listen;
-      bro say sahi != 10;
+      bro say correct != 10;
       bro done;
     `,
-    output: "sahi",
+    output: "correct",
   },
   {
-    name: `printStatement test with boolean sahi and string "sahi", should success`,
+    name: `printStatement test with boolean correct and string "correct", should success`,
     input: `
       bro listen;
-      bro say "sahi" == sahi;
+      bro say "correct" == correct;
       bro done;
     `,
-    output: "galat",
+    output: "wrong",
   },
   // while statement / loop tests
   {
@@ -747,7 +747,7 @@ export const WithOutputPositiveTests = [
     name: `whileStatement test with single break statement, should success`,
     input: `
       bro listen;
-      jab tak bhai (sahi) 
+      jab tak bhai (correct) 
         bas kar bhai;
       bro say "end";
       bro done;
@@ -760,10 +760,10 @@ export const WithOutputPositiveTests = [
       bro listen;
       bro remember a = 0;
       jab tak bhai (a < 2) {
-        jab tak bhai (sahi)
+        jab tak bhai (correct)
           bas kar bhai;
         bro say "hello";
-        bro if (sahi)
+        bro if (correct)
           bas kar bhai;
       }
       bro done;
@@ -777,7 +777,7 @@ export const WithOutputPositiveTests = [
       bro remember a = 0;
       jab tak bhai (a < 2) {
         bro say "hello";
-        bro if (sahi)
+        bro if (correct)
           bas kar bhai;
         bas kar bhai;
         bas kar bhai;
@@ -791,7 +791,7 @@ export const WithOutputPositiveTests = [
     name: `if statement success test - 1: only if, should success`,
     input: `
     bro listen
-    bro if (sahi) {
+    bro if (correct) {
       bro say "bhai";
     }
     bro done;
@@ -802,14 +802,14 @@ export const WithOutputPositiveTests = [
     name: `if statement success test - 2: if else both, should success`,
     input: `
     bro listen
-    bro if (sahi) {
-      bro say "sahi";
+    bro if (correct) {
+      bro say "correct";
     } bro otherwise {
-      bro say "galat";
+      bro say "wrong";
     }
     bro done;
     `,
-    output: "sahi",
+    output: "correct",
   },
   {
     name: `if statement success test - 3: if only with comarison condn, should success`,
@@ -829,14 +829,14 @@ export const WithOutputPositiveTests = [
     name: `else-if statement success test - 1: if with one else-if, should success`,
     input: `
     bro listen
-    bro if (galat) {
-      bro say "galat";
-    } bro otherwise if (sahi) {
-      bro say "sahi";
+    bro if (wrong) {
+      bro say "wrong";
+    } bro otherwise if (correct) {
+      bro say "correct";
     }
     bro done;
     `,
-    output: "sahi",
+    output: "correct",
   },
   {
     name: `else-if statement success test - 2: if with multiple else-ifs, should success`,
@@ -894,17 +894,17 @@ export const WithOutputPositiveTests = [
   },
   // logical expression test
   {
-    name: `logical "&&" test with sahi galat, should success`,
+    name: `logical "&&" test with correct wrong, should success`,
     input: `
         bro listen
-        bro if (sahi && galat) {
-          bro say "sahi";
+        bro if (correct && wrong) {
+          bro say "correct";
         } bro otherwise {
-          bro say "galat";
+          bro say "wrong";
         }
         bro done;
       `,
-    output: `galat`,
+    output: `wrong`,
   },
   // modulus operator test
   {

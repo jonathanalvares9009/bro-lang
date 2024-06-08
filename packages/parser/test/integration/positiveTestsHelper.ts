@@ -110,10 +110,10 @@ export const StatementTests = [
     name: "print statement test with boolean printing, should success",
     input: `
       bro listen
-      bro say sahi, galat;
+      bro say correct, wrong;
       bro done
     `,
-    output: `{\"type\":\"Program\",\"body\":{\"type\":\"InitStatement\",\"body\":[{\"type\":\"PrintStatement\",\"expressions\":[{\"type\":\"BooleanLiteral\",\"value\":\"sahi\"},{\"type\":\"BooleanLiteral\",\"value\":\"galat\"}]}]}}`,
+    output: `{\"type\":\"Program\",\"body\":{\"type\":\"InitStatement\",\"body\":[{\"type\":\"PrintStatement\",\"expressions\":[{\"type\":\"BooleanLiteral\",\"value\":\"correct\"},{\"type\":\"BooleanLiteral\",\"value\":\"wrong\"}]}]}}`,
   },
   {
     name: "print statement test with identifier printing, should success",
@@ -125,23 +125,23 @@ export const StatementTests = [
     output: `{\"type\":\"Program\",\"body\":{\"type\":\"InitStatement\",\"body\":[{\"type\":\"PrintStatement\",\"expressions\":[{\"type\":\"IdentifierExpression\",\"name\":\"a\"},{\"type\":\"IdentifierExpression\",\"name\":\"b\"},{\"type\":\"IdentifierExpression\",\"name\":\"c\"}]}]}}`,
   },
   {
-    name: "print statement test with nalla printing, should success",
+    name: "print statement test with nothing printing, should success",
     input: `
       bro listen
-      bro say nalla;
+      bro say nothing;
       bro done
     `,
-    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"PrintStatement","expressions":[{"type":"NullLiteral","value":"nalla"}]}]}}`,
+    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"PrintStatement","expressions":[{"type":"NullLiteral","value":"nothing"}]}]}}`,
   },
   {
-    name: "print statement test with variable nalla printing, should success",
+    name: "print statement test with variable nothing printing, should success",
     input: `
       bro listen
-      bro remember a = nalla;
+      bro remember a = nothing;
       bro say a;
       bro done
     `,
-    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"VariableStatement","declarations":[{"type":"VariableDeclaration","id":{"type":"IdentifierExpression","name":"a"},"init":{"type":"NullLiteral","value":"nalla"}}]},{"type":"PrintStatement","expressions":[{"type":"IdentifierExpression","name":"a"}]}]}}`,
+    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"VariableStatement","declarations":[{"type":"VariableDeclaration","id":{"type":"IdentifierExpression","name":"a"},"init":{"type":"NullLiteral","value":"nothing"}}]},{"type":"PrintStatement","expressions":[{"type":"IdentifierExpression","name":"a"}]}]}}`,
   },
   {
     name: "print statement test with logical AND, should success",
@@ -187,7 +187,7 @@ export const StatementTests = [
       bro remember a, b, c;
       bro done
     `,
-    output: `{\"type\":\"Program\",\"body\":{\"type\":\"InitStatement\",\"body\":[{\"type\":\"VariableStatement\",\"declarations\":[{\"type\":\"VariableDeclaration\",\"id\":{\"type\":\"IdentifierExpression\",\"name\":\"a\"},\"init\":{\"type\":\"NullLiteral\",\"value\":\"nalla\"}},{\"type\":\"VariableDeclaration\",\"id\":{\"type\":\"IdentifierExpression\",\"name\":\"b\"},\"init\":{\"type\":\"NullLiteral\",\"value\":\"nalla\"}},{\"type\":\"VariableDeclaration\",\"id\":{\"type\":\"IdentifierExpression\",\"name\":\"c\"},\"init\":{\"type\":\"NullLiteral\",\"value\":\"nalla\"}}]}]}}`,
+    output: `{\"type\":\"Program\",\"body\":{\"type\":\"InitStatement\",\"body\":[{\"type\":\"VariableStatement\",\"declarations\":[{\"type\":\"VariableDeclaration\",\"id\":{\"type\":\"IdentifierExpression\",\"name\":\"a\"},\"init\":{\"type\":\"NullLiteral\",\"value\":\"nothing\"}},{\"type\":\"VariableDeclaration\",\"id\":{\"type\":\"IdentifierExpression\",\"name\":\"b\"},\"init\":{\"type\":\"NullLiteral\",\"value\":\"nothing\"}},{\"type\":\"VariableDeclaration\",\"id\":{\"type\":\"IdentifierExpression\",\"name\":\"c\"},\"init\":{\"type\":\"NullLiteral\",\"value\":\"nothing\"}}]}]}}`,
   },
   {
     name: "variable statement test with basic variable declaration and initialisation, should success",
@@ -196,7 +196,7 @@ export const StatementTests = [
       bro remember a = 10, b;
       bro done
     `,
-    output: `{\"type\":\"Program\",\"body\":{\"type\":\"InitStatement\",\"body\":[{\"type\":\"VariableStatement\",\"declarations\":[{\"type\":\"VariableDeclaration\",\"id\":{\"type\":\"IdentifierExpression\",\"name\":\"a\"},\"init\":{\"type\":\"NumericLiteral\",\"value\":10}},{\"type\":\"VariableDeclaration\",\"id\":{\"type\":\"IdentifierExpression\",\"name\":\"b\"},\"init\":{\"type\":\"NullLiteral\",\"value\":\"nalla\"}}]}]}}`,
+    output: `{\"type\":\"Program\",\"body\":{\"type\":\"InitStatement\",\"body\":[{\"type\":\"VariableStatement\",\"declarations\":[{\"type\":\"VariableDeclaration\",\"id\":{\"type\":\"IdentifierExpression\",\"name\":\"a\"},\"init\":{\"type\":\"NumericLiteral\",\"value\":10}},{\"type\":\"VariableDeclaration\",\"id\":{\"type\":\"IdentifierExpression\",\"name\":\"b\"},\"init\":{\"type\":\"NullLiteral\",\"value\":\"nothing\"}}]}]}}`,
   },
   {
     name: "variable statement test with multiple variable initialisation, should success",
@@ -226,22 +226,22 @@ export const StatementTests = [
     output: `{\"type\":\"Program\",\"body\":{\"type\":\"InitStatement\",\"body\":[{\"type\":\"VariableStatement\",\"declarations\":[{\"type\":\"VariableDeclaration\",\"id\":{\"type\":\"IdentifierExpression\",\"name\":\"a\"},\"init\":{\"type\":\"BinaryExpression\",\"operator\":\"+\",\"left\":{\"type\":\"NumericLiteral\",\"value\":7},\"right\":{\"type\":\"NumericLiteral\",\"value\":90}}}]}]}}`,
   },
   {
-    name: "variable statement test with variable initialisation with nalla literal, should success",
+    name: "variable statement test with variable initialisation with nothing literal, should success",
     input: `
       bro listen
-      bro remember a = nalla;
+      bro remember a = nothing;
       bro done
     `,
-    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"VariableStatement","declarations":[{"type":"VariableDeclaration","id":{"type":"IdentifierExpression","name":"a"},"init":{"type":"NullLiteral","value":"nalla"}}]}]}}`,
+    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"VariableStatement","declarations":[{"type":"VariableDeclaration","id":{"type":"IdentifierExpression","name":"a"},"init":{"type":"NullLiteral","value":"nothing"}}]}]}}`,
   },
   {
-    name: "variable statement test with variable initialisation with nalla literal, should success",
+    name: "variable statement test with variable initialisation with nothing literal, should success",
     input: `
       bro listen
-      bro remember a = nalla;
+      bro remember a = nothing;
       bro done
     `,
-    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"VariableStatement","declarations":[{"type":"VariableDeclaration","id":{"type":"IdentifierExpression","name":"a"},"init":{"type":"NullLiteral","value":"nalla"}}]}]}}`,
+    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"VariableStatement","declarations":[{"type":"VariableDeclaration","id":{"type":"IdentifierExpression","name":"a"},"init":{"type":"NullLiteral","value":"nothing"}}]}]}}`,
   },
 ];
 
@@ -347,97 +347,97 @@ export const ExpressionsTests = [
     `,
     output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"ExpressionStatement","expression":{"type":"BinaryExpression","operator":">=","left":{"type":"IdentifierExpression","name":"x"},"right":{"type":"NumericLiteral","value":9}}}]}}`,
   },
-  // nalla and boolean expression test
+  // nothing and boolean expression test
   {
-    name: "complex expression test with one nalla operand, should success",
+    name: "complex expression test with one nothing operand, should success",
     input: `
         bro listen
-        (nalla * (4 + 8 + 10));
+        (nothing * (4 + 8 + 10));
         bro done
       `,
-    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"ExpressionStatement","expression":{"type":"BinaryExpression","operator":"*","left":{"type":"NullLiteral","value":"nalla"},"right":{"type":"BinaryExpression","operator":"+","left":{"type":"BinaryExpression","operator":"+","left":{"type":"NumericLiteral","value":4},"right":{"type":"NumericLiteral","value":8}},"right":{"type":"NumericLiteral","value":10}}}}]}}`,
+    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"ExpressionStatement","expression":{"type":"BinaryExpression","operator":"*","left":{"type":"NullLiteral","value":"nothing"},"right":{"type":"BinaryExpression","operator":"+","left":{"type":"BinaryExpression","operator":"+","left":{"type":"NumericLiteral","value":4},"right":{"type":"NumericLiteral","value":8}},"right":{"type":"NumericLiteral","value":10}}}}]}}`,
   },
   {
-    name: "complex expression test with one nalla operand and one boolean operand, should success",
+    name: "complex expression test with one nothing operand and one boolean operand, should success",
     input: `
         bro listen
-        (nalla * (sahi + 8 + 10));
+        (nothing * (correct + 8 + 10));
         bro done
       `,
-    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"ExpressionStatement","expression":{"type":"BinaryExpression","operator":"*","left":{"type":"NullLiteral","value":"nalla"},"right":{"type":"BinaryExpression","operator":"+","left":{"type":"BinaryExpression","operator":"+","left":{"type":"BooleanLiteral","value":"sahi"},"right":{"type":"NumericLiteral","value":8}},"right":{"type":"NumericLiteral","value":10}}}}]}}`,
+    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"ExpressionStatement","expression":{"type":"BinaryExpression","operator":"*","left":{"type":"NullLiteral","value":"nothing"},"right":{"type":"BinaryExpression","operator":"+","left":{"type":"BinaryExpression","operator":"+","left":{"type":"BooleanLiteral","value":"correct"},"right":{"type":"NumericLiteral","value":8}},"right":{"type":"NumericLiteral","value":10}}}}]}}`,
   },
   {
-    name: "complex expression test with one nalla operand and one boolean operand - 2, should success",
+    name: "complex expression test with one nothing operand and one boolean operand - 2, should success",
     input: `
         bro listen
-        (sahi * (nalla + 8 + 10));
+        (correct * (nothing + 8 + 10));
         bro done
       `,
-    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"ExpressionStatement","expression":{"type":"BinaryExpression","operator":"*","left":{"type":"BooleanLiteral","value":"sahi"},"right":{"type":"BinaryExpression","operator":"+","left":{"type":"BinaryExpression","operator":"+","left":{"type":"NullLiteral","value":"nalla"},"right":{"type":"NumericLiteral","value":8}},"right":{"type":"NumericLiteral","value":10}}}}]}}`,
+    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"ExpressionStatement","expression":{"type":"BinaryExpression","operator":"*","left":{"type":"BooleanLiteral","value":"correct"},"right":{"type":"BinaryExpression","operator":"+","left":{"type":"BinaryExpression","operator":"+","left":{"type":"NullLiteral","value":"nothing"},"right":{"type":"NumericLiteral","value":8}},"right":{"type":"NumericLiteral","value":10}}}}]}}`,
   },
   {
-    name: "complex expression test with one nalla operand and one boolean operand - 3, should success",
+    name: "complex expression test with one nothing operand and one boolean operand - 3, should success",
     input: `
         bro listen
-        (nalla + sahi);
+        (nothing + correct);
         bro done
       `,
-    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"ExpressionStatement","expression":{"type":"BinaryExpression","operator":"+","left":{"type":"NullLiteral","value":"nalla"},"right":{"type":"BooleanLiteral","value":"sahi"}}}]}}`,
+    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"ExpressionStatement","expression":{"type":"BinaryExpression","operator":"+","left":{"type":"NullLiteral","value":"nothing"},"right":{"type":"BooleanLiteral","value":"correct"}}}]}}`,
   },
   {
     name: "complex expression test with one boolean operand, should success",
     input: `
         bro listen
-        (sahi * (4 + 8 + 10));
+        (correct * (4 + 8 + 10));
         bro done
       `,
-    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"ExpressionStatement","expression":{"type":"BinaryExpression","operator":"*","left":{"type":"BooleanLiteral","value":"sahi"},"right":{"type":"BinaryExpression","operator":"+","left":{"type":"BinaryExpression","operator":"+","left":{"type":"NumericLiteral","value":4},"right":{"type":"NumericLiteral","value":8}},"right":{"type":"NumericLiteral","value":10}}}}]}}`,
+    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"ExpressionStatement","expression":{"type":"BinaryExpression","operator":"*","left":{"type":"BooleanLiteral","value":"correct"},"right":{"type":"BinaryExpression","operator":"+","left":{"type":"BinaryExpression","operator":"+","left":{"type":"NumericLiteral","value":4},"right":{"type":"NumericLiteral","value":8}},"right":{"type":"NumericLiteral","value":10}}}}]}}`,
   },
   {
     name: "expression test with only boolean operand, should success",
     input: `
         bro listen
-        sahi + galat;
+        correct + wrong;
         bro done
       `,
-    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"ExpressionStatement","expression":{"type":"BinaryExpression","operator":"+","left":{"type":"BooleanLiteral","value":"sahi"},"right":{"type":"BooleanLiteral","value":"galat"}}}]}}`,
+    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"ExpressionStatement","expression":{"type":"BinaryExpression","operator":"+","left":{"type":"BooleanLiteral","value":"correct"},"right":{"type":"BooleanLiteral","value":"wrong"}}}]}}`,
   },
   {
     name: "multiplicative expression test with only boolean operand, should success",
     input: `
         bro listen
-        sahi * galat;
+        correct * wrong;
         bro done
       `,
-    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"ExpressionStatement","expression":{"type":"BinaryExpression","operator":"*","left":{"type":"BooleanLiteral","value":"sahi"},"right":{"type":"BooleanLiteral","value":"galat"}}}]}}`,
+    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"ExpressionStatement","expression":{"type":"BinaryExpression","operator":"*","left":{"type":"BooleanLiteral","value":"correct"},"right":{"type":"BooleanLiteral","value":"wrong"}}}]}}`,
   },
   {
     name: "division expression test with only boolean operand, should success",
     input: `
         bro listen
-        sahi / galat;
+        correct / wrong;
         bro done
       `,
-    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"ExpressionStatement","expression":{"type":"BinaryExpression","operator":"/","left":{"type":"BooleanLiteral","value":"sahi"},"right":{"type":"BooleanLiteral","value":"galat"}}}]}}`,
+    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"ExpressionStatement","expression":{"type":"BinaryExpression","operator":"/","left":{"type":"BooleanLiteral","value":"correct"},"right":{"type":"BooleanLiteral","value":"wrong"}}}]}}`,
   },
   {
-    name: "print statement test with expression containing nalla, should success",
+    name: "print statement test with expression containing nothing, should success",
     input: `
         bro listen
-        bro say nalla + 5;
+        bro say nothing + 5;
         bro done;
       `,
-    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"PrintStatement","expressions":[{"type":"BinaryExpression","operator":"+","left":{"type":"NullLiteral","value":"nalla"},"right":{"type":"NumericLiteral","value":5}}]}]}}`,
+    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"PrintStatement","expressions":[{"type":"BinaryExpression","operator":"+","left":{"type":"NullLiteral","value":"nothing"},"right":{"type":"NumericLiteral","value":5}}]}]}}`,
   },
   // logical expression test
   {
-    name: `logical "&&" test with sahi galat, should success`,
+    name: `logical "&&" test with correct wrong, should success`,
     input: `
         bro listen
-        bro if (sahi && galat);
+        bro if (correct && wrong);
         bro done;
       `,
-    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"IfStatement","test":{"type":"LogicalExpression","operator":"&&","left":{"type":"BooleanLiteral","value":"sahi"},"right":{"type":"BooleanLiteral","value":"galat"}},"consequent":{"type":"EmptyStatement"},"alternates":[]}]}}`,
+    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"IfStatement","test":{"type":"LogicalExpression","operator":"&&","left":{"type":"BooleanLiteral","value":"correct"},"right":{"type":"BooleanLiteral","value":"wrong"}},"consequent":{"type":"EmptyStatement"},"alternates":[]}]}}`,
   },
   {
     name: `logical "&&" test with expression, should success`,
@@ -459,13 +459,13 @@ export const ExpressionsTests = [
   },
   // logical OR
   {
-    name: `logical "||" test with sahi galat, should success`,
+    name: `logical "||" test with correct wrong, should success`,
     input: `
         bro listen
-        bro if (sahi || galat);
+        bro if (correct || wrong);
         bro done;
       `,
-    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"IfStatement","test":{"type":"LogicalExpression","operator":"||","left":{"type":"BooleanLiteral","value":"sahi"},"right":{"type":"BooleanLiteral","value":"galat"}},"consequent":{"type":"EmptyStatement"},"alternates":[]}]}}`,
+    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"IfStatement","test":{"type":"LogicalExpression","operator":"||","left":{"type":"BooleanLiteral","value":"correct"},"right":{"type":"BooleanLiteral","value":"wrong"}},"consequent":{"type":"EmptyStatement"},"alternates":[]}]}}`,
   },
   {
     name: `logical "||" test with expression, should success`,
@@ -486,22 +486,22 @@ export const ExpressionsTests = [
     output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"VariableStatement","declarations":[{"type":"VariableDeclaration","id":{"type":"IdentifierExpression","name":"a"},"init":{"type":"LogicalExpression","operator":"||","left":{"type":"IdentifierExpression","name":"b"},"right":{"type":"IdentifierExpression","name":"d"}}}]}]}}`,
   },
   {
-    name: `identifier name starting with "sahi", should success`,
+    name: `identifier name starting with "correct", should success`,
     input: `
       bro listen
-      bro remember sahiValue = sahi;
+      bro remember correctValue = correct;
       bro done
     `,
-    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"VariableStatement","declarations":[{"type":"VariableDeclaration","id":{"type":"IdentifierExpression","name":"sahiValue"},"init":{"type":"BooleanLiteral","value":"sahi"}}]}]}}`,
+    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"VariableStatement","declarations":[{"type":"VariableDeclaration","id":{"type":"IdentifierExpression","name":"correctValue"},"init":{"type":"BooleanLiteral","value":"correct"}}]}]}}`,
   },
   {
-    name: `identifier name starting with "galat", should success`,
+    name: `identifier name starting with "wrong", should success`,
     input: `
       bro listen
-      bro remember galatValue = 10;
+      bro remember wrongValue = 10;
       bro done
     `,
-    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"VariableStatement","declarations":[{"type":"VariableDeclaration","id":{"type":"IdentifierExpression","name":"galatValue"},"init":{"type":"NumericLiteral","value":10}}]}]}}`,
+    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"VariableStatement","declarations":[{"type":"VariableDeclaration","id":{"type":"IdentifierExpression","name":"wrongValue"},"init":{"type":"NumericLiteral","value":10}}]}]}}`,
   },
 ];
 
@@ -510,23 +510,23 @@ export const IfStatementTests = [
     name: "if statement success test - 1: only if",
     input: `
     bro listen
-    bro if (sahi) {
+    bro if (correct) {
     }
     bro done;
       `,
-    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"IfStatement","test":{"type":"BooleanLiteral","value":"sahi"},"consequent":{"type":"BlockStatement","body":[]},"alternates":[]}]}}`,
+    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"IfStatement","test":{"type":"BooleanLiteral","value":"correct"},"consequent":{"type":"BlockStatement","body":[]},"alternates":[]}]}}`,
   },
   {
     name: "if statement success test - 2: if else both",
     input: `
     bro listen
-    bro if (sahi) {
+    bro if (correct) {
     } bro otherwise {
 
     }
     bro done;
       `,
-    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"IfStatement","test":{"type":"BooleanLiteral","value":"sahi"},"consequent":{"type":"BlockStatement","body":[]},"alternates":[{"type":"BlockStatement","body":[]}]}]}}`,
+    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"IfStatement","test":{"type":"BooleanLiteral","value":"correct"},"consequent":{"type":"BlockStatement","body":[]},"alternates":[{"type":"BlockStatement","body":[]}]}]}}`,
   },
   {
     name: "if statement success test - 3: if only with comarison condn",
@@ -604,53 +604,53 @@ export const IfStatementTests = [
     name: "else-if statement success test - 1: if-else-if one level ladder",
     input: `
     bro listen
-    bro if (sahi) {
-    } bro otherwise if (sahi) {
+    bro if (correct) {
+    } bro otherwise if (correct) {
     }
     bro done;
       `,
-    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"IfStatement","test":{"type":"BooleanLiteral","value":"sahi"},"consequent":{"type":"BlockStatement","body":[]},"alternates":[{"type":"IfStatement","test":{"type":"BooleanLiteral","value":"sahi"},"consequent":{"type":"BlockStatement","body":[]}}]}]}}`
+    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"IfStatement","test":{"type":"BooleanLiteral","value":"correct"},"consequent":{"type":"BlockStatement","body":[]},"alternates":[{"type":"IfStatement","test":{"type":"BooleanLiteral","value":"correct"},"consequent":{"type":"BlockStatement","body":[]}}]}]}}`
   },
   {
     name: "else-if statement success test - 2: if-else-if one level ladder with else",
     input: `
     bro listen
-    bro if (sahi) {
-    } bro otherwise if (sahi) {
+    bro if (correct) {
+    } bro otherwise if (correct) {
     } bro otherwise {
     }
     bro done;
       `,
-    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"IfStatement","test":{"type":"BooleanLiteral","value":"sahi"},"consequent":{"type":"BlockStatement","body":[]},"alternates":[{"type":"IfStatement","test":{"type":"BooleanLiteral","value":"sahi"},"consequent":{"type":"BlockStatement","body":[]}},{"type":"BlockStatement","body":[]}]}]}}`
+    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"IfStatement","test":{"type":"BooleanLiteral","value":"correct"},"consequent":{"type":"BlockStatement","body":[]},"alternates":[{"type":"IfStatement","test":{"type":"BooleanLiteral","value":"correct"},"consequent":{"type":"BlockStatement","body":[]}},{"type":"BlockStatement","body":[]}]}]}}`
   },
   {
     name: "else-if statement success test - 3: if-else-if multiple levels ladder",
     input: `
     bro listen
-    bro if (sahi) {
-    } bro otherwise if (sahi) {
-    } bro otherwise if (sahi) {
-    } bro otherwise if (sahi) {
-    } bro otherwise if (sahi) {
+    bro if (correct) {
+    } bro otherwise if (correct) {
+    } bro otherwise if (correct) {
+    } bro otherwise if (correct) {
+    } bro otherwise if (correct) {
     }
     bro done;
       `,
-    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"IfStatement","test":{"type":"BooleanLiteral","value":"sahi"},"consequent":{"type":"BlockStatement","body":[]},"alternates":[{"type":"IfStatement","test":{"type":"BooleanLiteral","value":"sahi"},"consequent":{"type":"BlockStatement","body":[]}},{"type":"IfStatement","test":{"type":"BooleanLiteral","value":"sahi"},"consequent":{"type":"BlockStatement","body":[]}},{"type":"IfStatement","test":{"type":"BooleanLiteral","value":"sahi"},"consequent":{"type":"BlockStatement","body":[]}},{"type":"IfStatement","test":{"type":"BooleanLiteral","value":"sahi"},"consequent":{"type":"BlockStatement","body":[]}}]}]}}`
+    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"IfStatement","test":{"type":"BooleanLiteral","value":"correct"},"consequent":{"type":"BlockStatement","body":[]},"alternates":[{"type":"IfStatement","test":{"type":"BooleanLiteral","value":"correct"},"consequent":{"type":"BlockStatement","body":[]}},{"type":"IfStatement","test":{"type":"BooleanLiteral","value":"correct"},"consequent":{"type":"BlockStatement","body":[]}},{"type":"IfStatement","test":{"type":"BooleanLiteral","value":"correct"},"consequent":{"type":"BlockStatement","body":[]}},{"type":"IfStatement","test":{"type":"BooleanLiteral","value":"correct"},"consequent":{"type":"BlockStatement","body":[]}}]}]}}`
   },
   {
     name: "else-if statement success test - 4: if-else-if multiple levels ladder with else",
     input: `
     bro listen
-    bro if (sahi) {
-    } bro otherwise if (sahi) {
-    } bro otherwise if (sahi) {
-    } bro otherwise if (sahi) {
-    } bro otherwise if (sahi) {
+    bro if (correct) {
+    } bro otherwise if (correct) {
+    } bro otherwise if (correct) {
+    } bro otherwise if (correct) {
+    } bro otherwise if (correct) {
     } bro otherwise {
     }
     bro done;
       `,
-    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"IfStatement","test":{"type":"BooleanLiteral","value":"sahi"},"consequent":{"type":"BlockStatement","body":[]},"alternates":[{"type":"IfStatement","test":{"type":"BooleanLiteral","value":"sahi"},"consequent":{"type":"BlockStatement","body":[]}},{"type":"IfStatement","test":{"type":"BooleanLiteral","value":"sahi"},"consequent":{"type":"BlockStatement","body":[]}},{"type":"IfStatement","test":{"type":"BooleanLiteral","value":"sahi"},"consequent":{"type":"BlockStatement","body":[]}},{"type":"IfStatement","test":{"type":"BooleanLiteral","value":"sahi"},"consequent":{"type":"BlockStatement","body":[]}},{"type":"BlockStatement","body":[]}]}]}}`
+    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"IfStatement","test":{"type":"BooleanLiteral","value":"correct"},"consequent":{"type":"BlockStatement","body":[]},"alternates":[{"type":"IfStatement","test":{"type":"BooleanLiteral","value":"correct"},"consequent":{"type":"BlockStatement","body":[]}},{"type":"IfStatement","test":{"type":"BooleanLiteral","value":"correct"},"consequent":{"type":"BlockStatement","body":[]}},{"type":"IfStatement","test":{"type":"BooleanLiteral","value":"correct"},"consequent":{"type":"BlockStatement","body":[]}},{"type":"IfStatement","test":{"type":"BooleanLiteral","value":"correct"},"consequent":{"type":"BlockStatement","body":[]}},{"type":"BlockStatement","body":[]}]}]}}`
   },
 ];
 
@@ -659,11 +659,11 @@ export const WhileStatementTests = [
     name: "while statement success test: only if",
     input: `
     bro listen
-    jab tak bhai (sahi) {
+    jab tak bhai (correct) {
     }
     bro done;
       `,
-    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"WhileStatement","test":{"type":"BooleanLiteral","value":"sahi"},"body":{"type":"BlockStatement","body":[]}}]}}`,
+    output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"WhileStatement","test":{"type":"BooleanLiteral","value":"correct"},"body":{"type":"BlockStatement","body":[]}}]}}`,
   },
   {
     name: "while statement success test: with some body",

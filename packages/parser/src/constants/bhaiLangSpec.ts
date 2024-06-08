@@ -21,7 +21,7 @@ export const TokenTypes = {
 
   AGLA_DEKH_BHAI: "agla dekh bhai",
 
-  NALLA_TYPE: "NALLA",
+  nothing_TYPE: "nothing",
 
   SEMI_COLON_TYPE: ";",
 
@@ -86,7 +86,7 @@ export const SPEC = [
   { regex: /^\bbro if\b/, tokenType: TokenTypes.AGAR_BHAI },
   { regex: /^\bbro otherwise if\b/, tokenType: TokenTypes.NAHI_TO_BHAI },
   { regex: /^\bbro otherwise\b/, tokenType: TokenTypes.WARNA_BHAI },
-  { regex: /^\bnalla\b/, tokenType: TokenTypes.NALLA_TYPE },
+  { regex: /^\bnothing\b/, tokenType: TokenTypes.nothing_TYPE },
   { regex: /^\bjab tak bhai\b/, tokenType: TokenTypes.JAB_TAK_BHAI },
   { regex: /^\bbas kar bhai\b/, tokenType: TokenTypes.BAS_KAR_BHAI },
   { regex: /^\bagla dekh bhai\b/, tokenType: TokenTypes.AGLA_DEKH_BHAI },
@@ -95,8 +95,8 @@ export const SPEC = [
   { regex: /^[+-]?([\d]*[.])?[\d]+/, tokenType: TokenTypes.NUMBER_TYPE },
 
   // Boolean
-  { regex: /^\bsahi\b/, tokenType: TokenTypes.BOOLEAN_TYPE },
-  { regex: /^\bgalat\b/, tokenType: TokenTypes.BOOLEAN_TYPE },
+  { regex: /^\bcorrect\b/, tokenType: TokenTypes.BOOLEAN_TYPE },
+  { regex: /^\bwrong\b/, tokenType: TokenTypes.BOOLEAN_TYPE },
 
   // Identifier
   { regex: /^\w+/, tokenType: TokenTypes.IDENTIFIER_TYPE },

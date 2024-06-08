@@ -79,7 +79,7 @@ bro done
 ```
 
 <h3 align="center">Types</h3>
-<p align="center">Numbers and strings are like other languages. Null values can be denoted using <code>nalla. sahi and galat</code> are the boolean values.</p>
+<p align="center">Numbers and strings are like other languages. Null values can be denoted using <code>nothing. correct and wrong</code> are the boolean values.</p>
 
 ```
 
@@ -88,9 +88,9 @@ bro listen
   bro remember b = 10 + (15*20);
   bro remember c = "two";
   bro remember d = 'ok';
-  bro remember e = nalla;
-  bro remember f = sahi;
-  bro remember g = galat;
+  bro remember e = nothing;
+  bro remember f = correct;
+  bro remember g = wrong;
 bro done
 ```
 
@@ -106,12 +106,12 @@ bro listen
     bro remember b = 20;
     bro say a + b;
   }
-  bro say 5, 'ok', nalla , sahi , galat;
+  bro say 5, 'ok', nothing , correct , wrong;
 bro done
 ```
 
 <h3 align="center">Conditionals</h3>
-<p align="center">Bhailang supports simple if else construct , <code>bro if</code> block will execute if condition is <code>sahi</code> and <code>bro otherwise</code> block will execute if condition is <code>galat</code>.</p>
+<p align="center">Bhailang supports simple if else construct , <code>bro if</code> block will execute if condition is <code>correct</code> and <code>bro otherwise</code> block will execute if condition is <code>wrong</code>.</p>
 
 ```
 
@@ -126,7 +126,7 @@ bro done
 ```
 
 <h3 align="center">Loops</h3>
-<p align="center">Statements inside <code>jab tak bhai</code> blocks are executed as long as a specified condition evaluates to sahi. If the condition becomes <code>galat</code>, statement within the loop stops executing and control passes to the statement following the loop. Use <code>bas kar bhai</code> to break the loop and <code className="language-cpp">agla dekh bhai</code> to continue within loop.</p>
+<p align="center">Statements inside <code>jab tak bhai</code> blocks are executed as long as a specified condition evaluates to correct. If the condition becomes <code>wrong</code>, statement within the loop stops executing and control passes to the statement following the loop. Use <code>bas kar bhai</code> to break the loop and <code className="language-cpp">agla dekh bhai</code> to continue within loop.</p>
 
 
 ```

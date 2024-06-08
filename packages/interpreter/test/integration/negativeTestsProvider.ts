@@ -1,5 +1,5 @@
 import { RuntimeException } from "../../src";
-import NallaPointerException from "../../src/exceptions/nallaPointerException";
+import nothingPointerException from "../../src/exceptions/nothingPointerException";
 
 
 export const NegativeTestCases = [
@@ -177,119 +177,119 @@ export const NegativeTestCases = [
       `,
     exception: RuntimeException,
   },
-  // cases with nalla
+  // cases with nothing
   {
-    name: "interpreter use nalla variable in expression, should throw an exception",
+    name: "interpreter use nothing variable in expression, should throw an exception",
     input: `
       bro listen;
       bro remember a;
       bro say a + 9;
       bro done;
     `,
-    exception: NallaPointerException,
+    exception: nothingPointerException,
   },
   {
-    name: "interpreter use nalla variable in expression - 2, should throw an exception",
+    name: "interpreter use nothing variable in expression - 2, should throw an exception",
     input: `
       bro listen;
-      bro remember a = nalla;
+      bro remember a = nothing;
       bro say a + 9;
       bro done;
     `,
-    exception: NallaPointerException,
+    exception: nothingPointerException,
   },
   {
-    name: "interpreter use nalla in variable initialisation expression, should throw an exception",
+    name: "interpreter use nothing in variable initialisation expression, should throw an exception",
     input: `
       bro listen;
-      bro remember a = nalla + 80;
+      bro remember a = nothing + 80;
       bro done;
     `,
-    exception: NallaPointerException,
+    exception: nothingPointerException,
   },
   {
-    name: "interpreter use nalla in variable initialisation expression - 2, should throw an exception",
+    name: "interpreter use nothing in variable initialisation expression - 2, should throw an exception",
     input: `
       bro listen;
-      bro remember a = nalla + "jam";
+      bro remember a = nothing + "jam";
       bro done;
     `,
-    exception: NallaPointerException,
+    exception: nothingPointerException,
   },
   {
-    name: "interpreter use nalla variable in another variable initialisation expression, should throw an exception",
+    name: "interpreter use nothing variable in another variable initialisation expression, should throw an exception",
     input: `
       bro listen;
       bro remember a;
       bro remember b = a + "hello";
       bro done;
     `,
-    exception: NallaPointerException,
+    exception: nothingPointerException,
   },
   {
-    name: "interpreter use nalla variable in complex expression, should throw an exception",
+    name: "interpreter use nothing variable in complex expression, should throw an exception",
     input: `
       bro listen;
       bro remember a;
       bro remember b = ((a*9) * a + "hello");
       bro done;
     `,
-    exception: NallaPointerException,
+    exception: nothingPointerException,
   },
-  // sahi - galat case
+  // correct - wrong case
   {
-    name: "interpreter use sahi variable in expression, should throw an exception",
+    name: "interpreter use correct variable in expression, should throw an exception",
     input: `
       bro listen;
-      bro remember a = sahi;
+      bro remember a = correct;
       bro say a + 9;
       bro done;
     `,
     exception: RuntimeException,
   },
   {
-    name: "interpreter use galat variable in expression, should throw an exception",
+    name: "interpreter use wrong variable in expression, should throw an exception",
     input: `
       bro listen;
-      bro remember a = galat;
+      bro remember a = wrong;
       bro say a + 9;
       bro done;
     `,
     exception: RuntimeException,
   },
   {
-    name: "interpreter use sahi in variable initialisation expression, should throw an exception",
+    name: "interpreter use correct in variable initialisation expression, should throw an exception",
     input: `
       bro listen;
-      bro remember a = sahi + 80;
+      bro remember a = correct + 80;
       bro done;
     `,
     exception: RuntimeException,
   },
   {
-    name: "interpreter use galat in variable initialisation expression, should throw an exception",
+    name: "interpreter use wrong in variable initialisation expression, should throw an exception",
     input: `
       bro listen;
-      bro remember a = galat + 80;
+      bro remember a = wrong + 80;
       bro done;
     `,
     exception: RuntimeException,
   },
   {
-    name: "interpreter use sahi variable in another variable initialisation expression, should throw an exception",
+    name: "interpreter use correct variable in another variable initialisation expression, should throw an exception",
     input: `
       bro listen;
-      bro remember a = sahi;
+      bro remember a = correct;
       bro remember b = a + "hello";
       bro done;
     `,
     exception: RuntimeException,
   },
   {
-    name: "interpreter use galat variable in complex expression, should throw an exception",
+    name: "interpreter use wrong variable in complex expression, should throw an exception",
     input: `
       bro listen;
-      bro remember a = galat;
+      bro remember a = wrong;
       bro remember b = ((a*9) * a + "hello");
       bro done;
     `,
@@ -298,46 +298,46 @@ export const NegativeTestCases = [
   // ##########
 
   {
-    name: "complex expression test with one nalla operand, should throw an exception",
+    name: "complex expression test with one nothing operand, should throw an exception",
     input: `
         bro listen
-        (nalla * (4 + 8 + 10));
+        (nothing * (4 + 8 + 10));
         bro done
       `,
-    output: NallaPointerException,
+    output: nothingPointerException,
   },
   {
-    name: "complex expression test with one nalla operand and one boolean operand, should throw an exception",
+    name: "complex expression test with one nothing operand and one boolean operand, should throw an exception",
     input: `
         bro listen
-        (nalla * (sahi + 8 + 10));
+        (nothing * (correct + 8 + 10));
         bro done
       `,
     output: RuntimeException,
   },
   {
-    name: "complex expression test with one nalla operand and one boolean operand - 2, should throw nalla pointer exception",
+    name: "complex expression test with one nothing operand and one boolean operand - 2, should throw nothing pointer exception",
     input: `
         bro listen
-        (sahi * (nalla + 8 + 10));
+        (correct * (nothing + 8 + 10));
         bro done
       `,
-    output: NallaPointerException,
+    output: nothingPointerException,
   },
   {
-    name: "complex expression test with one nalla operand and one boolean operand - 3, should throw nalla pointer exception",
+    name: "complex expression test with one nothing operand and one boolean operand - 3, should throw nothing pointer exception",
     input: `
         bro listen
-        (nalla + sahi);
+        (nothing + correct);
         bro done
       `,
-    output: NallaPointerException,
+    output: nothingPointerException,
   },
   {
     name: "complex expression test with one boolean operand, should throw an exception",
     input: `
         bro listen
-        (sahi * (4 + 8 + 10));
+        (correct * (4 + 8 + 10));
         bro done
       `,
     output: RuntimeException,
@@ -346,7 +346,7 @@ export const NegativeTestCases = [
     name: "additive expression test with only boolean operand, should throw an exception",
     input: `
         bro listen
-        sahi + galat;
+        correct + wrong;
         bro done
       `,
     output: RuntimeException,
@@ -355,7 +355,7 @@ export const NegativeTestCases = [
     name: "additive expression test with only variable boolean operand, should throw an exception",
     input: `
         bro listen
-        bro remember a = sahi, b = galat;
+        bro remember a = correct, b = wrong;
         a + b;
         bro done
       `,
@@ -365,7 +365,7 @@ export const NegativeTestCases = [
     name: "multiplicative expression test with only boolean operand, should throw an exception",
     input: `
         bro listen
-        sahi * galat;
+        correct * wrong;
         bro done
       `,
     output: RuntimeException,
@@ -374,7 +374,7 @@ export const NegativeTestCases = [
     name: "multiplicative expression test with only variable boolean operand, should throw an exception",
     input: `
         bro listen
-        bro remember a = sahi, b = galat;
+        bro remember a = correct, b = wrong;
         a * b;
         bro done
       `,
@@ -384,7 +384,7 @@ export const NegativeTestCases = [
     name: "division expression test with only boolean operand, should throw an exception",
     input: `
         bro listen
-        sahi / galat;
+        correct / wrong;
         bro done
       `,
     output: RuntimeException,
@@ -393,57 +393,57 @@ export const NegativeTestCases = [
     name: "division expression test with only variable boolean operand, should throw an exception",
     input: `
         bro listen
-        bro remember a = sahi, b = galat;
+        bro remember a = correct, b = wrong;
         a / b;
         bro done
       `,
     output: RuntimeException,
   },
   {
-    name: "print statement test with expression containing nalla, should throw an exception",
+    name: "print statement test with expression containing nothing, should throw an exception",
     input: `
         bro listen
-        bro say nalla + 5;
+        bro say nothing + 5;
         bro done;
       `,
-    output: NallaPointerException,
+    output: nothingPointerException,
   },
   {
-    name: "complex assign test with expression containing nalla, should throw an exception",
+    name: "complex assign test with expression containing nothing, should throw an exception",
     input: `
         bro listen
         bro remember a;
         a *= 5;
         bro done;
       `,
-    output: NallaPointerException,
+    output: nothingPointerException,
   },
   {
-    name: "complex assign test with expression containing sahi, should throw an exception",
+    name: "complex assign test with expression containing correct, should throw an exception",
     input: `
         bro listen
-        bro remember a = sahi;
+        bro remember a = correct;
         a *= 5;
         bro done;
       `,
-    output: NallaPointerException,
+    output: nothingPointerException,
   },
   {
-    name: "complex assign test with expression containing nalla - 2, should throw an exception",
+    name: "complex assign test with expression containing nothing - 2, should throw an exception",
     input: `
         bro listen
-        bro remember a = nalla;
+        bro remember a = nothing;
         a /= 5;
         bro done;
       `,
-    output: NallaPointerException,
+    output: nothingPointerException,
   },
   // while loop negative tests
   {
     name: "infinite while loop, should throw an exception",
     input: `
         bro listen
-        jab tak bhai (sahi) {
+        jab tak bhai (correct) {
 
         }
         bro done;
@@ -467,7 +467,7 @@ export const NegativeTestCases = [
     input: `
         bro listen
         bro remember a = 0;
-        bro if (sahi)
+        bro if (correct)
           bas kar bhai;
         bro done;
       `,
@@ -475,30 +475,30 @@ export const NegativeTestCases = [
   },
   // logical expression negative tests
   {
-    name: "use of nalla with &&, should throw an exception",
+    name: "use of nothing with &&, should throw an exception",
     input: `
         bro listen
-        bro say nalla && 90;
+        bro say nothing && 90;
         bro done;
       `,
-    output: NallaPointerException,
+    output: nothingPointerException,
   },
   {
-    name: "use of nalla variable with &&, should throw an exception",
+    name: "use of nothing variable with &&, should throw an exception",
     input: `
         bro listen
         bro remember a;
         bro say a && 90;
         bro done;
       `,
-    output: NallaPointerException,
+    output: nothingPointerException,
   },
   // modulus operator test
   {
     name: `modulus operator test with invalid operand, should throw an exception`,
     input: `
       bro listen;
-      bro say "sahi" % 9;
+      bro say "correct" % 9;
       bro done;
     `,
     output: RuntimeException,
@@ -522,7 +522,7 @@ export const NegativeTestCases = [
     input: `
         bro listen
         bro remember a = 0;
-        bro if (sahi)
+        bro if (correct)
           agla dekh bhai
         bro done;
       `,

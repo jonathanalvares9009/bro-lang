@@ -24,7 +24,7 @@ export default abstract class Literal {
       case TokenTypes.STRING_TYPE:
         return BhaiLangModule.getStringLiteral();
 
-      case TokenTypes.NALLA_TYPE:
+      case TokenTypes.nothing_TYPE:
         return BhaiLangModule.getNullLiteral();
 
       default:
