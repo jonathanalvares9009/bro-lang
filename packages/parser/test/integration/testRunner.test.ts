@@ -69,7 +69,7 @@ function _runNegativeTests(testCase: negTestObjType) {
 //   const parser = bhaiLangModule.getParser();
 //   console.debug(JSON.stringify(parser.parse(`
 //   bro listen
-//       bol bhai 9 == 90;
+//       bro say 9 == 90;
 //       bro done
 //   `)));
 // })

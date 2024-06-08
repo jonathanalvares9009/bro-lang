@@ -10,18 +10,18 @@ import Terminal from "./Terminal";
 
 const initialCode = `
 bro listen
- bol bhai "Hello World";
+ bro say "Hello World";
  
   bhai ye hai a = 3;
   bhai ye hai b = 0;
 
   jab tak bhai (b < 5) {
-    bol bhai b;
+    bro say b;
 
     agar bhai (b == a) {
-      bol bhai "b is equal to a";
+      bro say "b is equal to a";
     } nahi to bhai (b == 0) {
-      bol bhai "b is equal to zero";
+      bro say "b is equal to zero";
     }
 
     b += 1;

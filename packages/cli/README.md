@@ -28,7 +28,7 @@ You can also try out your code on <a href="https://bhailang.js.org/#playground">
 
 ```
 bro listen
-  bol bhai "Hello bhai";
+  bro say "Hello bhai";
 bro done
 
 ```
@@ -95,18 +95,18 @@ bro done
 ```
 
 <h3 align="center">Built-ins</h3>
-<p align="center">Use <code>bol bhai</code> to print anything to console.</p>
+<p align="center">Use <code>bro say</code> to print anything to console.</p>
 
 ```
 
 bro listen
-  bol bhai "Hello World";
+  bro say "Hello World";
   bhai ye hai a = 10;
   {
     bhai ye hai b = 20;
-    bol bhai a + b;
+    bro say a + b;
   }
-  bol bhai 5, 'ok', nalla , sahi , galat;
+  bro say 5, 'ok', nalla , sahi , galat;
 bro done
 ```
 
@@ -118,9 +118,9 @@ bro done
 bro listen
   bhai ye hai a = 10;
   agar bhai (a < 25) {
-   bol bhai "a is less than 25";
+   bro say "a is less than 25";
   } warna bhai {
-   bol bhai "a is greater than or equal to 25";
+   bro say "a is greater than or equal to 25";
   }
 bro done
 ```
@@ -136,15 +136,15 @@ bro listen
   jab tak bhai (a < 10) {
    a += 1;
    agar bhai (a == 5) {
-    bol bhai "andar se bol bhai ", a;
+    bro say "andar se bro say ", a;
     agla dekh bhai;
    }
    agar bhai (a == 6) {
     bas kar bhai;
    }
-   bol bhai a;
+   bro say a;
   }
-  bol bhai "done";
+  bro say "done";
 bro done
 ```
 

@@ -142,7 +142,7 @@ export const NoOutputPositiveTests = [
     bhai ye hai x = 9;
     agar bhai (x != 9) {
       x = 5;
-      bol bhai x;
+      bro say x;
     } warna bhai (x >= 9);
     bro done;
     `,
@@ -156,7 +156,7 @@ export const WithOutputPositiveTests = [
       bro listen;
       bhai ye hai a , b;
       a = b = 60;
-      bol bhai a, b;
+      bro say a, b;
       bro done
     `,
     output: "60 60",
@@ -167,7 +167,7 @@ export const WithOutputPositiveTests = [
       bro listen;
       bhai ye hai a;
       agar bhai (a == nalla) {
-        bol bhai a;
+        bro say a;
       }
       bro done
     `,
@@ -179,9 +179,9 @@ export const WithOutputPositiveTests = [
       bro listen;
       bhai ye hai a;
       agar bhai (a) {
-        bol bhai a;
+        bro say a;
       } warna bhai {
-        bol bhai "not nalla";
+        bro say "not nalla";
       }
       bro done
     `,
@@ -192,7 +192,7 @@ export const WithOutputPositiveTests = [
     input: `
       bro listen;
       agar bhai (nalla == nalla) {
-        bol bhai "hai nalla";
+        bro say "hai nalla";
       }
       bro done
     `,
@@ -204,7 +204,7 @@ export const WithOutputPositiveTests = [
       bro listen;
       bhai ye hai a;
       agar bhai (nalla == a) {
-        bol bhai "hai nalla";
+        bro say "hai nalla";
       }
       bro done
     `,
@@ -216,7 +216,7 @@ export const WithOutputPositiveTests = [
       bro listen;
       bhai ye hai a = nalla;
       agar bhai (nalla == a) {
-        bol bhai "hai nalla";
+        bro say "hai nalla";
       }
       bro done
     `,
@@ -228,9 +228,9 @@ export const WithOutputPositiveTests = [
       bro listen;
       bhai ye hai a = nalla;
       agar bhai ("nalla" == a) {
-        bol bhai "hai nalla";
+        bro say "hai nalla";
       } warna bhai {
-        bol bhai "not nalla";
+        bro say "not nalla";
       }
       bro done
     `,
@@ -242,9 +242,9 @@ export const WithOutputPositiveTests = [
       bro listen;
       bhai ye hai a = "nalla";
       agar bhai (nalla == a) {
-        bol bhai "hai nalla";
+        bro say "hai nalla";
       } warna bhai {
-        bol bhai "not nalla";
+        bro say "not nalla";
       }
       bro done
     `,
@@ -256,9 +256,9 @@ export const WithOutputPositiveTests = [
       bro listen;
       bhai ye hai a = "null";
       agar bhai (nalla == a) {
-        bol bhai "hai nalla";
+        bro say "hai nalla";
       } warna bhai {
-        bol bhai "not nalla";
+        bro say "not nalla";
       }
       bro done
     `,
@@ -271,9 +271,9 @@ export const WithOutputPositiveTests = [
       bhai ye hai a;
       bhai ye hai b;
       agar bhai (a == b) {
-        bol bhai "hai nalla";
+        bro say "hai nalla";
       } warna bhai {
-        bol bhai "nahi nalla";
+        bro say "nahi nalla";
       }
       bro done
     `,
@@ -286,9 +286,9 @@ export const WithOutputPositiveTests = [
       bhai ye hai a;
       bhai ye hai b = nalla;
       agar bhai (a == b) {
-        bol bhai "hai nalla";
+        bro say "hai nalla";
       } warna bhai {
-        bol bhai "nahi nalla";
+        bro say "nahi nalla";
       }
       bro done
     `,
@@ -301,9 +301,9 @@ export const WithOutputPositiveTests = [
       bhai ye hai a;
       bhai ye hai b = "nalla";
       agar bhai (a == b) {
-        bol bhai "hai nalla";
+        bro say "hai nalla";
       } warna bhai {
-        bol bhai "nahi nalla";
+        bro say "nahi nalla";
       }
       bro done
     `,
@@ -316,9 +316,9 @@ export const WithOutputPositiveTests = [
       bro listen;
       bhai ye hai a = sahi;
       agar bhai (sahi == a) {
-        bol bhai "hai sahi";
+        bro say "hai sahi";
       } warna bhai {
-        bol bhai "nahi sahi";
+        bro say "nahi sahi";
       }
       bro done
     `,
@@ -330,9 +330,9 @@ export const WithOutputPositiveTests = [
       bro listen;
       bhai ye hai a = galat;
       agar bhai (galat == a) {
-        bol bhai "hai galat";
+        bro say "hai galat";
       } warna bhai {
-        bol bhai "nahi galat";
+        bro say "nahi galat";
       }
       bro done
     `,
@@ -344,9 +344,9 @@ export const WithOutputPositiveTests = [
       bro listen;
       bhai ye hai a = "sahi";
       agar bhai (sahi == a) {
-        bol bhai "hai sahi";
+        bro say "hai sahi";
       } warna bhai {
-        bol bhai "nahi sahi";
+        bro say "nahi sahi";
       }
       bro done
     `,
@@ -358,9 +358,9 @@ export const WithOutputPositiveTests = [
       bro listen;
       bhai ye hai a = 7;
       agar bhai (sahi == (a > 5)) {
-        bol bhai "hai sahi";
+        bro say "hai sahi";
       } warna bhai {
-        bol bhai "nahi sahi";
+        bro say "nahi sahi";
       }
       bro done
     `,
@@ -372,9 +372,9 @@ export const WithOutputPositiveTests = [
       bro listen;
       bhai ye hai a = 7;
       agar bhai ("sahi" == (a > 5)) {
-        bol bhai "hai sahi";
+        bro say "hai sahi";
       } warna bhai {
-        bol bhai "nahi sahi";
+        bro say "nahi sahi";
       }
       bro done
     `,
@@ -386,9 +386,9 @@ export const WithOutputPositiveTests = [
       bro listen;
       bhai ye hai a = sahi;
       agar bhai ("sahi" == (a == sahi)) {
-        bol bhai "hai sahi";
+        bro say "hai sahi";
       } warna bhai {
-        bol bhai "nahi sahi";
+        bro say "nahi sahi";
       }
       bro done
     `,
@@ -400,9 +400,9 @@ export const WithOutputPositiveTests = [
       bro listen;
       bhai ye hai a = sahi;
       agar bhai ((a == sahi) == (a == sahi)) {
-        bol bhai "hai sahi";
+        bro say "hai sahi";
       } warna bhai {
-        bol bhai "nahi sahi";
+        bro say "nahi sahi";
       }
       bro done
     `,
@@ -414,9 +414,9 @@ export const WithOutputPositiveTests = [
       bro listen;
       bhai ye hai a;
       agar bhai ((a == nalla) == (a == sahi)) {
-        bol bhai "hai sahi";
+        bro say "hai sahi";
       } warna bhai {
-        bol bhai "nahi sahi";
+        bro say "nahi sahi";
       }
       bro done
     `,
@@ -428,9 +428,9 @@ export const WithOutputPositiveTests = [
       bro listen;
       bhai ye hai a;
       agar bhai ((a == nalla) == (a == sahi)) {
-        bol bhai "hai sahi";
+        bro say "hai sahi";
       } warna bhai {
-        bol bhai "nahi sahi";
+        bro say "nahi sahi";
       }
       bro done
     `,
@@ -443,9 +443,9 @@ export const WithOutputPositiveTests = [
       bhai ye hai a;
       bhai ye hai b = galat;
       agar bhai (a == b) {
-        bol bhai "hai sahi";
+        bro say "hai sahi";
       } warna bhai {
-        bol bhai "nahi sahi";
+        bro say "nahi sahi";
       }
       bro done
     `,
@@ -458,9 +458,9 @@ export const WithOutputPositiveTests = [
       bhai ye hai a = galat;
       bhai ye hai b = galat;
       agar bhai (a == b) {
-        bol bhai "hai galat";
+        bro say "hai galat";
       } warna bhai {
-        bol bhai "nahi galat";
+        bro say "nahi galat";
       }
       bro done
     `,
@@ -473,9 +473,9 @@ export const WithOutputPositiveTests = [
       bhai ye hai a = "galat";
       bhai ye hai b = galat;
       agar bhai (a == b) {
-        bol bhai "hai galat";
+        bro say "hai galat";
       } warna bhai {
-        bol bhai "nahi galat";
+        bro say "nahi galat";
       }
       bro done
     `,
@@ -486,7 +486,7 @@ export const WithOutputPositiveTests = [
     input: `
       bro listen
       bhai ye hai a = 1.2, b = 2;
-      bol bhai a + b;
+      bro say a + b;
       bro done
     `,
     output: "3.2"
@@ -496,7 +496,7 @@ export const WithOutputPositiveTests = [
     input: `
       bro listen
       bhai ye hai a = 1.2, b = 2.3;
-      bol bhai a + b;
+      bro say a + b;
       bro done
     `,
     output: "3.5"
@@ -506,7 +506,7 @@ export const WithOutputPositiveTests = [
     input: `
       bro listen;
       bhai ye hai a = 2, b = 60;
-      bol bhai (a * (4 + 8) + 10), b;
+      bro say (a * (4 + 8) + 10), b;
       bro done
     `,
     output: "34 60",
@@ -518,7 +518,7 @@ export const WithOutputPositiveTests = [
       bhai ye hai a = 2, b = 60;
 
       a = b + 3;
-      bol bhai a, b;
+      bro say a, b;
       bro done
     `,
     output: "63 60",
@@ -527,7 +527,7 @@ export const WithOutputPositiveTests = [
     name: "printStatement test with multiple expressions & without any variables, should success",
     input: `
       bro listen;
-      bol bhai "hello", sahi, galat;
+      bro say "hello", sahi, galat;
       bro done
     `,
     output: "hello sahi galat",
@@ -536,7 +536,7 @@ export const WithOutputPositiveTests = [
     name: "printStatement test with nalla, should success",
     input: `
       bro listen;
-      bol bhai nalla;
+      bro say nalla;
       bro done;
     `,
     output: "nalla",
@@ -545,7 +545,7 @@ export const WithOutputPositiveTests = [
     name: "printStatement test with nalla as second parameter, should success",
     input: `
       bro listen;
-      bol bhai 10, nalla;
+      bro say 10, nalla;
       bro done;
     `,
     output: "10 nalla",
@@ -554,7 +554,7 @@ export const WithOutputPositiveTests = [
     name: "printStatement test with string concatenation, should success",
     input: `
       bro listen;
-      bol bhai "hello" + "crap";
+      bro say "hello" + "crap";
       bro done;
     `,
     output: "hellocrap",
@@ -564,7 +564,7 @@ export const WithOutputPositiveTests = [
     input: `
       bro listen;
       bhai ye hai a = 70;
-      bol bhai 6*5, nalla, "jamtara", a;
+      bro say 6*5, nalla, "jamtara", a;
       bro done;
     `,
     output: "30 nalla jamtara 70",
@@ -574,7 +574,7 @@ export const WithOutputPositiveTests = [
     input: `
       bro listen;
       bhai ye hai a;
-      bol bhai a;
+      bro say a;
       bro done;
     `,
     output: "nalla",
@@ -583,7 +583,7 @@ export const WithOutputPositiveTests = [
     name: `printStatement test with string "undefined", should success`,
     input: `
       bro listen;
-      bol bhai "undefined";
+      bro say "undefined";
       bro done;
     `,
     output: "undefined",
@@ -593,7 +593,7 @@ export const WithOutputPositiveTests = [
     input: `
       bro listen;
       bhai ye hai a;
-      bol bhai a;
+      bro say a;
       bro done;
     `,
     output: "nalla",
@@ -603,7 +603,7 @@ export const WithOutputPositiveTests = [
     input: `
       bro listen;
       bhai ye hai a = sahi;
-      bol bhai a;
+      bro say a;
       bro done;
     `,
     output: "sahi",
@@ -613,7 +613,7 @@ export const WithOutputPositiveTests = [
     input: `
       bro listen;
       bhai ye hai a = galat;
-      bol bhai a;
+      bro say a;
       bro done;
     `,
     output: "galat",
@@ -623,7 +623,7 @@ export const WithOutputPositiveTests = [
     input: `
       bro listen;
       bhai ye hai a;
-      bol bhai a = 90;
+      bro say a = 90;
       bro done;
     `,
     output: "90",
@@ -632,7 +632,7 @@ export const WithOutputPositiveTests = [
     name: `printStatement test with logical AND, should success`,
     input: `
       bro listen;
-      bol bhai 9 && 10;
+      bro say 9 && 10;
       bro done;
     `,
     output: "10",
@@ -641,7 +641,7 @@ export const WithOutputPositiveTests = [
     name: `printStatement test with logical OR, should success`,
     input: `
       bro listen;
-      bol bhai 9 || 10;
+      bro say 9 || 10;
       bro done;
     `,
     output: "9",
@@ -650,7 +650,7 @@ export const WithOutputPositiveTests = [
     name: `printStatement test with logical - 1, should success`,
     input: `
       bro listen;
-      bol bhai galat && sahi;
+      bro say galat && sahi;
       bro done;
     `,
     output: "galat",
@@ -660,7 +660,7 @@ export const WithOutputPositiveTests = [
     input: `
     bro listen;
     bhai ye hai a = sahi;
-    bol bhai a && galat;
+    bro say a && galat;
     bro done;
     `,
     output: "galat",
@@ -670,7 +670,7 @@ export const WithOutputPositiveTests = [
     input: `
     bro listen;
     bhai ye hai a = sahi;
-    bol bhai a && sahi;
+    bro say a && sahi;
     bro done;
     `,
     output: "sahi",
@@ -679,7 +679,7 @@ export const WithOutputPositiveTests = [
     name: `printStatement test with equality, should success`,
     input: `
       bro listen;
-      bol bhai 9 == 10;
+      bro say 9 == 10;
       bro done;
     `,
     output: "galat",
@@ -688,7 +688,7 @@ export const WithOutputPositiveTests = [
     name: `printStatement test with inequality, should success`,
     input: `
       bro listen;
-      bol bhai 9 != 10;
+      bro say 9 != 10;
       bro done;
     `,
     output: "sahi",
@@ -697,7 +697,7 @@ export const WithOutputPositiveTests = [
     name: `printStatement test with logical OR, should success`,
     input: `
       bro listen;
-      bol bhai 9 || 10;
+      bro say 9 || 10;
       bro done;
     `,
     output: "9",
@@ -706,7 +706,7 @@ export const WithOutputPositiveTests = [
     name: `printStatement test with logical OR - 2, should success`,
     input: `
       bro listen;
-      bol bhai galat || sahi;
+      bro say galat || sahi;
       bro done;
     `,
     output: "sahi",
@@ -715,7 +715,7 @@ export const WithOutputPositiveTests = [
     name: `printStatement test with boolean sahi galat and logical, should success`,
     input: `
       bro listen;
-      bol bhai sahi != 10;
+      bro say sahi != 10;
       bro done;
     `,
     output: "sahi",
@@ -724,7 +724,7 @@ export const WithOutputPositiveTests = [
     name: `printStatement test with boolean sahi and string "sahi", should success`,
     input: `
       bro listen;
-      bol bhai "sahi" == sahi;
+      bro say "sahi" == sahi;
       bro done;
     `,
     output: "galat",
@@ -736,7 +736,7 @@ export const WithOutputPositiveTests = [
       bro listen;
       bhai ye hai a = 0;
       jab tak bhai (a < 1) {
-        bol bhai "bhai";
+        bro say "bhai";
         a += 1;
       }
       bro done;
@@ -749,7 +749,7 @@ export const WithOutputPositiveTests = [
       bro listen;
       jab tak bhai (sahi) 
         bas kar bhai;
-      bol bhai "end";
+      bro say "end";
       bro done;
     `,
     output: "end",
@@ -762,7 +762,7 @@ export const WithOutputPositiveTests = [
       jab tak bhai (a < 2) {
         jab tak bhai (sahi)
           bas kar bhai;
-        bol bhai "hello";
+        bro say "hello";
         agar bhai (sahi)
           bas kar bhai;
       }
@@ -776,7 +776,7 @@ export const WithOutputPositiveTests = [
       bro listen;
       bhai ye hai a = 0;
       jab tak bhai (a < 2) {
-        bol bhai "hello";
+        bro say "hello";
         agar bhai (sahi)
           bas kar bhai;
         bas kar bhai;
@@ -792,7 +792,7 @@ export const WithOutputPositiveTests = [
     input: `
     bro listen
     agar bhai (sahi) {
-      bol bhai "bhai";
+      bro say "bhai";
     }
     bro done;
     `,
@@ -803,9 +803,9 @@ export const WithOutputPositiveTests = [
     input: `
     bro listen
     agar bhai (sahi) {
-      bol bhai "sahi";
+      bro say "sahi";
     } warna bhai {
-      bol bhai "galat";
+      bro say "galat";
     }
     bro done;
     `,
@@ -818,7 +818,7 @@ export const WithOutputPositiveTests = [
     bhai ye hai x = 9;
     agar bhai (x >= 9) {
       x = 5;
-      bol bhai x;
+      bro say x;
     } 
     bro done;
     `,
@@ -830,9 +830,9 @@ export const WithOutputPositiveTests = [
     input: `
     bro listen
     agar bhai (galat) {
-      bol bhai "galat";
+      bro say "galat";
     } nahi to bhai (sahi) {
-      bol bhai "sahi";
+      bro say "sahi";
     }
     bro done;
     `,
@@ -844,13 +844,13 @@ export const WithOutputPositiveTests = [
     bro listen
     bhai ye hai x = 10;
     agar bhai (x < 5) {
-      bol bhai "x < 5";
+      bro say "x < 5";
     } nahi to bhai (x < 8) {
-      bol bhai "x < 8";
+      bro say "x < 8";
     } nahi to bhai (x < 12) {
-      bol bhai "x < 12";
+      bro say "x < 12";
     } nahi to bhai (x < 15) {
-      bol bhai "x < 15";
+      bro say "x < 15";
     }
     bro done;
     `,
@@ -862,12 +862,12 @@ export const WithOutputPositiveTests = [
     bro listen
     bhai ye hai a = 15;
     agar bhai (a < 0) {
-      bol bhai "a < 0";
+      bro say "a < 0";
     } nahi to bhai (a > 0) {
       agar bhai (a < 10) {
-        bol bhai "a < 10";
+        bro say "a < 10";
       } nahi to bhai (a < 20) {
-        bol bhai "a < 20";
+        bro say "a < 20";
       }
     }
     bro done
@@ -880,13 +880,13 @@ export const WithOutputPositiveTests = [
     bro listen
     bhai ye hai x = 15;
     agar bhai (x < 5) {
-      bol bhai "x < 5";
+      bro say "x < 5";
     } nahi to bhai (x < 8) {
-      bol bhai "x < 8";
+      bro say "x < 8";
     } nahi to bhai (x < 12) {
-      bol bhai "x < 12";
+      bro say "x < 12";
     } warna bhai {
-      bol bhai "x > 12";
+      bro say "x > 12";
     }
     bro done;
     `,
@@ -898,9 +898,9 @@ export const WithOutputPositiveTests = [
     input: `
         bro listen
         agar bhai (sahi && galat) {
-          bol bhai "sahi";
+          bro say "sahi";
         } warna bhai {
-          bol bhai "galat";
+          bro say "galat";
         }
         bro done;
       `,
@@ -911,7 +911,7 @@ export const WithOutputPositiveTests = [
     name: `modulus operator "%" test, should success`,
     input: `
         bro listen
-        bol bhai 90 % 9;
+        bro say 90 % 9;
         bro done;
       `,
     output: `0`,
@@ -920,7 +920,7 @@ export const WithOutputPositiveTests = [
     name: `modulus operator "%" test - 2, should success`,
     input: `
         bro listen
-        bol bhai 27 % 5;
+        bro say 27 % 5;
         bro done;
       `,
     output: `2`,
@@ -929,7 +929,7 @@ export const WithOutputPositiveTests = [
     name: `modulus operator "%" test - 2, should success`,
     input: `
         bro listen
-        bol bhai 5 % 20;
+        bro say 5 % 20;
         bro done;
       `,
     output: `5`,
@@ -948,7 +948,7 @@ export const WithOutputPositiveTests = [
         }
         a -= 1;
       }
-      bol bhai step;
+      bro say step;
       bro done;
     `,
     output: "3",
@@ -967,9 +967,9 @@ export const WithOutputPositiveTests = [
         }
         a -= 1;
         agla dekh bhai;
-        bol bhai "oye oye oye.. yha tk nhi aana tha bhai";
+        bro say "oye oye oye.. yha tk nhi aana tha bhai";
       }
-      bol bhai step;
+      bro say step;
       bro done;
     `,
     output: "3",
@@ -991,7 +991,7 @@ export const WithOutputPositiveTests = [
         agar bhai (step == 1) agla dekh bhai
         step += 1;
       }
-      bol bhai step;
+      bro say step;
       bro done;
     `,
     output: "1",

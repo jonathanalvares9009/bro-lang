@@ -92,7 +92,7 @@ export const StatementTests = [
     name: "print statement test with string printing, should success",
     input: `
       bro listen
-      bol bhai "puff...";
+      bro say "puff...";
       bro done
     `,
     output: `{\"type\":\"Program\",\"body\":{\"type\":\"InitStatement\",\"body\":[{\"type\":\"PrintStatement\",\"expressions\":[{\"type\":\"StringLiteral\",\"value\":\"puff...\"}]}]}}`,
@@ -101,7 +101,7 @@ export const StatementTests = [
     name: "print statement test with number printing, should success",
     input: `
       bro listen
-      bol bhai 478;
+      bro say 478;
       bro done
     `,
     output: `{\"type\":\"Program\",\"body\":{\"type\":\"InitStatement\",\"body\":[{\"type\":\"PrintStatement\",\"expressions\":[{\"type\":\"NumericLiteral\",\"value\":478}]}]}}`,
@@ -110,7 +110,7 @@ export const StatementTests = [
     name: "print statement test with boolean printing, should success",
     input: `
       bro listen
-      bol bhai sahi, galat;
+      bro say sahi, galat;
       bro done
     `,
     output: `{\"type\":\"Program\",\"body\":{\"type\":\"InitStatement\",\"body\":[{\"type\":\"PrintStatement\",\"expressions\":[{\"type\":\"BooleanLiteral\",\"value\":\"sahi\"},{\"type\":\"BooleanLiteral\",\"value\":\"galat\"}]}]}}`,
@@ -119,7 +119,7 @@ export const StatementTests = [
     name: "print statement test with identifier printing, should success",
     input: `
       bro listen
-      bol bhai a, b, c;
+      bro say a, b, c;
       bro done
     `,
     output: `{\"type\":\"Program\",\"body\":{\"type\":\"InitStatement\",\"body\":[{\"type\":\"PrintStatement\",\"expressions\":[{\"type\":\"IdentifierExpression\",\"name\":\"a\"},{\"type\":\"IdentifierExpression\",\"name\":\"b\"},{\"type\":\"IdentifierExpression\",\"name\":\"c\"}]}]}}`,
@@ -128,7 +128,7 @@ export const StatementTests = [
     name: "print statement test with nalla printing, should success",
     input: `
       bro listen
-      bol bhai nalla;
+      bro say nalla;
       bro done
     `,
     output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"PrintStatement","expressions":[{"type":"NullLiteral","value":"nalla"}]}]}}`,
@@ -138,7 +138,7 @@ export const StatementTests = [
     input: `
       bro listen
       bhai ye hai a = nalla;
-      bol bhai a;
+      bro say a;
       bro done
     `,
     output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"VariableStatement","declarations":[{"type":"VariableDeclaration","id":{"type":"IdentifierExpression","name":"a"},"init":{"type":"NullLiteral","value":"nalla"}}]},{"type":"PrintStatement","expressions":[{"type":"IdentifierExpression","name":"a"}]}]}}`,
@@ -147,7 +147,7 @@ export const StatementTests = [
     name: "print statement test with logical AND, should success",
     input: `
       bro listen
-      bol bhai a && b;
+      bro say a && b;
       bro done
     `,
     output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"PrintStatement","expressions":[{"type":"LogicalExpression","operator":"&&","left":{"type":"IdentifierExpression","name":"a"},"right":{"type":"IdentifierExpression","name":"b"}}]}]}}`,
@@ -156,7 +156,7 @@ export const StatementTests = [
     name: "print statement test with assignment, should success",
     input: `
       bro listen
-      bol bhai a = 9;
+      bro say a = 9;
       bro done
     `,
     output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"PrintStatement","expressions":[{"type":"AssignmentExpression","operator":"=","left":{"type":"IdentifierExpression","name":"a"},"right":{"type":"NumericLiteral","value":9}}]}]}}`,
@@ -165,7 +165,7 @@ export const StatementTests = [
     name: "print statement test with logical OR, should success",
     input: `
       bro listen
-      bol bhai 9 || 90;
+      bro say 9 || 90;
       bro done
     `,
     output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"PrintStatement","expressions":[{"type":"LogicalExpression","operator":"||","left":{"type":"NumericLiteral","value":9},"right":{"type":"NumericLiteral","value":90}}]}]}}`,
@@ -174,7 +174,7 @@ export const StatementTests = [
     name: "print statement test with equality operator, should success",
     input: `
       bro listen
-      bol bhai 9 == 90;
+      bro say 9 == 90;
       bro done
     `,
     output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"PrintStatement","expressions":[{"type":"BinaryExpression","operator":"==","left":{"type":"NumericLiteral","value":9},"right":{"type":"NumericLiteral","value":90}}]}]}}`,
@@ -424,7 +424,7 @@ export const ExpressionsTests = [
     name: "print statement test with expression containing nalla, should success",
     input: `
         bro listen
-        bol bhai nalla + 5;
+        bro say nalla + 5;
         bro done;
       `,
     output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"PrintStatement","expressions":[{"type":"BinaryExpression","operator":"+","left":{"type":"NullLiteral","value":"nalla"},"right":{"type":"NumericLiteral","value":5}}]}]}}`,
@@ -670,7 +670,7 @@ export const WhileStatementTests = [
     input: `
     bro listen
     jab tak bhai (x > 9) {
-      bol bhai "hello";
+      bro say "hello";
     }
     bro done;
       `,
@@ -681,7 +681,7 @@ export const WhileStatementTests = [
     input: `
     bro listen
     jab tak bhai (x > 9)
-      bol bhai "hello";
+      bro say "hello";
     bro done;
       `,
     output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"WhileStatement","test":{"type":"BinaryExpression","operator":">","left":{"type":"IdentifierExpression","name":"x"},"right":{"type":"NumericLiteral","value":9}},"body":{"type":"PrintStatement","expressions":[{"type":"StringLiteral","value":"hello"}]}}]}}`,
@@ -691,7 +691,7 @@ export const WhileStatementTests = [
     input: `
     bro listen
     jab tak bhai (x > 9)
-      bol bhai "hello";
+      bro say "hello";
     bhai ye hai a = 90;
     bro done;
       `,
