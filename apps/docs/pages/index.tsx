@@ -10,8 +10,8 @@ export default function Docs() {
   return (
     <div className="bg-background">
       <Head>
-        <title>Bhailang - A toy programming language based on an inside joke</title>
-        <meta property="og:title" content="Bhailang - A toy programming language based on an inside joke" key="title" />
+        <title>BroLang - The coolest language ever built for bros by bros</title>
+        <meta property="og:title" content="BroLang - The coolest language ever build" key="title" />
         <meta property="og:type" content="website" key="type" />
         <meta property="og:url" content="https://bhailang.js.org" key="url" />
         <meta property="og:description" content="Bhailang is dynamically typed toy programming language, based on an inside joke, written in Typescript. Created by Aniket Singh and Rishabh Tripathi." key="description" />
