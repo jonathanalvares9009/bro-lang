@@ -27,7 +27,7 @@ listen bro
     b += 1;
   }
 
-bye bhai
+done bro
 `;
 
 const Code = (props: Props) => {

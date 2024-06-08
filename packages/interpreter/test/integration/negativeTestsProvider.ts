@@ -8,7 +8,7 @@ export const NegativeTestCases = [
     input: `
           listen bro;
           a = 4;
-          bye bhai;
+          done bro;
         `,
     exception: RuntimeException,
   },
@@ -17,7 +17,7 @@ export const NegativeTestCases = [
     input: `
           listen bro;
           a += 4;
-          bye bhai;
+          done bro;
         `,
     exception: RuntimeException,
   },
@@ -26,7 +26,7 @@ export const NegativeTestCases = [
     input: `
           listen bro;
           a -= 4;
-          bye bhai;
+          done bro;
         `,
     exception: RuntimeException,
   },
@@ -35,7 +35,7 @@ export const NegativeTestCases = [
     input: `
           listen bro;
           a -= 4;
-          bye bhai;
+          done bro;
         `,
     exception: RuntimeException,
   },
@@ -44,7 +44,7 @@ export const NegativeTestCases = [
     input: `
           listen bro;
           a /= 4;
-          bye bhai;
+          done bro;
         `,
     exception: RuntimeException,
   },
@@ -53,7 +53,7 @@ export const NegativeTestCases = [
     input: `
           listen bro;
           a;
-          bye bhai;
+          done bro;
         `,
     exception: RuntimeException,
   },
@@ -62,7 +62,7 @@ export const NegativeTestCases = [
     input: `
           listen bro;
           a + b;
-          bye bhai;
+          done bro;
         `,
     exception: RuntimeException,
   },
@@ -71,7 +71,7 @@ export const NegativeTestCases = [
     input: `
           listen bro;
           a + 4;
-          bye bhai;
+          done bro;
         `,
     exception: RuntimeException,
   },
@@ -80,7 +80,7 @@ export const NegativeTestCases = [
     input: `
           listen bro;
           a - 4;
-          bye bhai;
+          done bro;
         `,
     exception: RuntimeException,
   },
@@ -89,7 +89,7 @@ export const NegativeTestCases = [
     input: `
           listen bro;
           a - b;
-          bye bhai;
+          done bro;
         `,
     exception: RuntimeException,
   },
@@ -98,7 +98,7 @@ export const NegativeTestCases = [
     input: `
           listen bro;
           a * 4;
-          bye bhai;
+          done bro;
         `,
     exception: RuntimeException,
   },
@@ -107,7 +107,7 @@ export const NegativeTestCases = [
     input: `
           listen bro;
           a * b;
-          bye bhai;
+          done bro;
         `,
     exception: RuntimeException,
   },
@@ -116,7 +116,7 @@ export const NegativeTestCases = [
     input: `
           listen bro;
           a / 4;
-          bye bhai;
+          done bro;
         `,
     exception: RuntimeException,
   },
@@ -125,7 +125,7 @@ export const NegativeTestCases = [
     input: `
           listen bro;
           a / b;
-          bye bhai;
+          done bro;
         `,
     exception: RuntimeException,
   },
@@ -134,7 +134,7 @@ export const NegativeTestCases = [
     input: `
           listen bro;
           bol bhai a;
-          bye bhai;
+          done bro;
         `,
     exception: RuntimeException,
   },
@@ -143,7 +143,7 @@ export const NegativeTestCases = [
     input: `
           listen bro;
           bol bhai a, b;
-          bye bhai;
+          done bro;
         `,
     exception: RuntimeException,
   },
@@ -153,7 +153,7 @@ export const NegativeTestCases = [
           listen bro;
           bhai ye hai a = 8;
           bol bhai a, b;
-          bye bhai;
+          done bro;
         `,
     exception: RuntimeException,
   },
@@ -162,7 +162,7 @@ export const NegativeTestCases = [
     input: `
           listen bro;
           bhai ye hai a = b = 8;
-          bye bhai;
+          done bro;
         `,
     exception: RuntimeException,
   },
@@ -173,7 +173,7 @@ export const NegativeTestCases = [
         bhai ye hai a;
         a = 9;
         bhai ye hai a = 0;
-        bye bhai;
+        done bro;
       `,
     exception: RuntimeException,
   },
@@ -184,7 +184,7 @@ export const NegativeTestCases = [
       listen bro;
       bhai ye hai a;
       bol bhai a + 9;
-      bye bhai;
+      done bro;
     `,
     exception: NallaPointerException,
   },
@@ -194,7 +194,7 @@ export const NegativeTestCases = [
       listen bro;
       bhai ye hai a = nalla;
       bol bhai a + 9;
-      bye bhai;
+      done bro;
     `,
     exception: NallaPointerException,
   },
@@ -203,7 +203,7 @@ export const NegativeTestCases = [
     input: `
       listen bro;
       bhai ye hai a = nalla + 80;
-      bye bhai;
+      done bro;
     `,
     exception: NallaPointerException,
   },
@@ -212,7 +212,7 @@ export const NegativeTestCases = [
     input: `
       listen bro;
       bhai ye hai a = nalla + "jam";
-      bye bhai;
+      done bro;
     `,
     exception: NallaPointerException,
   },
@@ -222,7 +222,7 @@ export const NegativeTestCases = [
       listen bro;
       bhai ye hai a;
       bhai ye hai b = a + "hello";
-      bye bhai;
+      done bro;
     `,
     exception: NallaPointerException,
   },
@@ -232,7 +232,7 @@ export const NegativeTestCases = [
       listen bro;
       bhai ye hai a;
       bhai ye hai b = ((a*9) * a + "hello");
-      bye bhai;
+      done bro;
     `,
     exception: NallaPointerException,
   },
@@ -243,7 +243,7 @@ export const NegativeTestCases = [
       listen bro;
       bhai ye hai a = sahi;
       bol bhai a + 9;
-      bye bhai;
+      done bro;
     `,
     exception: RuntimeException,
   },
@@ -253,7 +253,7 @@ export const NegativeTestCases = [
       listen bro;
       bhai ye hai a = galat;
       bol bhai a + 9;
-      bye bhai;
+      done bro;
     `,
     exception: RuntimeException,
   },
@@ -262,7 +262,7 @@ export const NegativeTestCases = [
     input: `
       listen bro;
       bhai ye hai a = sahi + 80;
-      bye bhai;
+      done bro;
     `,
     exception: RuntimeException,
   },
@@ -271,7 +271,7 @@ export const NegativeTestCases = [
     input: `
       listen bro;
       bhai ye hai a = galat + 80;
-      bye bhai;
+      done bro;
     `,
     exception: RuntimeException,
   },
@@ -281,7 +281,7 @@ export const NegativeTestCases = [
       listen bro;
       bhai ye hai a = sahi;
       bhai ye hai b = a + "hello";
-      bye bhai;
+      done bro;
     `,
     exception: RuntimeException,
   },
@@ -291,7 +291,7 @@ export const NegativeTestCases = [
       listen bro;
       bhai ye hai a = galat;
       bhai ye hai b = ((a*9) * a + "hello");
-      bye bhai;
+      done bro;
     `,
     exception: RuntimeException,
   },
@@ -302,7 +302,7 @@ export const NegativeTestCases = [
     input: `
         listen bro
         (nalla * (4 + 8 + 10));
-        bye bhai
+        done bro
       `,
     output: NallaPointerException,
   },
@@ -311,7 +311,7 @@ export const NegativeTestCases = [
     input: `
         listen bro
         (nalla * (sahi + 8 + 10));
-        bye bhai
+        done bro
       `,
     output: RuntimeException,
   },
@@ -320,7 +320,7 @@ export const NegativeTestCases = [
     input: `
         listen bro
         (sahi * (nalla + 8 + 10));
-        bye bhai
+        done bro
       `,
     output: NallaPointerException,
   },
@@ -329,7 +329,7 @@ export const NegativeTestCases = [
     input: `
         listen bro
         (nalla + sahi);
-        bye bhai
+        done bro
       `,
     output: NallaPointerException,
   },
@@ -338,7 +338,7 @@ export const NegativeTestCases = [
     input: `
         listen bro
         (sahi * (4 + 8 + 10));
-        bye bhai
+        done bro
       `,
     output: RuntimeException,
   },
@@ -347,7 +347,7 @@ export const NegativeTestCases = [
     input: `
         listen bro
         sahi + galat;
-        bye bhai
+        done bro
       `,
     output: RuntimeException,
   },
@@ -357,7 +357,7 @@ export const NegativeTestCases = [
         listen bro
         bhai ye hai a = sahi, b = galat;
         a + b;
-        bye bhai
+        done bro
       `,
     output: RuntimeException,
   },
@@ -366,7 +366,7 @@ export const NegativeTestCases = [
     input: `
         listen bro
         sahi * galat;
-        bye bhai
+        done bro
       `,
     output: RuntimeException,
   },
@@ -376,7 +376,7 @@ export const NegativeTestCases = [
         listen bro
         bhai ye hai a = sahi, b = galat;
         a * b;
-        bye bhai
+        done bro
       `,
     output: RuntimeException,
   },
@@ -385,7 +385,7 @@ export const NegativeTestCases = [
     input: `
         listen bro
         sahi / galat;
-        bye bhai
+        done bro
       `,
     output: RuntimeException,
   },
@@ -395,7 +395,7 @@ export const NegativeTestCases = [
         listen bro
         bhai ye hai a = sahi, b = galat;
         a / b;
-        bye bhai
+        done bro
       `,
     output: RuntimeException,
   },
@@ -404,7 +404,7 @@ export const NegativeTestCases = [
     input: `
         listen bro
         bol bhai nalla + 5;
-        bye bhai;
+        done bro;
       `,
     output: NallaPointerException,
   },
@@ -414,7 +414,7 @@ export const NegativeTestCases = [
         listen bro
         bhai ye hai a;
         a *= 5;
-        bye bhai;
+        done bro;
       `,
     output: NallaPointerException,
   },
@@ -424,7 +424,7 @@ export const NegativeTestCases = [
         listen bro
         bhai ye hai a = sahi;
         a *= 5;
-        bye bhai;
+        done bro;
       `,
     output: NallaPointerException,
   },
@@ -434,7 +434,7 @@ export const NegativeTestCases = [
         listen bro
         bhai ye hai a = nalla;
         a /= 5;
-        bye bhai;
+        done bro;
       `,
     output: NallaPointerException,
   },
@@ -446,7 +446,7 @@ export const NegativeTestCases = [
         jab tak bhai (sahi) {
 
         }
-        bye bhai;
+        done bro;
       `,
     output: RuntimeException,
   },
@@ -458,7 +458,7 @@ export const NegativeTestCases = [
         jab tak bhai (a < 2) {
           bol bhai "bhai";
         }
-        bye bhai;
+        done bro;
       `,
     output: RuntimeException,
   },
@@ -469,7 +469,7 @@ export const NegativeTestCases = [
         bhai ye hai a = 0;
         agar bhai (sahi)
           bas kar bhai;
-        bye bhai;
+        done bro;
       `,
     output: RuntimeException,
   },
@@ -479,7 +479,7 @@ export const NegativeTestCases = [
     input: `
         listen bro
         bol bhai nalla && 90;
-        bye bhai;
+        done bro;
       `,
     output: NallaPointerException,
   },
@@ -489,7 +489,7 @@ export const NegativeTestCases = [
         listen bro
         bhai ye hai a;
         bol bhai a && 90;
-        bye bhai;
+        done bro;
       `,
     output: NallaPointerException,
   },
@@ -499,7 +499,7 @@ export const NegativeTestCases = [
     input: `
       listen bro;
       bol bhai "sahi" % 9;
-      bye bhai;
+      done bro;
     `,
     output: RuntimeException,
   },
@@ -513,7 +513,7 @@ export const NegativeTestCases = [
           agla dekh bhai;
           a = 5;
         }
-        bye bhai;
+        done bro;
       `,
     output: RuntimeException,
   },
@@ -524,7 +524,7 @@ export const NegativeTestCases = [
         bhai ye hai a = 0;
         agar bhai (sahi)
           agla dekh bhai
-        bye bhai;
+        done bro;
       `,
     output: RuntimeException,
   },

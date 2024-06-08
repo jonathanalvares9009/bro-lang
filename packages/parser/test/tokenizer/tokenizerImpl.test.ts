@@ -14,11 +14,11 @@ test("test Tokenizer.getNextToken with HI_BHAI_TYPE should success", () => {
 });
 
 test("test Tokenizer.getNextToken with BYE_BHAI_TYPE should success", () => {
-  tokenizer.initTokenizer(`bye bhai`);
+  tokenizer.initTokenizer(`done bro`);
 
   expect(tokenizer.getNextToken()).toStrictEqual({
     type: TokenTypes.BYE_BHAI_TYPE,
-    value: "bye bhai",
+    value: "done bro",
   });
 });
 

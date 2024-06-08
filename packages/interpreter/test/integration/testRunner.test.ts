@@ -48,7 +48,7 @@ test("test redeclaring & printing variables in different scopes", () => {
       bol bhai a;
     }
     bol bhai a;
-    bye bhai;`)
+    done bro;`)
   ).not.toThrowError();
   expect(console.log).toHaveBeenCalledWith("90");
   expect(console.log).toHaveBeenCalledWith("4");
@@ -63,7 +63,7 @@ test("test assigning variable in parent scope", () => {
       bol bhai a;
     }
     bol bhai a;
-    bye bhai;`)
+    done bro;`)
   ).not.toThrowError();
   expect(console.log).toHaveBeenCalledWith("90");
   expect(console.log).toHaveBeenCalledWith("90");
@@ -77,7 +77,7 @@ test("test accessing variable in parent scope", () => {
       bol bhai a;
     }
     bol bhai a;
-    bye bhai;`)
+    done bro;`)
   ).not.toThrowError();
   expect(console.log).toHaveBeenCalledWith("4");
   expect(console.log).toHaveBeenCalledWith("4");
@@ -92,7 +92,7 @@ test("whileStatement test with 2 times loop, should success", () => {
       bol bhai "bhai";
       a += 1;
     }
-    bye bhai;`)
+    done bro;`)
   ).not.toThrowError();
   expect(console.log).toHaveBeenCalledWith("bhai");
   expect(console.log).toHaveBeenCalledWith("bhai");
@@ -110,7 +110,7 @@ test("whileStatement test with nested loops - 2, should success", () => {
       }
       a += 1;
     }
-    bye bhai;
+    done bro;
     `)
   ).not.toThrowError();
   expect(console.log).toHaveBeenCalledWith("bhai");
@@ -131,7 +131,7 @@ test("whileStatement test with nested loops - 3, should success", () => {
       }
       a += 1;
     }
-    bye bhai;
+    done bro;
     `)
   ).not.toThrowError();
   expect(console.log).toHaveBeenCalledWith("bhai");
@@ -152,7 +152,7 @@ test("whileStatement test with nested loops - 4, should success", () => {
       }
     }
     bol bhai "done";
-    bye bhai
+    done bro
     `)
   ).not.toThrowError();
   expect(console.log).toHaveBeenCalledWith("0");
@@ -175,7 +175,7 @@ test("whileStatement test with nested loops - 5, should success", () => {
         bas kar bhai;
     }
     bol bhai "done";
-    bye bhai
+    done bro
     `)
   ).not.toThrowError();
   expect(console.log).toHaveBeenCalledWith("0");
@@ -200,7 +200,7 @@ test("whileStatement test with nested loops - 6, should success", () => {
       bol bhai "2 baar hi chapunga";
     }
     bol bhai "done";
-    bye bhai
+    done bro
     `)
   ).not.toThrowError();
   expect(console.log).toHaveBeenCalledWith("0");
@@ -218,7 +218,7 @@ test("whileStatement test with infinite loop, should throw runtime exception aft
     jab tak bhai (sahi) {
       bol bhai "bhai";
     }
-    bye bhai;
+    done bro;
     
     `)
   ).toThrowError(RuntimeException);
@@ -241,7 +241,7 @@ test("if-else ladders one after the other, should be evaluated separately", () =
     } warna bhai {
       bol bhai "x > 4";
     }
-    bye bhai;
+    done bro;
     
     `)
   ).not.toThrowError();
@@ -263,6 +263,6 @@ test("if-else ladders one after the other, should be evaluated separately", () =
 //       bol bhai "2 baar hi chapunga";
 //     }
 //     bol bhai "done";
-//     bye bhai
+//     done bro
 //     `);
 // });

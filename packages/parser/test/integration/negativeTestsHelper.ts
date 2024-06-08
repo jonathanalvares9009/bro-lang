@@ -8,9 +8,9 @@ export const NegativeStatementTests = [
     output: SyntaxError,
   },
   {
-    name: "only bye bhai, should throw an exception",
+    name: "only done bro, should throw an exception",
     input: `
-        bye bhai
+        done bro
       `,
     output: SyntaxError,
   },
@@ -19,7 +19,7 @@ export const NegativeStatementTests = [
     input: `
         listen bro
         listen bro
-        bye bhai
+        done bro
       `,
     output: SyntaxError,
   },
@@ -28,8 +28,8 @@ export const NegativeStatementTests = [
     input: `
         listen bro
         listen bro
-        bye bhai
-        bye bhai
+        done bro
+        done bro
       `,
     output: SyntaxError,
   },
@@ -39,7 +39,7 @@ export const NegativeStatementTests = [
     input: `
         listen bro
         {
-        bye bhai
+        done bro
       `,
     output: SyntaxError,
   },
@@ -48,7 +48,7 @@ export const NegativeStatementTests = [
     input: `
         listen bro
         }
-        bye bhai
+        done bro
       `,
     output: SyntaxError,
   },
@@ -67,7 +67,7 @@ export const NegativeStatementTests = [
         {
           naam = 4
         }
-        bye bhai
+        done bro
       `,
     output: SyntaxError,
   },
@@ -77,7 +77,7 @@ export const NegativeStatementTests = [
     input: `
         listen bro
         bol bhai ;
-        bye bhai
+        done bro
       `,
     output: SyntaxError,
   },
@@ -86,7 +86,7 @@ export const NegativeStatementTests = [
     input: `
         listen bro
         bol bhai 478
-        bye bhai
+        done bro
       `,
     output: SyntaxError,
   },
@@ -95,7 +95,7 @@ export const NegativeStatementTests = [
     input: `
         listen bro
         bol bhai sahi galat;
-        bye bhai
+        done bro
       `,
     output: SyntaxError,
   },
@@ -104,7 +104,7 @@ export const NegativeStatementTests = [
     input: `
         listen bro
         bol bhai ~!*;
-        bye bhai
+        done bro
       `,
     output: SyntaxError,
   },
@@ -122,7 +122,7 @@ export const NegativeStatementTests = [
     input: `
         listen bro
         bhai ye hai a b c;
-        bye bhai
+        done bro
       `,
     output: SyntaxError,
   },
@@ -131,7 +131,7 @@ export const NegativeStatementTests = [
     input: `
         listen bro
         bhai ye hai a 
-        bye bhai
+        done bro
       `,
     output: SyntaxError,
   },
@@ -140,7 +140,7 @@ export const NegativeStatementTests = [
     input: `
         listen bro
         bhai ye hai ;
-        bye bhai
+        done bro
       `,
     output: SyntaxError,
   },
@@ -187,7 +187,7 @@ export const NegativeExpressionsTests = [
     input: `
         listen bro
         a = 4
-        bye bhai
+        done bro
       `,
     output: SyntaxError,
   },
@@ -196,7 +196,7 @@ export const NegativeExpressionsTests = [
     input: `
         listen bro
         a *=- 4;
-        bye bhai
+        done bro
       `,
     output: SyntaxError,
   },
@@ -205,7 +205,7 @@ export const NegativeExpressionsTests = [
     input: `
         listen bro
         "hello" = 4;
-        bye bhai
+        done bro
       `,
     output: SyntaxError,
   },
@@ -214,7 +214,7 @@ export const NegativeExpressionsTests = [
     input: `
         listen bro
         5 = 890;
-        bye bhai
+        done bro
       `,
     output: SyntaxError,
   },
@@ -241,7 +241,7 @@ export const NegativeExpressionsTests = [
     input: `
         listen bro
         (a + 4;
-        bye bhai
+        done bro
       `,
     output: SyntaxError,
   },
@@ -250,7 +250,7 @@ export const NegativeExpressionsTests = [
     input: `
         listen bro
         a + 4);
-        bye bhai
+        done bro
       `,
     output: SyntaxError,
   },
@@ -268,7 +268,7 @@ export const NegativeExpressionsTests = [
     input: `
         listen bro
         (a * (4 + 8 + 10);
-        bye bhai
+        done bro
       `,
     output: SyntaxError,
   },
@@ -278,7 +278,7 @@ export const NegativeExpressionsTests = [
     input: `
     listen bro
     bhai ye hai a = b && ;
-    bye bhai;
+    done bro;
       `,
     output: SyntaxError,
   },
@@ -287,7 +287,7 @@ export const NegativeExpressionsTests = [
     input: `
     listen bro
     bhai ye hai a = && b;
-    bye bhai;
+    done bro;
       `,
     output: SyntaxError,
   },
@@ -296,7 +296,7 @@ export const NegativeExpressionsTests = [
     input: `
     listen bro
     agar bhai (&&);
-    bye bhai;
+    done bro;
       `,
     output: SyntaxError,
   },
@@ -306,7 +306,7 @@ export const NegativeExpressionsTests = [
     input: `
     listen bro
     bhai ye hai a = 1..2;
-    bye bhai;
+    done bro;
       `,
     output: SyntaxError,
   },
@@ -315,7 +315,7 @@ export const NegativeExpressionsTests = [
     input: `
     listen bro
     bhai ye hai a = ..2;
-    bye bhai;
+    done bro;
       `,
     output: SyntaxError,
   },
@@ -324,7 +324,7 @@ export const NegativeExpressionsTests = [
     input: `
     listen bro
     bhai ye hai a = 1.2.3;
-    bye bhai;
+    done bro;
       `,
     output: SyntaxError,
   },
@@ -346,7 +346,7 @@ export const IfStatementNagativeTests = [
         warna bhai {
 
         }
-        bye bhai;
+        done bro;
       `,
     output: SyntaxError,
   },
@@ -357,7 +357,7 @@ export const IfStatementNagativeTests = [
        agar bhai {
 
        }
-        bye bhai;
+        done bro;
       `,
     output: SyntaxError,
   },
@@ -367,7 +367,7 @@ export const IfStatementNagativeTests = [
         listen bro
         nahi to bhai (sahi) {
         }
-        bye bhai;
+        done bro;
       `,
     output: SyntaxError,
   },
@@ -378,7 +378,7 @@ export const IfStatementNagativeTests = [
         nahi to bhai (sahi) {
         } nahi to bhai (sahi) {
         }
-        bye bhai;
+        done bro;
       `,
     output: SyntaxError,
   },
@@ -389,7 +389,7 @@ export const IfStatementNagativeTests = [
         agar bhai (sahi) {
 
         } nahi to bhai (sahi)
-        bye bhai;
+        done bro;
       `,
     output: SyntaxError,
   },
@@ -402,7 +402,7 @@ export const IfStatementNagativeTests = [
         } nahi to bhai (sahi) {
 
         } nahi to bhai (sahi)
-        bye bhai;
+        done bro;
       `,
     output: SyntaxError,
   },
@@ -413,7 +413,7 @@ export const IfStatementNagativeTests = [
         agar bhai (sahi) {
 
         } nahi to bhai
-        bye bhai;
+        done bro;
       `,
     output: SyntaxError,
   },
@@ -426,7 +426,7 @@ export const IfStatementNagativeTests = [
         } nahi to bhai (sahi) {
 
         } nahi to bhai
-        bye bhai;
+        done bro;
       `,
     output: SyntaxError,
   }
@@ -438,7 +438,7 @@ export const ContinueStatementNegativeTests = [
     input: `
         listen bro
           agla dekh bhai
-        bye bhai
+        done bro
       `,
     output: SyntaxError,
   },

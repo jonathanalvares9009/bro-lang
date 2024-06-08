@@ -29,7 +29,7 @@ You can also try out your code on <a href="https://bhailang.js.org/#playground">
 ```
 listen bro
   bol bhai "Hello bhai";
-bye bhai
+done bro
 
 ```
 
@@ -50,7 +50,7 @@ hello bhai
 <h2 align="center">Documentation</h2>
 
 <h3 align="center">General</h3>
-<p align="center"><code>listen bro</code> is the entrypoint for the program and all program must end with <code>bye bhai</code>. Anything outside of it will be ignored.</p>
+<p align="center"><code>listen bro</code> is the entrypoint for the program and all program must end with <code>done bro</code>. Anything outside of it will be ignored.</p>
 
 ```
 
@@ -58,7 +58,7 @@ This will be ignored
 
 listen bro
 // Write code here
-bye bhai
+done bro
 
 This too
 ```
@@ -75,7 +75,7 @@ listen bro
   a = a + 1;
   b = 21;
   c *= 2;
-bye bhai
+done bro
 ```
 
 <h3 align="center">Types</h3>
@@ -91,7 +91,7 @@ listen bro
   bhai ye hai e = nalla;
   bhai ye hai f = sahi;
   bhai ye hai g = galat;
-bye bhai
+done bro
 ```
 
 <h3 align="center">Built-ins</h3>
@@ -107,7 +107,7 @@ listen bro
     bol bhai a + b;
   }
   bol bhai 5, 'ok', nalla , sahi , galat;
-bye bhai
+done bro
 ```
 
 <h3 align="center">Conditionals</h3>
@@ -122,7 +122,7 @@ listen bro
   } warna bhai {
    bol bhai "a is greater than or equal to 25";
   }
-bye bhai
+done bro
 ```
 
 <h3 align="center">Loops</h3>
@@ -145,7 +145,7 @@ listen bro
    bol bhai a;
   }
   bol bhai "done";
-bye bhai
+done bro
 ```
 
 
