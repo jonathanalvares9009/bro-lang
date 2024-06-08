@@ -64,14 +64,14 @@ This too
 ```
 
 <h3 align="center">Variables</h3>
-<p align="center">Variables can be declared using <code>bhai ye hai</code>.</p>
+<p align="center">Variables can be declared using <code>bro remember</code>.</p>
 
 ```
 
 bro listen
-  bhai ye hai a = 10;
-  bhai ye hai b = "two";
-  bhai ye hai c = 15;
+  bro remember a = 10;
+  bro remember b = "two";
+  bro remember c = 15;
   a = a + 1;
   b = 21;
   c *= 2;
@@ -84,13 +84,13 @@ bro done
 ```
 
 bro listen
-  bhai ye hai a = 10;
-  bhai ye hai b = 10 + (15*20);
-  bhai ye hai c = "two";
-  bhai ye hai d = 'ok';
-  bhai ye hai e = nalla;
-  bhai ye hai f = sahi;
-  bhai ye hai g = galat;
+  bro remember a = 10;
+  bro remember b = 10 + (15*20);
+  bro remember c = "two";
+  bro remember d = 'ok';
+  bro remember e = nalla;
+  bro remember f = sahi;
+  bro remember g = galat;
 bro done
 ```
 
@@ -101,9 +101,9 @@ bro done
 
 bro listen
   bro say "Hello World";
-  bhai ye hai a = 10;
+  bro remember a = 10;
   {
-    bhai ye hai b = 20;
+    bro remember b = 20;
     bro say a + b;
   }
   bro say 5, 'ok', nalla , sahi , galat;
@@ -116,7 +116,7 @@ bro done
 ```
 
 bro listen
-  bhai ye hai a = 10;
+  bro remember a = 10;
   agar bhai (a < 25) {
    bro say "a is less than 25";
   } warna bhai {
@@ -132,7 +132,7 @@ bro done
 ```
 
 bro listen
-  bhai ye hai a = 0;
+  bro remember a = 0;
   jab tak bhai (a < 10) {
    a += 1;
    agar bhai (a == 5) {

@@ -121,7 +121,7 @@ export const NegativeStatementTests = [
     name: "variable statement test with space separated variable declaration, should throw an exception",
     input: `
         bro listen
-        bhai ye hai a b c;
+        bro remember a b c;
         bro done
       `,
     output: SyntaxError,
@@ -130,7 +130,7 @@ export const NegativeStatementTests = [
     name: "variable statement test without semi colon, should throw an exception",
     input: `
         bro listen
-        bhai ye hai a 
+        bro remember a 
         bro done
       `,
     output: SyntaxError,
@@ -139,7 +139,7 @@ export const NegativeStatementTests = [
     name: "variable statement test with no identifier token, should throw an exception",
     input: `
         bro listen
-        bhai ye hai ;
+        bro remember ;
         bro done
       `,
     output: SyntaxError,
@@ -148,7 +148,7 @@ export const NegativeStatementTests = [
     name: "variable statement test with identifier expression and no other token, should throw an exception",
     input: `
         bro listen
-        bhai ye hai a, b
+        bro remember a, b
       `,
     output: SyntaxError,
   },
@@ -156,7 +156,7 @@ export const NegativeStatementTests = [
     name: "variable statement test with assignment expression and no other token, should throw an exception",
     input: `
         bro listen
-        bhai ye hai a = 5
+        bro remember a = 5
       `,
     output: SyntaxError,
   },
@@ -164,7 +164,7 @@ export const NegativeStatementTests = [
     name: "variable statement test with no other token, should throw an exception",
     input: `
         bro listen
-        bhai ye hai
+        bro remember
       `,
     output: SyntaxError,
   },
@@ -277,7 +277,7 @@ export const NegativeExpressionsTests = [
     name: "logical expression test with right operand missing, should throw an exception",
     input: `
     bro listen
-    bhai ye hai a = b && ;
+    bro remember a = b && ;
     bro done;
       `,
     output: SyntaxError,
@@ -286,7 +286,7 @@ export const NegativeExpressionsTests = [
     name: "logical expression test with left operand missing, should throw an exception",
     input: `
     bro listen
-    bhai ye hai a = && b;
+    bro remember a = && b;
     bro done;
       `,
     output: SyntaxError,
@@ -305,7 +305,7 @@ export const NegativeExpressionsTests = [
     name: "float expression test with multiple continuous decimal points - 1, should throw an exception",
     input: `
     bro listen
-    bhai ye hai a = 1..2;
+    bro remember a = 1..2;
     bro done;
       `,
     output: SyntaxError,
@@ -314,7 +314,7 @@ export const NegativeExpressionsTests = [
     name: "float expression test with multiple continuous decimal points - 2, should throw an exception",
     input: `
     bro listen
-    bhai ye hai a = ..2;
+    bro remember a = ..2;
     bro done;
       `,
     output: SyntaxError,
@@ -323,7 +323,7 @@ export const NegativeExpressionsTests = [
     name: "float expression test with multiple decimal points at different places, should throw an exception",
     input: `
     bro listen
-    bhai ye hai a = 1.2.3;
+    bro remember a = 1.2.3;
     bro done;
       `,
     output: SyntaxError,

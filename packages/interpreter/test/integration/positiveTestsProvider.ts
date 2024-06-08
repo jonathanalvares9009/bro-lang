@@ -49,7 +49,7 @@ export const NoOutputPositiveTests = [
     input: `
       bro listen
       {
-        bhai ye hai a = 4;
+        bro remember a = 4;
       }
       bro done
     `,
@@ -59,7 +59,7 @@ export const NoOutputPositiveTests = [
     name: "interpreter variable statement test with basic variable declaration, should success",
     input: `
       bro listen
-      bhai ye hai a, b, c;
+      bro remember a, b, c;
       bro done
     `,
   },
@@ -67,7 +67,7 @@ export const NoOutputPositiveTests = [
     name: "interpreter variable statement test with basic variable declaration and initialisation, should success",
     input: `
       bro listen
-      bhai ye hai a = 10, b = "crap";
+      bro remember a = 10, b = "crap";
       bro done
     `,
   },
@@ -75,7 +75,7 @@ export const NoOutputPositiveTests = [
     name: "interpreter variable statement test with multiple variable initialisation, should success",
     input: `
       bro listen
-      bhai ye hai a = 10, b = 5;
+      bro remember a = 10, b = 5;
       bro done
     `,
   },
@@ -83,7 +83,7 @@ export const NoOutputPositiveTests = [
     name: "interpreter variable statement test with variable initialisation with some expression, should success",
     input: `
       bro listen
-      bhai ye hai a = 7 + 90;
+      bro remember a = 7 + 90;
       bro done
     `,
   },
@@ -92,7 +92,7 @@ export const NoOutputPositiveTests = [
     name: "simple assignment expression test with only one identifer, should success",
     input: `
       bro listen
-      bhai ye hai a = sahi;
+      bro remember a = sahi;
       a = 4;
       bro done
     `,
@@ -101,7 +101,7 @@ export const NoOutputPositiveTests = [
     name: "complex assignment expression test with only one identifer, should success",
     input: `
       bro listen
-      bhai ye hai a = 2;
+      bro remember a = 2;
       a *= 4;
       bro done
     `,
@@ -111,7 +111,7 @@ export const NoOutputPositiveTests = [
     name: "paranthesized expression test with one parenthesis and simple expression, should success",
     input: `
       bro listen
-      bhai ye hai a = 2;
+      bro remember a = 2;
       (a + 4);
       bro done
     `,
@@ -120,7 +120,7 @@ export const NoOutputPositiveTests = [
     name: "paranthesized expression test with one parenthesis and complex expression, should success",
     input: `
       bro listen
-      bhai ye hai a = 2;
+      bro remember a = 2;
       (a + 4) * 10 + (5 - 4);
       bro done
     `,
@@ -129,7 +129,7 @@ export const NoOutputPositiveTests = [
     name: "paranthesized expression test with multiple parenthesis, should success",
     input: `
       bro listen
-      bhai ye hai a = 2;
+      bro remember a = 2;
       (a * (4 + 8) + 10);
       bro done
     `,
@@ -139,7 +139,7 @@ export const NoOutputPositiveTests = [
     name: "paranthesized expression test with multiple parenthesis, should success",
     input: `
     bro listen
-    bhai ye hai x = 9;
+    bro remember x = 9;
     agar bhai (x != 9) {
       x = 5;
       bro say x;
@@ -154,7 +154,7 @@ export const WithOutputPositiveTests = [
     name: "variable assignment test with multiple variables, should success",
     input: `
       bro listen;
-      bhai ye hai a , b;
+      bro remember a , b;
       a = b = 60;
       bro say a, b;
       bro done
@@ -165,7 +165,7 @@ export const WithOutputPositiveTests = [
     name: `binaryExpression print test with nalla and "==", should success`,
     input: `
       bro listen;
-      bhai ye hai a;
+      bro remember a;
       agar bhai (a == nalla) {
         bro say a;
       }
@@ -177,7 +177,7 @@ export const WithOutputPositiveTests = [
     name: `binaryExpression print test with nalla without any operator, should success`,
     input: `
       bro listen;
-      bhai ye hai a;
+      bro remember a;
       agar bhai (a) {
         bro say a;
       } warna bhai {
@@ -202,7 +202,7 @@ export const WithOutputPositiveTests = [
     name: `binaryExpression print test with comparing nalla with var "a", should success`,
     input: `
       bro listen;
-      bhai ye hai a;
+      bro remember a;
       agar bhai (nalla == a) {
         bro say "hai nalla";
       }
@@ -214,7 +214,7 @@ export const WithOutputPositiveTests = [
     name: `binaryExpression print test with comparing nalla with var "a" explicit initialization, should success`,
     input: `
       bro listen;
-      bhai ye hai a = nalla;
+      bro remember a = nalla;
       agar bhai (nalla == a) {
         bro say "hai nalla";
       }
@@ -226,7 +226,7 @@ export const WithOutputPositiveTests = [
     name: `binaryExpression print test with comparing nalla with string nalla, should success`,
     input: `
       bro listen;
-      bhai ye hai a = nalla;
+      bro remember a = nalla;
       agar bhai ("nalla" == a) {
         bro say "hai nalla";
       } warna bhai {
@@ -240,7 +240,7 @@ export const WithOutputPositiveTests = [
     name: `binaryExpression print test with comparing nalla with string nalla, should success`,
     input: `
       bro listen;
-      bhai ye hai a = "nalla";
+      bro remember a = "nalla";
       agar bhai (nalla == a) {
         bro say "hai nalla";
       } warna bhai {
@@ -254,7 +254,7 @@ export const WithOutputPositiveTests = [
     name: `binaryExpression print test with comparing nalla with string null, should success`,
     input: `
       bro listen;
-      bhai ye hai a = "null";
+      bro remember a = "null";
       agar bhai (nalla == a) {
         bro say "hai nalla";
       } warna bhai {
@@ -268,8 +268,8 @@ export const WithOutputPositiveTests = [
     name: `binaryExpression print test with nalla var "a" & "b" - 0, should success`,
     input: `
       bro listen;
-      bhai ye hai a;
-      bhai ye hai b;
+      bro remember a;
+      bro remember b;
       agar bhai (a == b) {
         bro say "hai nalla";
       } warna bhai {
@@ -283,8 +283,8 @@ export const WithOutputPositiveTests = [
     name: `binaryExpression print test with nalla var "a" & "b" - 1, should success`,
     input: `
       bro listen;
-      bhai ye hai a;
-      bhai ye hai b = nalla;
+      bro remember a;
+      bro remember b = nalla;
       agar bhai (a == b) {
         bro say "hai nalla";
       } warna bhai {
@@ -298,8 +298,8 @@ export const WithOutputPositiveTests = [
     name: `binaryExpression print test with nalla var "a" & "b" -2, should success`,
     input: `
       bro listen;
-      bhai ye hai a;
-      bhai ye hai b = "nalla";
+      bro remember a;
+      bro remember b = "nalla";
       agar bhai (a == b) {
         bro say "hai nalla";
       } warna bhai {
@@ -314,7 +314,7 @@ export const WithOutputPositiveTests = [
     name: `binaryExpression print test with boolean expression - sahi, should success`,
     input: `
       bro listen;
-      bhai ye hai a = sahi;
+      bro remember a = sahi;
       agar bhai (sahi == a) {
         bro say "hai sahi";
       } warna bhai {
@@ -328,7 +328,7 @@ export const WithOutputPositiveTests = [
     name: `binaryExpression print test with boolean expression - galat, should success`,
     input: `
       bro listen;
-      bhai ye hai a = galat;
+      bro remember a = galat;
       agar bhai (galat == a) {
         bro say "hai galat";
       } warna bhai {
@@ -342,7 +342,7 @@ export const WithOutputPositiveTests = [
     name: `binaryExpression print test with boolean expression - sahi with string sahi, should success`,
     input: `
       bro listen;
-      bhai ye hai a = "sahi";
+      bro remember a = "sahi";
       agar bhai (sahi == a) {
         bro say "hai sahi";
       } warna bhai {
@@ -356,7 +356,7 @@ export const WithOutputPositiveTests = [
     name: `binaryExpression print test with boolean expression - sahi expression, should success`,
     input: `
       bro listen;
-      bhai ye hai a = 7;
+      bro remember a = 7;
       agar bhai (sahi == (a > 5)) {
         bro say "hai sahi";
       } warna bhai {
@@ -370,7 +370,7 @@ export const WithOutputPositiveTests = [
     name: `binaryExpression print test with boolean expression - sahi expression & string "sahi", should success`,
     input: `
       bro listen;
-      bhai ye hai a = 7;
+      bro remember a = 7;
       agar bhai ("sahi" == (a > 5)) {
         bro say "hai sahi";
       } warna bhai {
@@ -384,7 +384,7 @@ export const WithOutputPositiveTests = [
     name: `binaryExpression print test with boolean expression - sahi expression & two expressions, should success`,
     input: `
       bro listen;
-      bhai ye hai a = sahi;
+      bro remember a = sahi;
       agar bhai ("sahi" == (a == sahi)) {
         bro say "hai sahi";
       } warna bhai {
@@ -398,7 +398,7 @@ export const WithOutputPositiveTests = [
     name: `binaryExpression print test with boolean expression - sahi expression -3, should success`,
     input: `
       bro listen;
-      bhai ye hai a = sahi;
+      bro remember a = sahi;
       agar bhai ((a == sahi) == (a == sahi)) {
         bro say "hai sahi";
       } warna bhai {
@@ -412,7 +412,7 @@ export const WithOutputPositiveTests = [
     name: `binaryExpression print test with boolean expression - sahi expression - 4, should success`,
     input: `
       bro listen;
-      bhai ye hai a;
+      bro remember a;
       agar bhai ((a == nalla) == (a == sahi)) {
         bro say "hai sahi";
       } warna bhai {
@@ -426,7 +426,7 @@ export const WithOutputPositiveTests = [
     name: `binaryExpression print test with boolean expression - sahi expression - 5, should success`,
     input: `
       bro listen;
-      bhai ye hai a;
+      bro remember a;
       agar bhai ((a == nalla) == (a == sahi)) {
         bro say "hai sahi";
       } warna bhai {
@@ -440,8 +440,8 @@ export const WithOutputPositiveTests = [
     name: `binaryExpression print test with boolean expression - sahi expression - 5, should success`,
     input: `
       bro listen;
-      bhai ye hai a;
-      bhai ye hai b = galat;
+      bro remember a;
+      bro remember b = galat;
       agar bhai (a == b) {
         bro say "hai sahi";
       } warna bhai {
@@ -455,8 +455,8 @@ export const WithOutputPositiveTests = [
     name: `binaryExpression print test with boolean expression - galat variables comparison, should success`,
     input: `
       bro listen;
-      bhai ye hai a = galat;
-      bhai ye hai b = galat;
+      bro remember a = galat;
+      bro remember b = galat;
       agar bhai (a == b) {
         bro say "hai galat";
       } warna bhai {
@@ -470,8 +470,8 @@ export const WithOutputPositiveTests = [
     name: `binaryExpression print test with boolean expression - galat variables comparison with string galat, should success`,
     input: `
       bro listen;
-      bhai ye hai a = "galat";
-      bhai ye hai b = galat;
+      bro remember a = "galat";
+      bro remember b = galat;
       agar bhai (a == b) {
         bro say "hai galat";
       } warna bhai {
@@ -485,7 +485,7 @@ export const WithOutputPositiveTests = [
     name: "float value addition with integer value test, should success",
     input: `
       bro listen
-      bhai ye hai a = 1.2, b = 2;
+      bro remember a = 1.2, b = 2;
       bro say a + b;
       bro done
     `,
@@ -495,7 +495,7 @@ export const WithOutputPositiveTests = [
     name: "float value addition with float value value test, should success",
     input: `
       bro listen
-      bhai ye hai a = 1.2, b = 2.3;
+      bro remember a = 1.2, b = 2.3;
       bro say a + b;
       bro done
     `,
@@ -505,7 +505,7 @@ export const WithOutputPositiveTests = [
     name: "printStatement test with multiple expressions, should success",
     input: `
       bro listen;
-      bhai ye hai a = 2, b = 60;
+      bro remember a = 2, b = 60;
       bro say (a * (4 + 8) + 10), b;
       bro done
     `,
@@ -515,7 +515,7 @@ export const WithOutputPositiveTests = [
     name: "printStatement test with multiple expressions and re assigning value of one variable, should success",
     input: `
       bro listen;
-      bhai ye hai a = 2, b = 60;
+      bro remember a = 2, b = 60;
 
       a = b + 3;
       bro say a, b;
@@ -563,7 +563,7 @@ export const WithOutputPositiveTests = [
     name: "printStatement test with multiple expresions including nalla, should success",
     input: `
       bro listen;
-      bhai ye hai a = 70;
+      bro remember a = 70;
       bro say 6*5, nalla, "jamtara", a;
       bro done;
     `,
@@ -573,7 +573,7 @@ export const WithOutputPositiveTests = [
     name: "printStatement test with nalla variable, should success",
     input: `
       bro listen;
-      bhai ye hai a;
+      bro remember a;
       bro say a;
       bro done;
     `,
@@ -592,7 +592,7 @@ export const WithOutputPositiveTests = [
     name: `printStatement test with nalla variable, should success`,
     input: `
       bro listen;
-      bhai ye hai a;
+      bro remember a;
       bro say a;
       bro done;
     `,
@@ -602,7 +602,7 @@ export const WithOutputPositiveTests = [
     name: `printStatement test with sahi variable, should success`,
     input: `
       bro listen;
-      bhai ye hai a = sahi;
+      bro remember a = sahi;
       bro say a;
       bro done;
     `,
@@ -612,7 +612,7 @@ export const WithOutputPositiveTests = [
     name: `printStatement test with galat variable, should success`,
     input: `
       bro listen;
-      bhai ye hai a = galat;
+      bro remember a = galat;
       bro say a;
       bro done;
     `,
@@ -622,7 +622,7 @@ export const WithOutputPositiveTests = [
     name: `printStatement test with assignment expression, should success`,
     input: `
       bro listen;
-      bhai ye hai a;
+      bro remember a;
       bro say a = 90;
       bro done;
     `,
@@ -659,7 +659,7 @@ export const WithOutputPositiveTests = [
     name: `printStatement test with logical - 2, should success`,
     input: `
     bro listen;
-    bhai ye hai a = sahi;
+    bro remember a = sahi;
     bro say a && galat;
     bro done;
     `,
@@ -669,7 +669,7 @@ export const WithOutputPositiveTests = [
     name: `printStatement test with logical - 3, should success`,
     input: `
     bro listen;
-    bhai ye hai a = sahi;
+    bro remember a = sahi;
     bro say a && sahi;
     bro done;
     `,
@@ -734,7 +734,7 @@ export const WithOutputPositiveTests = [
     name: `whileStatement test with 1 time loop, should success`,
     input: `
       bro listen;
-      bhai ye hai a = 0;
+      bro remember a = 0;
       jab tak bhai (a < 1) {
         bro say "bhai";
         a += 1;
@@ -758,7 +758,7 @@ export const WithOutputPositiveTests = [
     name: `whileStatement test with nested loops, should success`,
     input: `
       bro listen;
-      bhai ye hai a = 0;
+      bro remember a = 0;
       jab tak bhai (a < 2) {
         jab tak bhai (sahi)
           bas kar bhai;
@@ -774,7 +774,7 @@ export const WithOutputPositiveTests = [
     name: `whileStatement with multiple breaks, should success`,
     input: `
       bro listen;
-      bhai ye hai a = 0;
+      bro remember a = 0;
       jab tak bhai (a < 2) {
         bro say "hello";
         agar bhai (sahi)
@@ -815,7 +815,7 @@ export const WithOutputPositiveTests = [
     name: `if statement success test - 3: if only with comarison condn, should success`,
     input: `
     bro listen
-    bhai ye hai x = 9;
+    bro remember x = 9;
     agar bhai (x >= 9) {
       x = 5;
       bro say x;
@@ -842,7 +842,7 @@ export const WithOutputPositiveTests = [
     name: `else-if statement success test - 2: if with multiple else-ifs, should success`,
     input: `
     bro listen
-    bhai ye hai x = 10;
+    bro remember x = 10;
     agar bhai (x < 5) {
       bro say "x < 5";
     } nahi to bhai (x < 8) {
@@ -860,7 +860,7 @@ export const WithOutputPositiveTests = [
     name: `else-if statement success test - 3: nested if-else-if ladder, should success`,
     input: `
     bro listen
-    bhai ye hai a = 15;
+    bro remember a = 15;
     agar bhai (a < 0) {
       bro say "a < 0";
     } nahi to bhai (a > 0) {
@@ -878,7 +878,7 @@ export const WithOutputPositiveTests = [
     name: `else-if statement success test - 4: if-else-if ladder evaluating to else, should success`,
     input: `
     bro listen
-    bhai ye hai x = 15;
+    bro remember x = 15;
     agar bhai (x < 5) {
       bro say "x < 5";
     } nahi to bhai (x < 8) {
@@ -938,8 +938,8 @@ export const WithOutputPositiveTests = [
     name: `whileStatement test with single continue statement, should success`,
     input: `
       bro listen;
-      bhai ye hai a = 5;
-      bhai ye hai step = 0;
+      bro remember a = 5;
+      bro remember step = 0;
       jab tak bhai (a > 0) {
         step += 1;
         agar bhai (a % 2 != 0){
@@ -957,8 +957,8 @@ export const WithOutputPositiveTests = [
     name: `whileStatement test with multiple continue statement, should success`,
     input: `
       bro listen;
-      bhai ye hai a = 5;
-      bhai ye hai step = 0;
+      bro remember a = 5;
+      bro remember step = 0;
       jab tak bhai (a > 0) {
         step += 1;
         agar bhai (a % 2 == 0){
@@ -980,8 +980,8 @@ export const WithOutputPositiveTests = [
     name: `whileStatement test with single continue statement without block, should success`,
     input: `
       bro listen;
-      bhai ye hai a = 10;
-      bhai ye hai step = 0;
+      bro remember a = 10;
+      bro remember step = 0;
       jab tak bhai (a > 0) {
         agar bhai (a % 2 == 0){
           a -= 3;

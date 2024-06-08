@@ -7,7 +7,7 @@ export const TokenTypes = {
 
   BOL_BHAI_TYPE: "bro say",
 
-  BHAI_YE_HAI_TYPE: "bhai ye hai",
+  BHAI_YE_HAI_TYPE: "bro remember",
 
   AGAR_BHAI: "agar bhai",
 
@@ -82,7 +82,7 @@ export const SPEC = [
   { regex: /^\bbro listen\b/, tokenType: TokenTypes.HI_BHAI_TYPE },
   { regex: /^\bbro done\b/, tokenType: TokenTypes.BYE_BHAI_TYPE },
   { regex: /^\bbro say\b/, tokenType: TokenTypes.BOL_BHAI_TYPE },
-  { regex: /^\bbhai ye hai\b/, tokenType: TokenTypes.BHAI_YE_HAI_TYPE },
+  { regex: /^\bbro remember\b/, tokenType: TokenTypes.BHAI_YE_HAI_TYPE },
   { regex: /^\bagar bhai\b/, tokenType: TokenTypes.AGAR_BHAI },
   { regex: /^\bnahi to bhai\b/, tokenType: TokenTypes.NAHI_TO_BHAI },
   { regex: /^\bwarna bhai\b/, tokenType: TokenTypes.WARNA_BHAI },

@@ -12,8 +12,8 @@ const initialCode = `
 bro listen
  bro say "Hello World";
  
-  bhai ye hai a = 3;
-  bhai ye hai b = 0;
+  bro remember a = 3;
+  bro remember b = 0;
 
   jab tak bhai (b < 5) {
     bro say b;

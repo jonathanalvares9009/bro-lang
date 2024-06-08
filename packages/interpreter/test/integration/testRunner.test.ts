@@ -42,9 +42,9 @@ NegativeTestCases.forEach((testCase) => {
 test("test redeclaring & printing variables in different scopes", () => {
   expect(() =>
     interpreter.interpret(`bro listen;
-    bhai ye hai a = 4;
+    bro remember a = 4;
     {
-      bhai ye hai a = 90;
+      bro remember a = 90;
       bro say a;
     }
     bro say a;
@@ -57,7 +57,7 @@ test("test redeclaring & printing variables in different scopes", () => {
 test("test assigning variable in parent scope", () => {
   expect(() =>
     interpreter.interpret(`bro listen;
-    bhai ye hai a = 4;
+    bro remember a = 4;
     {
       a = 90;
       bro say a;
@@ -72,7 +72,7 @@ test("test assigning variable in parent scope", () => {
 test("test accessing variable in parent scope", () => {
   expect(() =>
     interpreter.interpret(`bro listen;
-    bhai ye hai a = 4;
+    bro remember a = 4;
     {
       bro say a;
     }
@@ -87,7 +87,7 @@ test("whileStatement test with 2 times loop, should success", () => {
   expect(() =>
     interpreter.interpret(`
     bro listen;
-    bhai ye hai a = 0;
+    bro remember a = 0;
     jab tak bhai (a < 2) {
       bro say "bhai";
       a += 1;
@@ -102,7 +102,7 @@ test("whileStatement test with nested loops - 2, should success", () => {
   expect(() =>
     interpreter.interpret(`
     bro listen;
-    bhai ye hai a = 0, b = 0;
+    bro remember a = 0, b = 0;
     jab tak bhai (a < 2) {
       jab tak bhai (b < 1) {
         bro say "bhai";
@@ -120,9 +120,9 @@ test("whileStatement test with nested loops - 3, should success", () => {
   expect(() =>
     interpreter.interpret(`
     bro listen;
-    bhai ye hai a = 0;
+    bro remember a = 0;
     jab tak bhai (a < 2) {
-      bhai ye hai b = 0;
+      bro remember b = 0;
       jab tak bhai (b < 2) {
         bro say "bhai";
         b += 1;
@@ -143,7 +143,7 @@ test("whileStatement test with nested loops - 4, should success", () => {
   expect(() =>
     interpreter.interpret(`
     bro listen
-    bhai ye hai a = 0;
+    bro remember a = 0;
     jab tak bhai (a < 10) {
       bro say a;
       a += 1;
@@ -167,7 +167,7 @@ test("whileStatement test with nested loops - 5, should success", () => {
   expect(() =>
     interpreter.interpret(`
     bro listen
-    bhai ye hai a = 0;
+    bro remember a = 0;
     jab tak bhai (a < 10) {
       bro say a;
       a += 1;
@@ -190,7 +190,7 @@ test("whileStatement test with nested loops - 6, should success", () => {
   expect(() =>
     interpreter.interpret(`
     bro listen
-    bhai ye hai a = 0;
+    bro remember a = 0;
     jab tak bhai (a < 10) {
       bro say a;
       a += 1;
@@ -231,7 +231,7 @@ test("if-else ladders one after the other, should be evaluated separately", () =
   expect(() =>
     interpreter.interpret(`
     bro listen
-    bhai ye hai x = 6;
+    bro remember x = 6;
     agar bhai (x < 5) {
       bro say "x < 5";
     } nahi to bhai (x < 8) {
@@ -253,7 +253,7 @@ test("if-else ladders one after the other, should be evaluated separately", () =
 // test("jest", () => {
 //     interpreter.interpret(`
 //     bro listen
-//     bhai ye hai a = 0;
+//     bro remember a = 0;
 //     jab tak bhai (a < 10) {
 //       bro say a;
 //       a += 1;

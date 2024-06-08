@@ -81,7 +81,7 @@ export const StatementTests = [
     input: `
       bro listen
       {
-        bhai ye hai a = 4;
+        bro remember a = 4;
       }
       bro done
     `,
@@ -137,7 +137,7 @@ export const StatementTests = [
     name: "print statement test with variable nalla printing, should success",
     input: `
       bro listen
-      bhai ye hai a = nalla;
+      bro remember a = nalla;
       bro say a;
       bro done
     `,
@@ -184,7 +184,7 @@ export const StatementTests = [
     name: "variable statement test with basic variable declaration, should success",
     input: `
       bro listen
-      bhai ye hai a, b, c;
+      bro remember a, b, c;
       bro done
     `,
     output: `{\"type\":\"Program\",\"body\":{\"type\":\"InitStatement\",\"body\":[{\"type\":\"VariableStatement\",\"declarations\":[{\"type\":\"VariableDeclaration\",\"id\":{\"type\":\"IdentifierExpression\",\"name\":\"a\"},\"init\":{\"type\":\"NullLiteral\",\"value\":\"nalla\"}},{\"type\":\"VariableDeclaration\",\"id\":{\"type\":\"IdentifierExpression\",\"name\":\"b\"},\"init\":{\"type\":\"NullLiteral\",\"value\":\"nalla\"}},{\"type\":\"VariableDeclaration\",\"id\":{\"type\":\"IdentifierExpression\",\"name\":\"c\"},\"init\":{\"type\":\"NullLiteral\",\"value\":\"nalla\"}}]}]}}`,
@@ -193,7 +193,7 @@ export const StatementTests = [
     name: "variable statement test with basic variable declaration and initialisation, should success",
     input: `
       bro listen
-      bhai ye hai a = 10, b;
+      bro remember a = 10, b;
       bro done
     `,
     output: `{\"type\":\"Program\",\"body\":{\"type\":\"InitStatement\",\"body\":[{\"type\":\"VariableStatement\",\"declarations\":[{\"type\":\"VariableDeclaration\",\"id\":{\"type\":\"IdentifierExpression\",\"name\":\"a\"},\"init\":{\"type\":\"NumericLiteral\",\"value\":10}},{\"type\":\"VariableDeclaration\",\"id\":{\"type\":\"IdentifierExpression\",\"name\":\"b\"},\"init\":{\"type\":\"NullLiteral\",\"value\":\"nalla\"}}]}]}}`,
@@ -202,7 +202,7 @@ export const StatementTests = [
     name: "variable statement test with multiple variable initialisation, should success",
     input: `
       bro listen
-      bhai ye hai a = 10, b = 5;
+      bro remember a = 10, b = 5;
       bro done
     `,
     output: `{\"type\":\"Program\",\"body\":{\"type\":\"InitStatement\",\"body\":[{\"type\":\"VariableStatement\",\"declarations\":[{\"type\":\"VariableDeclaration\",\"id\":{\"type\":\"IdentifierExpression\",\"name\":\"a\"},\"init\":{\"type\":\"NumericLiteral\",\"value\":10}},{\"type\":\"VariableDeclaration\",\"id\":{\"type\":\"IdentifierExpression\",\"name\":\"b\"},\"init\":{\"type\":\"NumericLiteral\",\"value\":5}}]}]}}`,
@@ -211,7 +211,7 @@ export const StatementTests = [
     name: "variable statement test with multiple variable initialisation with same value, should success",
     input: `
       bro listen
-      bhai ye hai a = b = 5;
+      bro remember a = b = 5;
       bro done
     `,
     output: `{\"type\":\"Program\",\"body\":{\"type\":\"InitStatement\",\"body\":[{\"type\":\"VariableStatement\",\"declarations\":[{\"type\":\"VariableDeclaration\",\"id\":{\"type\":\"IdentifierExpression\",\"name\":\"a\"},\"init\":{\"type\":\"AssignmentExpression\",\"operator\":\"=\",\"left\":{\"type\":\"IdentifierExpression\",\"name\":\"b\"},\"right\":{\"type\":\"NumericLiteral\",\"value\":5}}}]}]}}`,
@@ -220,7 +220,7 @@ export const StatementTests = [
     name: "variable statement test with variable initialisation with some expression, should success",
     input: `
       bro listen
-      bhai ye hai a = 7 + 90;
+      bro remember a = 7 + 90;
       bro done
     `,
     output: `{\"type\":\"Program\",\"body\":{\"type\":\"InitStatement\",\"body\":[{\"type\":\"VariableStatement\",\"declarations\":[{\"type\":\"VariableDeclaration\",\"id\":{\"type\":\"IdentifierExpression\",\"name\":\"a\"},\"init\":{\"type\":\"BinaryExpression\",\"operator\":\"+\",\"left\":{\"type\":\"NumericLiteral\",\"value\":7},\"right\":{\"type\":\"NumericLiteral\",\"value\":90}}}]}]}}`,
@@ -229,7 +229,7 @@ export const StatementTests = [
     name: "variable statement test with variable initialisation with nalla literal, should success",
     input: `
       bro listen
-      bhai ye hai a = nalla;
+      bro remember a = nalla;
       bro done
     `,
     output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"VariableStatement","declarations":[{"type":"VariableDeclaration","id":{"type":"IdentifierExpression","name":"a"},"init":{"type":"NullLiteral","value":"nalla"}}]}]}}`,
@@ -238,7 +238,7 @@ export const StatementTests = [
     name: "variable statement test with variable initialisation with nalla literal, should success",
     input: `
       bro listen
-      bhai ye hai a = nalla;
+      bro remember a = nalla;
       bro done
     `,
     output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"VariableStatement","declarations":[{"type":"VariableDeclaration","id":{"type":"IdentifierExpression","name":"a"},"init":{"type":"NullLiteral","value":"nalla"}}]}]}}`,
@@ -452,7 +452,7 @@ export const ExpressionsTests = [
     name: `logical "&&" test in variable declaration, should success`,
     input: `
         bro listen
-        bhai ye hai a = b && d;
+        bro remember a = b && d;
         bro done;
       `,
     output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"VariableStatement","declarations":[{"type":"VariableDeclaration","id":{"type":"IdentifierExpression","name":"a"},"init":{"type":"LogicalExpression","operator":"&&","left":{"type":"IdentifierExpression","name":"b"},"right":{"type":"IdentifierExpression","name":"d"}}}]}]}}`,
@@ -480,7 +480,7 @@ export const ExpressionsTests = [
     name: `logical "||" test in variable declaration, should success`,
     input: `
         bro listen
-        bhai ye hai a = b || d;
+        bro remember a = b || d;
         bro done;
       `,
     output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"VariableStatement","declarations":[{"type":"VariableDeclaration","id":{"type":"IdentifierExpression","name":"a"},"init":{"type":"LogicalExpression","operator":"||","left":{"type":"IdentifierExpression","name":"b"},"right":{"type":"IdentifierExpression","name":"d"}}}]}]}}`,
@@ -489,7 +489,7 @@ export const ExpressionsTests = [
     name: `identifier name starting with "sahi", should success`,
     input: `
       bro listen
-      bhai ye hai sahiValue = sahi;
+      bro remember sahiValue = sahi;
       bro done
     `,
     output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"VariableStatement","declarations":[{"type":"VariableDeclaration","id":{"type":"IdentifierExpression","name":"sahiValue"},"init":{"type":"BooleanLiteral","value":"sahi"}}]}]}}`,
@@ -498,7 +498,7 @@ export const ExpressionsTests = [
     name: `identifier name starting with "galat", should success`,
     input: `
       bro listen
-      bhai ye hai galatValue = 10;
+      bro remember galatValue = 10;
       bro done
     `,
     output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"VariableStatement","declarations":[{"type":"VariableDeclaration","id":{"type":"IdentifierExpression","name":"galatValue"},"init":{"type":"NumericLiteral","value":10}}]}]}}`,
@@ -532,7 +532,7 @@ export const IfStatementTests = [
     name: "if statement success test - 3: if only with comarison condn",
     input: `
     bro listen
-    bhai ye hai x = 9;
+    bro remember x = 9;
     agar bhai (x >= 9) {
       x = 5;
     } 
@@ -544,7 +544,7 @@ export const IfStatementTests = [
     name: "if statement success test - 4: if only with equality condn",
     input: `
     bro listen
-    bhai ye hai x = 9;
+    bro remember x = 9;
     agar bhai (x == 9) {
       x = 5;
     } 
@@ -556,7 +556,7 @@ export const IfStatementTests = [
     name: "if statement success test - 4: if only with equality condn",
     input: `
     bro listen
-    bhai ye hai x = 9;
+    bro remember x = 9;
     agar bhai (x == 9) {
       x = 5;
     } 
@@ -568,7 +568,7 @@ export const IfStatementTests = [
     name: "if statement success test - 5: if only with inequality condn",
     input: `
     bro listen
-    bhai ye hai x = 9;
+    bro remember x = 9;
     agar bhai (x != 9) {
       x = 5;
     } 
@@ -580,7 +580,7 @@ export const IfStatementTests = [
     name: "if statement success test - 6: else with only expression statement",
     input: `
     bro listen
-    bhai ye hai x = 9;
+    bro remember x = 9;
     agar bhai (x != 9) {
       x = 5;
     } warna bhai (x >= 9);
@@ -592,7 +592,7 @@ export const IfStatementTests = [
     name: "if statement success test - 7: with block",
     input: `
     bro listen
-    bhai ye hai x = 9;
+    bro remember x = 9;
     agar bhai (x != 9)
       x = 5;
     warna bhai (x >= 9);
@@ -692,7 +692,7 @@ export const WhileStatementTests = [
     bro listen
     jab tak bhai (x > 9)
       bro say "hello";
-    bhai ye hai a = 90;
+    bro remember a = 90;
     bro done;
       `,
     output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"WhileStatement","test":{"type":"BinaryExpression","operator":">","left":{"type":"IdentifierExpression","name":"x"},"right":{"type":"NumericLiteral","value":9}},"body":{"type":"PrintStatement","expressions":[{"type":"StringLiteral","value":"hello"}]}},{"type":"VariableStatement","declarations":[{"type":"VariableDeclaration","id":{"type":"IdentifierExpression","name":"a"},"init":{"type":"NumericLiteral","value":90}}]}]}}`,
@@ -704,7 +704,7 @@ export const WhileStatementTests = [
     jab tak bhai (x > 9) {
       bas kar bhai;
     }
-    bhai ye hai a = 90;
+    bro remember a = 90;
     bro done;
       `,
     output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"WhileStatement","test":{"type":"BinaryExpression","operator":">","left":{"type":"IdentifierExpression","name":"x"},"right":{"type":"NumericLiteral","value":9}},"body":{"type":"BlockStatement","body":[{"type":"BreakStatement"},{"type":"EmptyStatement"}]}},{"type":"VariableStatement","declarations":[{"type":"VariableDeclaration","id":{"type":"IdentifierExpression","name":"a"},"init":{"type":"NumericLiteral","value":90}}]}]}}`,
@@ -716,7 +716,7 @@ export const WhileStatementTests = [
     jab tak bhai (x > 9) {
       agla dekh bhai;
     }
-    bhai ye hai a = 90;
+    bro remember a = 90;
     bro done;
       `,
     output: `{"type":"Program","body":{"type":"InitStatement","body":[{"type":"WhileStatement","test":{"type":"BinaryExpression","operator":">","left":{"type":"IdentifierExpression","name":"x"},"right":{"type":"NumericLiteral","value":9}},"body":{"type":"BlockStatement","body":[{"type":"ContinueStatement"},{"type":"EmptyStatement"}]}},{"type":"VariableStatement","declarations":[{"type":"VariableDeclaration","id":{"type":"IdentifierExpression","name":"a"},"init":{"type":"NumericLiteral","value":90}}]}]}}`,

@@ -151,7 +151,7 @@ export const NegativeTestCases = [
     name: "interpreter printing multiple variables with only one of them declared, should throw an exception",
     input: `
           bro listen;
-          bhai ye hai a = 8;
+          bro remember a = 8;
           bro say a, b;
           bro done;
         `,
@@ -161,7 +161,7 @@ export const NegativeTestCases = [
     name: "interpreter declaring multiple variables with chain assignment, should throw an exception",
     input: `
           bro listen;
-          bhai ye hai a = b = 8;
+          bro remember a = b = 8;
           bro done;
         `,
     exception: RuntimeException,
@@ -170,9 +170,9 @@ export const NegativeTestCases = [
     name: "interpreter re declare already declared variable, should throw an exception",
     input: `
         bro listen;
-        bhai ye hai a;
+        bro remember a;
         a = 9;
-        bhai ye hai a = 0;
+        bro remember a = 0;
         bro done;
       `,
     exception: RuntimeException,
@@ -182,7 +182,7 @@ export const NegativeTestCases = [
     name: "interpreter use nalla variable in expression, should throw an exception",
     input: `
       bro listen;
-      bhai ye hai a;
+      bro remember a;
       bro say a + 9;
       bro done;
     `,
@@ -192,7 +192,7 @@ export const NegativeTestCases = [
     name: "interpreter use nalla variable in expression - 2, should throw an exception",
     input: `
       bro listen;
-      bhai ye hai a = nalla;
+      bro remember a = nalla;
       bro say a + 9;
       bro done;
     `,
@@ -202,7 +202,7 @@ export const NegativeTestCases = [
     name: "interpreter use nalla in variable initialisation expression, should throw an exception",
     input: `
       bro listen;
-      bhai ye hai a = nalla + 80;
+      bro remember a = nalla + 80;
       bro done;
     `,
     exception: NallaPointerException,
@@ -211,7 +211,7 @@ export const NegativeTestCases = [
     name: "interpreter use nalla in variable initialisation expression - 2, should throw an exception",
     input: `
       bro listen;
-      bhai ye hai a = nalla + "jam";
+      bro remember a = nalla + "jam";
       bro done;
     `,
     exception: NallaPointerException,
@@ -220,8 +220,8 @@ export const NegativeTestCases = [
     name: "interpreter use nalla variable in another variable initialisation expression, should throw an exception",
     input: `
       bro listen;
-      bhai ye hai a;
-      bhai ye hai b = a + "hello";
+      bro remember a;
+      bro remember b = a + "hello";
       bro done;
     `,
     exception: NallaPointerException,
@@ -230,8 +230,8 @@ export const NegativeTestCases = [
     name: "interpreter use nalla variable in complex expression, should throw an exception",
     input: `
       bro listen;
-      bhai ye hai a;
-      bhai ye hai b = ((a*9) * a + "hello");
+      bro remember a;
+      bro remember b = ((a*9) * a + "hello");
       bro done;
     `,
     exception: NallaPointerException,
@@ -241,7 +241,7 @@ export const NegativeTestCases = [
     name: "interpreter use sahi variable in expression, should throw an exception",
     input: `
       bro listen;
-      bhai ye hai a = sahi;
+      bro remember a = sahi;
       bro say a + 9;
       bro done;
     `,
@@ -251,7 +251,7 @@ export const NegativeTestCases = [
     name: "interpreter use galat variable in expression, should throw an exception",
     input: `
       bro listen;
-      bhai ye hai a = galat;
+      bro remember a = galat;
       bro say a + 9;
       bro done;
     `,
@@ -261,7 +261,7 @@ export const NegativeTestCases = [
     name: "interpreter use sahi in variable initialisation expression, should throw an exception",
     input: `
       bro listen;
-      bhai ye hai a = sahi + 80;
+      bro remember a = sahi + 80;
       bro done;
     `,
     exception: RuntimeException,
@@ -270,7 +270,7 @@ export const NegativeTestCases = [
     name: "interpreter use galat in variable initialisation expression, should throw an exception",
     input: `
       bro listen;
-      bhai ye hai a = galat + 80;
+      bro remember a = galat + 80;
       bro done;
     `,
     exception: RuntimeException,
@@ -279,8 +279,8 @@ export const NegativeTestCases = [
     name: "interpreter use sahi variable in another variable initialisation expression, should throw an exception",
     input: `
       bro listen;
-      bhai ye hai a = sahi;
-      bhai ye hai b = a + "hello";
+      bro remember a = sahi;
+      bro remember b = a + "hello";
       bro done;
     `,
     exception: RuntimeException,
@@ -289,8 +289,8 @@ export const NegativeTestCases = [
     name: "interpreter use galat variable in complex expression, should throw an exception",
     input: `
       bro listen;
-      bhai ye hai a = galat;
-      bhai ye hai b = ((a*9) * a + "hello");
+      bro remember a = galat;
+      bro remember b = ((a*9) * a + "hello");
       bro done;
     `,
     exception: RuntimeException,
@@ -355,7 +355,7 @@ export const NegativeTestCases = [
     name: "additive expression test with only variable boolean operand, should throw an exception",
     input: `
         bro listen
-        bhai ye hai a = sahi, b = galat;
+        bro remember a = sahi, b = galat;
         a + b;
         bro done
       `,
@@ -374,7 +374,7 @@ export const NegativeTestCases = [
     name: "multiplicative expression test with only variable boolean operand, should throw an exception",
     input: `
         bro listen
-        bhai ye hai a = sahi, b = galat;
+        bro remember a = sahi, b = galat;
         a * b;
         bro done
       `,
@@ -393,7 +393,7 @@ export const NegativeTestCases = [
     name: "division expression test with only variable boolean operand, should throw an exception",
     input: `
         bro listen
-        bhai ye hai a = sahi, b = galat;
+        bro remember a = sahi, b = galat;
         a / b;
         bro done
       `,
@@ -412,7 +412,7 @@ export const NegativeTestCases = [
     name: "complex assign test with expression containing nalla, should throw an exception",
     input: `
         bro listen
-        bhai ye hai a;
+        bro remember a;
         a *= 5;
         bro done;
       `,
@@ -422,7 +422,7 @@ export const NegativeTestCases = [
     name: "complex assign test with expression containing sahi, should throw an exception",
     input: `
         bro listen
-        bhai ye hai a = sahi;
+        bro remember a = sahi;
         a *= 5;
         bro done;
       `,
@@ -432,7 +432,7 @@ export const NegativeTestCases = [
     name: "complex assign test with expression containing nalla - 2, should throw an exception",
     input: `
         bro listen
-        bhai ye hai a = nalla;
+        bro remember a = nalla;
         a /= 5;
         bro done;
       `,
@@ -454,7 +454,7 @@ export const NegativeTestCases = [
     name: "infinite condition while loop, should throw an exception",
     input: `
         bro listen
-        bhai ye hai a = 0;
+        bro remember a = 0;
         jab tak bhai (a < 2) {
           bro say "bhai";
         }
@@ -466,7 +466,7 @@ export const NegativeTestCases = [
     name: "invalid use of break, should throw an exception",
     input: `
         bro listen
-        bhai ye hai a = 0;
+        bro remember a = 0;
         agar bhai (sahi)
           bas kar bhai;
         bro done;
@@ -487,7 +487,7 @@ export const NegativeTestCases = [
     name: "use of nalla variable with &&, should throw an exception",
     input: `
         bro listen
-        bhai ye hai a;
+        bro remember a;
         bro say a && 90;
         bro done;
       `,
@@ -508,7 +508,7 @@ export const NegativeTestCases = [
     name: "infinite condition while loop with continue, should throw an exception",
     input: `
         bro listen
-        bhai ye hai a = 0;
+        bro remember a = 0;
         jab tak bhai (a < 2) {
           agla dekh bhai;
           a = 5;
@@ -521,7 +521,7 @@ export const NegativeTestCases = [
     name: "invalid use of continue, should throw an exception",
     input: `
         bro listen
-        bhai ye hai a = 0;
+        bro remember a = 0;
         agar bhai (sahi)
           agla dekh bhai
         bro done;
