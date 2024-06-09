@@ -29,13 +29,22 @@ console.log = function (...args) {
 
 const filePath = yargs(hideBin(process.argv))
   .command(
-    "<filepath>",
-    "Interpret the contents of the specified file and print it to stdout",
+    '<filepath>',
+    'Interpret the contents of the .bro file and print it to stdout',
     () => {},
     (argv) => {
       console.info(argv);
     }
   )
+  .check((argv) => {
+    if (typeof argv._[0] !== 'string' || !argv._[0].endsWith('.bro')) {
+      throw new Error('Invalid file extension. Please provide a .bro file');
+    }
+    if (!fs.existsSync(argv._[0])) {
+      throw new Error('File does not exist');
+    }
+    return true;
+  })
   .demandCommand(1).argv._[0];
 
 fs.readFile(filePath, "utf8", (err, data) => {
