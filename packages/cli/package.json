@@ -1,11 +1,11 @@
 {
-  "name": "bhailang",
+  "name": "brolang",
   "version": "0.1.0",
-  "description": "CLI for bhai-lang",
+  "description": "CLI for bro-lang",
   "source": "src/index.ts",
   "main": "bin/index.js",
   "bin": {
-    "bhailang": "./bin/index.js"
+    "brolang": "./bin/index.js"
   },
   "files": [
     "bin"
@@ -16,12 +16,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DulLabs/bhai-lang.git"
+    "url": "git+https://github.com/jonathanalvares9009/bro-lang.git"
   },
   "keywords": [
     "programming",
     "language",
-    "bhai-lang",
+    "bro-lang",
     "bl",
     "javascript",
     "typescript"
@@ -34,13 +34,17 @@
     {
       "name": "Rishabh Tripathi",
       "url": "https://github.com/ristri"
+    },
+    {
+      "name": "Jonathan Alvares",
+      "url": "https://github.com/jonathanalvares9009"
     }
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DulLabs/bhai-lang/issues"
+    "url": "https://github.com/jonathanalvares9009/issues"
   },
-  "homepage": "https://github.com/DulLabs/bhai-lang#readme",
+  "homepage": "https://github.com/jonathanalvares9009#readme",
   "devDependencies": {
     "ts-node": "^10.4.0",
     "ts-jest": "^27.1.2",

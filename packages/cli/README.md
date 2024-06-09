@@ -8,7 +8,7 @@
   
 </p>
 <p align="center">
-  <b>Bhai lang is a toy programming language written in Typescript.</b>
+  <b>Brolang is a toy programming language created for tech bros.</b>
 </p>
 <br>
 
@@ -28,7 +28,7 @@ You can also try out your code on <a href="https://bhailang.js.org/#playground">
 
 ```
 bro listen
-  bro say "Hello bhai";
+  bro say "Hello Bro";
 bro done
 
 ```
@@ -36,13 +36,13 @@ bro done
 <h4 align="left">Run</h4>
 
 ```
-bhailang test.bhai
+brolang test.bro
 ```
 
 <h4 align="left">Output</h4>
 
 ```
-hello bhai
+hello Bro
 ```
 
 
@@ -111,7 +111,7 @@ bro done
 ```
 
 <h3 align="center">Conditionals</h3>
-<p align="center">Bhailang supports simple if else construct , <code>bro if</code> block will execute if condition is <code>correct</code> and <code>bro otherwise</code> block will execute if condition is <code>wrong</code>.</p>
+<p align="center">Brolang supports simple if else construct , <code>bro if</code> block will execute if condition is <code>correct</code> and <code>bro otherwise</code> block will execute if condition is <code>wrong</code>.</p>
 
 ```
 
