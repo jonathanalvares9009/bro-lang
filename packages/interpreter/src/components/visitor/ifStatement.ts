@@ -4,10 +4,9 @@ import { ASTNode } from "bhai-lang-parser";
 import InterpreterModule from "../../module/interpreterModule";
 import Scope from "../scope";
 
-
 export default class IfStatement implements Visitor {
-
   private evaluateNode(node: ASTNode | undefined, parentScope: Scope) {
+    console.log("IfStatement => evaluateNode");
     if (node) {
       InterpreterModule.setCurrentScope(new Scope(parentScope));
       InterpreterModule.getCurrentScope().setLoop(parentScope.isLoop());
@@ -16,10 +15,13 @@ export default class IfStatement implements Visitor {
   }
 
   visitNode(node: ASTNode) {
+    console.log("IfStatement");
     const test = node.test;
     const parentScope = InterpreterModule.getCurrentScope();
     if (test) {
-      const testResult = InterpreterModule.getVisitor(test.type).visitNode(test);
+      const testResult = InterpreterModule.getVisitor(test.type).visitNode(
+        test
+      );
       if (testResult === true || testResult === "correct") {
         this.evaluateNode(node.consequent, parentScope);
       } else {
@@ -34,7 +36,9 @@ export default class IfStatement implements Visitor {
             } else {
               // Evaluate the "test" condition of the "bro otherwise if" node
               // If the condition is true, evaluate the node and break
-              const testResult = InterpreterModule.getVisitor(alternateTest!.type).visitNode(alternateTest);
+              const testResult = InterpreterModule.getVisitor(
+                alternateTest!.type
+              ).visitNode(alternateTest);
               if (testResult === true || testResult === "correct") {
                 this.evaluateNode(alternate.consequent, parentScope);
                 break;
@@ -44,8 +48,12 @@ export default class IfStatement implements Visitor {
         }
       }
     }
-    parentScope.setBreakStatement(InterpreterModule.getCurrentScope().isBreakStatement());
-    parentScope.setContinueStatement(InterpreterModule.getCurrentScope().isContinueStatement());
+    parentScope.setBreakStatement(
+      InterpreterModule.getCurrentScope().isBreakStatement()
+    );
+    parentScope.setContinueStatement(
+      InterpreterModule.getCurrentScope().isContinueStatement()
+    );
 
     InterpreterModule.setCurrentScope(parentScope);
   }

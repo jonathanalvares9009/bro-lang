@@ -6,6 +6,7 @@ import InterpreterModule from "../../module/interpreterModule";
 
 export default class IdentifierExpression implements Visitor {
   visitNode(node: ASTNode) {
+    console.log("IdentifierExpression");
     if (!node.name) {
       throw new InvalidStateException(`Invalid node name for: ${node.type}`);
     }

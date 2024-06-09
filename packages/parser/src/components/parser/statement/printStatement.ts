@@ -6,9 +6,9 @@ import { ASTNode } from "../types/nodeTypes";
 
 import Expression from "./expression";
 
-
 export default class PrintStatement extends Statement {
   getStatement(): ASTNode {
+    console.log("Parser => PrintStatement");
     this._tokenExecutor.eatTokenAndForwardLookahead(TokenTypes.BOL_BHAI_TYPE);
 
     const expressions = this._getExpressionList();
@@ -22,6 +22,7 @@ export default class PrintStatement extends Statement {
   }
 
   private _getExpressionList() {
+    console.log("Parser => PrintStatement => _getExpressionList");
     const expressions: any[] = [];
 
     do {
@@ -35,6 +36,7 @@ export default class PrintStatement extends Statement {
   }
 
   private _getExpression() {
+    console.log("Parser => PrintStatement => _getExpression");
     return Expression.getExpressionImpl(
       NodeType.AssignmentExpression
     ).getExpression();

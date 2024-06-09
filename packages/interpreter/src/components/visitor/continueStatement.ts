@@ -3,9 +3,9 @@ import Visitor from ".";
 import RuntimeException from "../../exceptions/runtimeException";
 import InterpreterModule from "../../module/interpreterModule";
 
-
 export default class ContinueStatement implements Visitor {
   visitNode() {
+    console.log("ContinueStatement");
     if (InterpreterModule.getCurrentScope().isLoop()) {
       InterpreterModule.getCurrentScope().setContinueStatement(true);
     } else {

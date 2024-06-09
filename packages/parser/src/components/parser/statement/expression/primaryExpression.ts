@@ -8,6 +8,7 @@ import Literal from "./literals";
 
 export default class PrimaryExpression extends Expression {
   getExpression(): ASTNode {
+    console.log("Parser => PrimaryExpression");
     const token = this._tokenExecutor.getLookahead();
 
     switch (token?.type) {
@@ -27,11 +28,13 @@ export default class PrimaryExpression extends Expression {
   }
 
   private _getnothingLiteral() {
+    console.log("Parser => PrimaryExpression => nothingLiteral");
     this._tokenExecutor.eatTokenAndForwardLookahead(TokenTypes.nothing_TYPE);
     return Literal.getLiteralImpl(TokenTypes.nothing_TYPE).getLiteral();
   }
 
   private _getLeftHandSideExpression() {
+    console.log("Parser => PrimaryExpression => LeftHandSideExpression");
     return Expression.getExpressionImpl(
       NodeType.IdentifierExpression
     ).getExpression();

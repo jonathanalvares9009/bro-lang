@@ -4,13 +4,13 @@ import { TokenTypes } from "../../../../constants/bhaiLangSpec";
 import { NodeType } from "../../../../constants/constants";
 import { ASTNode } from "../../types/nodeTypes";
 
-
 export default class AssignmentExpression extends Expression {
   private _logicalORExpression = Expression.getExpressionImpl(
     NodeType.LogicalORExpression
   );
 
   getExpression(): ASTNode {
+    console.log("Parser => AssignmentExpression");
     const left = this._logicalORExpression.getExpression();
 
     // case if there is no AssignmentOperator but only normal additive expression => x + y
@@ -31,6 +31,7 @@ export default class AssignmentExpression extends Expression {
    * @returns
    */
   private _isAssignmentOperator(tokenType: string | undefined) {
+    console.log("Parser => AssignmentExpression => isAssignmentOperator");
     return (
       tokenType &&
       (tokenType === TokenTypes.SIMPLE_ASSIGN_TYPE ||
@@ -39,6 +40,7 @@ export default class AssignmentExpression extends Expression {
   }
 
   private _getAssignmentOperator() {
+    console.log("Parser => AssignmentExpression => getAssignmentOperator");
     const lookahead = this._tokenExecutor.getLookahead();
 
     if (!lookahead || lookahead.type === TokenTypes.SIMPLE_ASSIGN_TYPE)
@@ -56,6 +58,7 @@ export default class AssignmentExpression extends Expression {
    * @param {*} node
    */
   private _checkValidAssignmentTarget(node: any) {
+    console.log("Parser => AssignmentExpression => checkValidAssignmentTarget");
     if (node.type === NodeType.IdentifierExpression) return node;
 
     throw new SyntaxError("Invalid left hand side in assignment expression");

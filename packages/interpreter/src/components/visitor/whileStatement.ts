@@ -5,22 +5,25 @@ import RuntimeException from "../../exceptions/runtimeException";
 import InterpreterModule from "../../module/interpreterModule";
 import Scope from "../scope";
 
-
 export default class WhileStatement implements Visitor {
   visitNode(node: ASTNode) {
+    console.log("WhileStatement");
     const test = node.test;
     if (test) {
-      const getConditionValue = ()=> InterpreterModule.getVisitor(test.type).visitNode(test);
+      const getConditionValue = () =>
+        InterpreterModule.getVisitor(test.type).visitNode(test);
 
       const parentScope = InterpreterModule.getCurrentScope();
 
       InterpreterModule.setCurrentScope(new Scope(parentScope));
-      
+
       InterpreterModule.getCurrentScope().setLoop(true);
 
-
-      for (let testResult = getConditionValue(), executions = 0; testResult === true || testResult === "correct"; testResult = getConditionValue(), executions++) {
-
+      for (
+        let testResult = getConditionValue(), executions = 0;
+        testResult === true || testResult === "correct";
+        testResult = getConditionValue(), executions++
+      ) {
         if (InterpreterModule.getCurrentScope().isBreakStatement()) {
           break;
         }
@@ -29,8 +32,7 @@ export default class WhileStatement implements Visitor {
           throw new RuntimeException("Bohot jyada hi chale jaa rha hai loop");
         }
 
-
-        if(InterpreterModule.getCurrentScope().isContinueStatement()){
+        if (InterpreterModule.getCurrentScope().isContinueStatement()) {
           InterpreterModule.getCurrentScope().setContinueStatement(false);
           continue;
         }

@@ -1,5 +1,5 @@
 #! /usr/bin/env node
-import interpreter from "interpreter";
+import interpreter from "bhai-lang-interpreter";
 import chalk from "chalk";
 import fs from "fs";
 import yargs from "yargs";
@@ -29,19 +29,19 @@ console.log = function (...args) {
 
 const filePath = yargs(hideBin(process.argv))
   .command(
-    '<filepath>',
-    'Interpret the contents of the .bro file and print it to stdout',
+    "<filepath>",
+    "Interpret the contents of the .bro file and print it to stdout",
     () => {},
     (argv) => {
       console.info(argv);
     }
   )
   .check((argv) => {
-    if (typeof argv._[0] !== 'string' || !argv._[0].endsWith('.bro')) {
-      throw new Error('Invalid file extension. Please provide a .bro file');
+    if (typeof argv._[0] !== "string" || !argv._[0].endsWith(".bro")) {
+      throw new Error("Invalid file extension. Please provide a .bro file");
     }
     if (!fs.existsSync(argv._[0])) {
-      throw new Error('File does not exist');
+      throw new Error("File does not exist");
     }
     return true;
   })

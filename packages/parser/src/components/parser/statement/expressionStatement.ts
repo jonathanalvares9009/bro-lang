@@ -8,6 +8,7 @@ import Expression from "./expression";
 
 export default class ExpressionStatement extends Statement {
   getStatement(): ASTNode {
+    console.log("Parser => ExpressionStatement");
     const expression = Expression.getExpressionImpl(
       NodeType.AssignmentExpression
     ).getExpression();

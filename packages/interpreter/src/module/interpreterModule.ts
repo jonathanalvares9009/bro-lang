@@ -24,7 +24,6 @@ import VariableStatement from "../components/visitor/variableStatement";
 import WhileStatement from "../components/visitor/whileStatement";
 import InvalidStateException from "../exceptions/invalidStateException";
 
-
 export default class InterpreterModule {
   private static _visitorMap = {
     [NodeType.Program]: new Program(),
@@ -53,6 +52,7 @@ export default class InterpreterModule {
   private static _interpreter: Interpreter;
 
   static getVisitor(nodeType: string) {
+    console.log("getVisitor");
     const visitor = InterpreterModule._visitorMap[nodeType];
 
     if (!visitor)
@@ -64,17 +64,20 @@ export default class InterpreterModule {
   }
 
   static getInterpreter() {
+    console.log("getInterpreter");
     this._interpreter =
       this._interpreter ?? new Interpreter(parser, this.getCurrentScope());
     return this._interpreter;
   }
 
   static getCurrentScope() {
+    console.log("getCurrentScope");
     this._currentScope = this._currentScope ?? new Scope(null);
     return this._currentScope;
   }
 
   static setCurrentScope(scope: Scope) {
+    console.log("setCurrentScope");
     this._currentScope = scope;
   }
 }

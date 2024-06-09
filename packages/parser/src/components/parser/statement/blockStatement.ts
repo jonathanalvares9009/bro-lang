@@ -10,11 +10,13 @@ export default class BlockStatement extends Statement {
   _statementList: StatementList;
 
   constructor(tokenExecutor: TokenExecutor, statementList: StatementList) {
+    console.log("Parser => BlockStatement");
     super(tokenExecutor);
     this._statementList = statementList;
   }
 
   getStatement(): ASTNode {
+    console.log("Parser => BlockStatement");
     this._tokenExecutor.eatTokenAndForwardLookahead(
       TokenTypes.OPEN_CURLY_BRACE_TYPE
     );

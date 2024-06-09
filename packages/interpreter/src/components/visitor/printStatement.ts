@@ -4,9 +4,9 @@ import { ASTNode } from "bhai-lang-parser";
 import InvalidStateException from "../../exceptions/invalidStateException";
 import InterpreterModule from "../../module/interpreterModule";
 
-
 export default class PrintStatement implements Visitor {
   visitNode(node: ASTNode) {
+    console.log("PrintStatement");
     if (!node.expressions)
       throw new InvalidStateException(
         `No expressions to print: ${node.expressions}`
@@ -14,14 +14,13 @@ export default class PrintStatement implements Visitor {
 
     const value = node.expressions
       .map((expression: ASTNode) => {
-        let currentNodeOutput = InterpreterModule.getVisitor(expression.type).visitNode(expression);
-        if (currentNodeOutput === true)
-          currentNodeOutput = "correct";
-        else if (currentNodeOutput === false)
-          currentNodeOutput = "wrong";
+        let currentNodeOutput = InterpreterModule.getVisitor(
+          expression.type
+        ).visitNode(expression);
+        if (currentNodeOutput === true) currentNodeOutput = "correct";
+        else if (currentNodeOutput === false) currentNodeOutput = "wrong";
         return currentNodeOutput;
-      }
-      )
+      })
       .join(" ");
     console.log(value);
   }

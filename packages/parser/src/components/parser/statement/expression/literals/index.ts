@@ -1,6 +1,6 @@
 import { TokenTypes } from "../../../../../constants/bhaiLangSpec";
 import UnsupportedTypeException from "../../../../../exceptions/unsupportedTypeException";
-import BhaiLangModule from "../../../../../module/bhaiLangModule";
+import BroLangModule from "../../../../../module/broLangModule";
 import TokenExecutor from "../../../tokenExecutor";
 import { ASTNode } from "../../../types/nodeTypes";
 
@@ -8,24 +8,26 @@ export default abstract class Literal {
   protected _tokenExecutor: TokenExecutor;
 
   constructor(tokenExecutor: TokenExecutor) {
+    console.log("Parser => Literal");
     this._tokenExecutor = tokenExecutor;
   }
 
   abstract getLiteral(): ASTNode;
 
   static getLiteralImpl(tokenType?: string): Literal {
+    console.log("Parser => getLiteralImpl");
     switch (tokenType) {
       case TokenTypes.NUMBER_TYPE:
-        return BhaiLangModule.getNumericLiteral();
+        return BroLangModule.getNumericLiteral();
 
       case TokenTypes.BOOLEAN_TYPE:
-        return BhaiLangModule.getBooleanLiteral();
+        return BroLangModule.getBooleanLiteral();
 
       case TokenTypes.STRING_TYPE:
-        return BhaiLangModule.getStringLiteral();
+        return BroLangModule.getStringLiteral();
 
       case TokenTypes.nothing_TYPE:
-        return BhaiLangModule.getNullLiteral();
+        return BroLangModule.getNullLiteral();
 
       default:
         throw new UnsupportedTypeException(

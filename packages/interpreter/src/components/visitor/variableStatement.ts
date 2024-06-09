@@ -6,6 +6,7 @@ import InterpreterModule from "../../module/interpreterModule";
 
 export default class VariableStatement implements Visitor {
   visitNode(node: ASTNode) {
+    console.log("VariableStatement");
     if (!node.declarations)
       throw new InvalidStateException(
         `variable declarations in variable statement is not present: ${node.declarations}`

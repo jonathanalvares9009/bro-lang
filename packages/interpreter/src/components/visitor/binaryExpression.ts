@@ -2,14 +2,14 @@ import Visitor from ".";
 import { ASTNode, NodeType } from "bhai-lang-parser";
 
 import InvalidStateException from "../../exceptions/invalidStateException";
-import nothingPointerException from "../../exceptions/nallaPointerException";
+import nothingPointerException from "../../exceptions/nothingPointerException";
 import RuntimeException from "../../exceptions/runtimeException";
 import { getOperationValue } from "../../helpers";
 import InterpreterModule from "../../module/interpreterModule";
 
-
 export default class BinaryExpression implements Visitor {
   visitNode(node: ASTNode) {
+    console.log("BinaryExpression");
     if (!node.left || !node.right || !node.operator) {
       throw new InvalidStateException(
         `Left , right or operator not found for: ${node.type}`
@@ -23,25 +23,31 @@ export default class BinaryExpression implements Visitor {
       if (node.operator !== "==" && node.operator !== "!=") {
         this._checknothing(node);
         this._checkBoolean(node);
-      } 
+      }
       left = this._getNodeValue(node.left);
       right = this._getNodeValue(node.right);
     } else if (node.type == NodeType.LogicalExpression) {
       this._checknothing(node);
 
-      left = node.left.type == NodeType.BooleanLiteral ? (node.left.value == "correct" ? true : false) : InterpreterModule.getVisitor(node.left.type).visitNode(
-        node.left
-      );
+      left =
+        node.left.type == NodeType.BooleanLiteral
+          ? node.left.value == "correct"
+            ? true
+            : false
+          : InterpreterModule.getVisitor(node.left.type).visitNode(node.left);
 
-      right = node.right.type == NodeType.BooleanLiteral ? (node.right.value == "correct" ? true : false) : InterpreterModule.getVisitor(node.right.type).visitNode(
-        node.right
-      );
-
+      right =
+        node.right.type == NodeType.BooleanLiteral
+          ? node.right.value == "correct"
+            ? true
+            : false
+          : InterpreterModule.getVisitor(node.right.type).visitNode(node.right);
     }
     return getOperationValue({ left, right }, node.operator);
   }
 
   private _checknothing(node: ASTNode) {
+    console.log("checknothing");
     if (!node.left || !node.right || !node.operator) {
       throw new InvalidStateException(
         `Left , right or operator not found for: ${node.type}`
@@ -70,6 +76,7 @@ export default class BinaryExpression implements Visitor {
   }
 
   private _checkBoolean(node: ASTNode) {
+    console.log("checkBoolean");
 
     if (!node.left || !node.right || !node.operator) {
       throw new InvalidStateException(
@@ -99,9 +106,8 @@ export default class BinaryExpression implements Visitor {
   }
 
   private _getNodeValue(node: ASTNode) {
-
-    if (node.type === NodeType.NullLiteral)
-      return null;
+    console.log("getNodeValue");
+    if (node.type === NodeType.NullLiteral) return null;
 
     if (node.type === NodeType.BooleanLiteral) {
       return node.value === "correct" ? true : false;
@@ -110,9 +116,6 @@ export default class BinaryExpression implements Visitor {
     if (node.type === NodeType.IdentifierExpression && node.name)
       return InterpreterModule.getCurrentScope().get(node.name);
 
-    return InterpreterModule.getVisitor(node.type).visitNode(
-      node
-    );
+    return InterpreterModule.getVisitor(node.type).visitNode(node);
   }
-
 }

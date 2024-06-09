@@ -48,7 +48,7 @@ import { Tokenizer } from "../components/tokenizer/types";
 import { SPEC } from "../constants/bhaiLangSpec";
 
 
-export default class BhaiLangModule {
+export default class BroLangModule {
   private static _tokenizer?: Tokenizer;
   private static _initStatement?: InitStatement;
   private static _parser?: Parser;
@@ -80,12 +80,14 @@ export default class BhaiLangModule {
   private static _whileStatement?: WhileStatement;
 
   static getTokenizer() {
+    console.log("Parser => getTokenizer");
     if (!this._tokenizer) this._tokenizer = new TokenizerImpl(SPEC);
 
     return this._tokenizer;
   }
 
   static getTokenExecutor() {
+    console.log("Parser => getTokenExecutor");
     if (!this._tokenExecutor)
       this._tokenExecutor = new TokenExecutor(this.getTokenizer());
 
@@ -93,6 +95,7 @@ export default class BhaiLangModule {
   }
 
   static getStatementList() {
+    console.log("Parser => getStatementList");
     if (!this._statementList)
       this._statementList = new StatementList(this.getTokenExecutor());
 
@@ -100,6 +103,7 @@ export default class BhaiLangModule {
   }
 
   static getInitStatement() {
+    console.log("Parser => getInitStatement");
     if (!this._initStatement)
       this._initStatement = new InitStatement(
         this.getTokenExecutor(),
@@ -110,6 +114,7 @@ export default class BhaiLangModule {
   }
 
   static getPrintStatement() {
+    console.log("Parser => getPrintStatement");
     if (!this._printStatement) {
       this._printStatement = new PrintStatement(this.getTokenExecutor());
     }
@@ -118,6 +123,7 @@ export default class BhaiLangModule {
   }
 
   static getIfStatement() {
+    console.log("Parser => getIfStatement");
     if (!this._ifStatement) {
       this._ifStatement = new IfStatement(this.getTokenExecutor());
     }
@@ -126,6 +132,7 @@ export default class BhaiLangModule {
   }
 
   static getBreakStatement() {
+    console.log("Parser => getBreakStatement");
     if (!this._breakStatement) {
       this._breakStatement = new BreakStatement(this.getTokenExecutor());
     }
@@ -134,6 +141,7 @@ export default class BhaiLangModule {
   }
 
   static getContinueStatement() {
+    console.log("Parser => getContinueStatement");
     if(!this._continueStatement){
       this._continueStatement = new ContinueStatement(this.getTokenExecutor());
     }
@@ -142,6 +150,7 @@ export default class BhaiLangModule {
   }
 
   static getWhileStatement() {
+    console.log("Parser => getWhileStatement");
     if (!this._whileStatement) {
       this._whileStatement = new WhileStatement(this.getTokenExecutor());
     }
@@ -150,6 +159,7 @@ export default class BhaiLangModule {
   }
 
   static getExpressionStatement() {
+    console.log("Parser => getExpressionStatement");
     if (!this._expresionStatement) {
       this._expresionStatement = new ExpressionStatement(
         this.getTokenExecutor()
@@ -160,6 +170,7 @@ export default class BhaiLangModule {
   }
 
   static getEmptyStatement() {
+    console.log("Parser => getEmptyStatement");
     if (!this._emptyStatement) {
       this._emptyStatement = new EmptyStatement(this.getTokenExecutor());
     }
@@ -168,6 +179,7 @@ export default class BhaiLangModule {
   }
 
   static getBlockStatement() {
+    console.log("Parser => getBlockStatement");
     if (!this._blockStatement) {
       this._blockStatement = new BlockStatement(
         this.getTokenExecutor(),
@@ -179,6 +191,7 @@ export default class BhaiLangModule {
   }
 
   static getVariableStatement() {
+    console.log("Parser => getVariableStatement");
     if (!this._variableStatement)
       this._variableStatement = new VariableStatement(
         this.getTokenExecutor(),
@@ -189,6 +202,7 @@ export default class BhaiLangModule {
   }
 
   static getAdditiveExpression() {
+    console.log("Parser => getAdditiveExpression");
     if (!this._additiveExpression) {
       this._additiveExpression = new AdditiveExpression(
         this.getTokenExecutor()
@@ -199,6 +213,7 @@ export default class BhaiLangModule {
   }
 
   static getMultiplicativeExpression() {
+    console.log("Parser => getMultiplicativeExpression");
     if (!this._multiplicativeExpression) {
       this._multiplicativeExpression = new MultiplicativeExpression(
         this.getTokenExecutor()
@@ -209,6 +224,7 @@ export default class BhaiLangModule {
   }
 
   static getPrimaryExpression() {
+    console.log("Parser => getPrimaryExpression");
     if (!this._primaryExpression) {
       this._primaryExpression = new PrimaryExpression(this.getTokenExecutor());
     }
@@ -217,6 +233,7 @@ export default class BhaiLangModule {
   }
 
   static getParanthesizedExpression() {
+    console.log("Parser => getParanthesizedExpression");
     if (!this._paranthesizedExpression) {
       this._paranthesizedExpression = new ParanthesizedExpression(
         this.getTokenExecutor()
@@ -227,6 +244,7 @@ export default class BhaiLangModule {
   }
 
   static getIndentifierExpression() {
+    console.log("Parser => getIndentifierExpression");
     if (!this._idetifierExpression)
       this._idetifierExpression = new IdentifierExpression(
         this.getTokenExecutor()
@@ -236,6 +254,7 @@ export default class BhaiLangModule {
   }
 
   static getEqualityExpression() {
+    console.log("Parser => getEqualityExpression");
     if (!this._equalityExpression)
       this._equalityExpression = new EqualityExpression(
         this.getTokenExecutor()
@@ -245,6 +264,7 @@ export default class BhaiLangModule {
   }
 
   static getLogicalANDExpression() {
+    console.log("Parser => getLogicalANDExpression");
     if (!this._logicalANDExpression)
       this._logicalANDExpression = new LogicalANDExpression(
         this.getTokenExecutor()
@@ -254,6 +274,7 @@ export default class BhaiLangModule {
   }
 
   static getLogicalORExpression() {
+    console.log("Parser => getLogicalORExpression");
     if (!this._logicalORExpression)
       this._logicalORExpression = new LogicalORExpression(
         this.getTokenExecutor()
@@ -263,6 +284,7 @@ export default class BhaiLangModule {
   }
 
   static getRelationalExpression() {
+    console.log("Parser => getRelationalExpression");
     if (!this._relationalExpression)
       this._relationalExpression = new RelationalExpression(
         this.getTokenExecutor()
@@ -272,6 +294,7 @@ export default class BhaiLangModule {
   }
 
   static getAssignmentExpression() {
+    console.log("Parser => getAssignmentExpression");
     if (!this._assignmentExpression)
       this._assignmentExpression = new AssignmentExpression(
         this.getTokenExecutor()
@@ -281,6 +304,7 @@ export default class BhaiLangModule {
   }
 
   static getNumericLiteral() {
+    console.log("Parser => getNumericLiteral");
     if (!this._numericLiteral) {
       this._numericLiteral = new NumericLiteral(this.getTokenExecutor());
     }
@@ -289,6 +313,7 @@ export default class BhaiLangModule {
   }
 
   static getStringLiteral() {
+    console.log("Parser => getStringLiteral");
     if (!this._stringLiteral) {
       this._stringLiteral = new StringLiteral(this.getTokenExecutor());
     }
@@ -296,6 +321,7 @@ export default class BhaiLangModule {
   }
 
   static getBooleanLiteral() {
+    console.log("Parser => getBooleanLiteral");
     if (!this._booleanLiteral) {
       this._booleanLiteral = new BooleanLiteral(this.getTokenExecutor());
     }
@@ -304,6 +330,7 @@ export default class BhaiLangModule {
   }
 
   static getNullLiteral() {
+    console.log("Parser => getNullLiteral");
     if (!this._nullLiteral) {
       this._nullLiteral = new NullLiteral(this.getTokenExecutor());
     }
@@ -312,12 +339,14 @@ export default class BhaiLangModule {
   }
 
   static getProgram() {
+    console.log("Parser => getProgram");
     if (!this._program) this._program = new Program(this.getStatementList());
 
     return this._program;
   }
 
   static getParser() {
+    console.log("Parser => getParser");
     if (!this._parser)
       this._parser = new Parser(
         this.getTokenizer(),

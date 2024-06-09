@@ -2,14 +2,14 @@ import Visitor from ".";
 import { ASTNode } from "bhai-lang-parser";
 
 import InvalidStateException from "../../exceptions/invalidStateException";
-import nothingPointerException from "../../exceptions/nallaPointerException";
+import nothingPointerException from "../../exceptions/nothingPointerException";
 import RuntimeException from "../../exceptions/runtimeException";
 import { getOperationValue } from "../../helpers";
 import InterpreterModule from "../../module/interpreterModule";
 
-
 export default class AssignmentExpression implements Visitor {
   visitNode(node: ASTNode) {
+    console.log("AssignmentExpression");
     if (!node.left)
       throw new InvalidStateException(
         `left node not present while executing: ${node.type}`

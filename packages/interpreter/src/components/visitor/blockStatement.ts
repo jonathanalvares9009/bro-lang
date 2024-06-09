@@ -4,9 +4,9 @@ import { ASTNode } from "bhai-lang-parser";
 import InterpreterModule from "../../module/interpreterModule";
 import Scope from "../scope";
 
-
 export default class BlockStatement implements Visitor {
   visitNode(node: ASTNode) {
+    console.log("BlockStatement");
     const parentScope = InterpreterModule.getCurrentScope();
     InterpreterModule.setCurrentScope(new Scope(parentScope));
 
@@ -26,7 +26,9 @@ export default class BlockStatement implements Visitor {
       });
     }
 
-    parentScope.setBreakStatement(InterpreterModule.getCurrentScope().isBreakStatement());
+    parentScope.setBreakStatement(
+      InterpreterModule.getCurrentScope().isBreakStatement()
+    );
 
     InterpreterModule.setCurrentScope(parentScope);
   }
