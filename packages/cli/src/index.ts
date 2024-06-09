@@ -1,5 +1,5 @@
 #! /usr/bin/env node
-import interpreter from "bhai-lang-interpreter";
+import interpreter from "interpreter";
 import chalk from "chalk";
 import fs from "fs";
 import yargs from "yargs";

@@ -55,6 +55,6 @@
     "@types/jest": "^27.4.0",
     "config": "*",
     "tsconfig": "*",
-    "bhai-lang-interpreter": "*"
+    "bhai-lang-interpreter": "file:../interpreter"
   }
 }
