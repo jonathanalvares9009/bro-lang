@@ -112,7 +112,7 @@ bro done
     bro when (a < 10) {
       a += 1;
       bro if (a == 5) {
-        bro say "andar se bro say ", a;
+        bro say "tech bro", a;
         bro skip;
       }
       bro if (a == 6) {
@@ -136,8 +136,7 @@ export default function Documentation() {
             Documentation
           </h2>
           <p className="mt-4 text-gray-300">
-            Bhailang is dynamically typed toy programming language, based on an
-            inside joke, written in Typescript.
+            Brolang is dynamically typed toy programming language built for tech bros.
           </p>
 
           <div className="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">

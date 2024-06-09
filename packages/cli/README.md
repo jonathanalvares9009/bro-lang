@@ -15,7 +15,7 @@
 <h2 align="center">Installation</h2>
 
 ```
-npm i -g bhailang
+npm i -g brolang
 ```
 
 <h2 align="center">Usage</h2>
@@ -136,7 +136,7 @@ bro listen
   bro when (a < 10) {
    a += 1;
    bro if (a == 5) {
-    bro say "andar se bro say ", a;
+    bro say "tech bro", a;
     bro skip;
    }
    bro if (a == 6) {

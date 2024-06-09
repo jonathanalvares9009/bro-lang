@@ -14,8 +14,8 @@ export default function Docs() {
         <meta property="og:title" content="BroLang - The coolest language ever build" key="title" />
         <meta property="og:type" content="website" key="type" />
         <meta property="og:url" content="https://bhailang.js.org" key="url" />
-        <meta property="og:description" content="Bhailang is dynamically typed toy programming language, based on an inside joke, written in Typescript. Created by Aniket Singh and Rishabh Tripathi." key="description" />
-        <meta name="description" content="Bhailang is dynamically typed toy programming language, based on an inside joke, written in Typescript. Created by Aniket Singh and Rishabh Tripathi." />
+        <meta property="og:description" content="Brolang is a dynamically typed toy programming language, built for tech bros. Created by Aniket Singh and Rishabh Tripathi." key="description" />
+        <meta name="description" content="Brolang is a dynamically typed toy programming language, built for tech bros. Created by Aniket Singh and Rishabh Tripathi." />
         <meta property="og:site_name" content="Bhailang Documentation" key="siteName" />
       </Head>
       <Header />

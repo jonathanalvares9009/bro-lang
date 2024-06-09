@@ -2,7 +2,7 @@ import Visitor from ".";
 import { ASTNode } from "bhai-lang-parser";
 
 import InvalidStateException from "../../exceptions/invalidStateException";
-import nothingPointerException from "../../exceptions/nothingPointerException";
+import nothingPointerException from "../../exceptions/nallaPointerException";
 import RuntimeException from "../../exceptions/runtimeException";
 import { getOperationValue } from "../../helpers";
 import InterpreterModule from "../../module/interpreterModule";
