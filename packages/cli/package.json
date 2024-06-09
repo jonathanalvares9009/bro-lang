@@ -1,6 +1,6 @@
 {
-  "name": "brolang",
-  "version": "0.1.0",
+  "name": "brolang-cli",
+  "version": "0.2.0",
   "description": "CLI for bro-lang",
   "source": "src/index.ts",
   "main": "bin/index.js",

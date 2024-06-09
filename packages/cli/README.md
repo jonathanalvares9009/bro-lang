@@ -1,4 +1,4 @@
-<h1 align="center">Bhai Lang</h1>
+<h1 align="center">Bro Lang</h1>
 <p align="center">
 <a href="https://lgtm.com/projects/g/DulLabs/bhai-lang/alerts/"><img alt="Total alerts" src="https://img.shields.io/lgtm/alerts/g/DulLabs/bhai-lang.svg?logo=lgtm&logoWidth=18"/></a>
 <a href="https://lgtm.com/projects/g/DulLabs/bhai-lang/context:javascript"><img alt="Language grade: JavaScript" src="https://img.shields.io/lgtm/grade/javascript/g/DulLabs/bhai-lang.svg?logo=lgtm&logoWidth=18"/></a>
@@ -15,7 +15,7 @@
 <h2 align="center">Installation</h2>
 
 ```
-npm i -g brolang
+npm i -g brolang-cli
 ```
 
 <h2 align="center">Usage</h2>
@@ -24,7 +24,7 @@ npm i -g brolang
 
 
 <h4 align="left">Edit the file with a text editor.
-You can also try out your code on <a href="https://bhailang.js.org/#playground">Bhai Lang PlayGround</a></h4>
+You can also try out your code on <a href="https://bhailang.js.org/#playground">Bro Lang PlayGround</a></h4>
 
 ```
 bro listen
