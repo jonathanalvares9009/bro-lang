@@ -1,5 +1,5 @@
 import TokenizerImpl from "../../src/components/tokenizer";
-import { SPEC, TokenTypes } from "../../src/constants/bhaiLangSpec";
+import { SPEC, TokenTypes } from "../../src/constants/broLangSpec";
 import InvalidStateException from "../../src/exceptions/invalidStateException";
 
 const tokenizer = new TokenizerImpl(SPEC);

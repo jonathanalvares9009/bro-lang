@@ -1,4 +1,4 @@
-import { TokenTypes } from "../../../constants/bhaiLangSpec";
+import { TokenTypes } from "../../../constants/broLangSpec";
 import BroLangModule from "../../../module/broLangModule";
 import { Token } from "../../tokenizer/types";
 import TokenExecutor from "../tokenExecutor";

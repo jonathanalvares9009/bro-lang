@@ -1,6 +1,6 @@
 import Statement from "../../src/components/parser/statement";
 import BlockStatement from "../../src/components/parser/statement/blockStatement";
-import { TokenTypes } from "../../src/constants/bhaiLangSpec";
+import { TokenTypes } from "../../src/constants/broLangSpec";
 import BroLangModule from "../../src/module/broLangModule";
 
 jest.mock("../../src/module/broLangModule");

@@ -1,4 +1,4 @@
-import { TokenTypes } from "../../constants/bhaiLangSpec";
+import { TokenTypes } from "../../constants/broLangSpec";
 import { Token, Tokenizer } from "../tokenizer/types";
 
 export default class TokenExecutor {

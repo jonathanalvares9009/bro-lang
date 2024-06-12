@@ -1,4 +1,4 @@
-import { TokenTypes } from "../../../../../constants/bhaiLangSpec";
+import { TokenTypes } from "../../../../../constants/broLangSpec";
 import UnsupportedTypeException from "../../../../../exceptions/unsupportedTypeException";
 import BroLangModule from "../../../../../module/broLangModule";
 import TokenExecutor from "../../../tokenExecutor";

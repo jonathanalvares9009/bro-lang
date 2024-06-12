@@ -28,7 +28,7 @@ import StatementList from "../components/parser/statementList";
 import TokenExecutor from "../components/parser/tokenExecutor";
 import TokenizerImpl from "../components/tokenizer";
 import { Tokenizer } from "../components/tokenizer/types";
-import { SPEC } from "../constants/bhaiLangSpec";
+import { SPEC } from "../constants/broLangSpec";
 
 export default class BroLangModule {
   private static _tokenizer?: Tokenizer;
