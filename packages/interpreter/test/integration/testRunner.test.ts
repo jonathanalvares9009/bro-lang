@@ -223,7 +223,7 @@ test("whileStatement test with infinite loop, should throw runtime exception aft
     `)
   ).toThrowError(RuntimeException);
 
-  expect(console.log).toHaveBeenCalledTimes(135047);
+  expect(console.log).toHaveBeenCalledTimes(5001);
   expect(console.log).toHaveBeenCalledWith("bhai");
 });
 

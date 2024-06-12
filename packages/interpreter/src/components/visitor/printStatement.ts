@@ -21,5 +21,6 @@ export default class PrintStatement implements Visitor {
         return currentNodeOutput;
       })
       .join(" ");
+    console.log(value);
   }
 }
