@@ -6,7 +6,6 @@ import { ASTNode } from "../../types/nodeTypes";
 
 export default class ParanthesizedExpression extends Expression {
   getExpression(): ASTNode {
-    console.log("Parser => ParanthesizedExpression");
     this._tokenExecutor.eatTokenAndForwardLookahead(
       TokenTypes.OPEN_PARENTHESIS_TYPE
     );

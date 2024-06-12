@@ -13,7 +13,6 @@ export class Parser {
     program: Program,
     tokenExecutor: TokenExecutor
   ) {
-    console.log("Parser");
     this._tokenizer = tokenizer;
     this._program = program;
     this._tokenExecutor = tokenExecutor;
@@ -21,7 +20,6 @@ export class Parser {
   }
 
   parse(stringToTokenize: string) {
-    console.log("Parser => parse");
     this._stringToTokenize = stringToTokenize;
 
     this._tokenizer.initTokenizer(this._stringToTokenize);

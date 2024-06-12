@@ -6,7 +6,6 @@ import { ASTNode } from "../../../types/nodeTypes";
 
 export default class BooleanLiteral extends Literal {
   getLiteral(): ASTNode {
-    console.log("Parser => BooleanLiteral");
     const token = this._tokenExecutor.eatTokenAndForwardLookahead(
       TokenTypes.BOOLEAN_TYPE
     );

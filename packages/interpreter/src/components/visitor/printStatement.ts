@@ -6,7 +6,6 @@ import InterpreterModule from "../../module/interpreterModule";
 
 export default class PrintStatement implements Visitor {
   visitNode(node: ASTNode) {
-    console.log("PrintStatement");
     if (!node.expressions)
       throw new InvalidStateException(
         `No expressions to print: ${node.expressions}`
@@ -22,6 +21,5 @@ export default class PrintStatement implements Visitor {
         return currentNodeOutput;
       })
       .join(" ");
-    console.log(value);
   }
 }

@@ -5,7 +5,6 @@ export function checkNumberOperands(operands: {
   left: unknown;
   right: unknown;
 }): operands is { left: number; right: number } {
-  console.log("checkNumberOperands");
   return (
     typeof operands.left === "number" && typeof operands.right === "number"
   );
@@ -15,7 +14,6 @@ export function checkStringOperands(operands: {
   left: unknown;
   right: unknown;
 }): operands is { left: string; right: string } {
-  console.log("checkStringOperands");
   return (
     typeof operands.left === "string" && typeof operands.right === "string"
   );
@@ -25,7 +23,6 @@ export function checkNumberAndStringOperands(operands: {
   left: unknown;
   right: unknown;
 }): operands is { left: string; right: string } {
-  console.log("checkNumberAndStringOperands");
   return (
     (typeof operands.left === "string" && typeof operands.right === "number") ||
     (typeof operands.right === "string" && typeof operands.left === "number")
@@ -36,7 +33,6 @@ export function getOperationValue(
   operands: { left: unknown; right: unknown },
   operator: string
 ) {
-  console.log("getOperationValue");
   const exception = new RuntimeException(
     `Ye kya kar raha hai: "${operator}" ke sath "${typeof operands.left}" aur "${typeof operands.right}" nahi jamte.`
   );

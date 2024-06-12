@@ -6,7 +6,6 @@ import InterpreterModule from "../../module/interpreterModule";
 
 export default class Program implements Visitor {
   visitNode(node: ASTNode) {
-    console.log("Program");
     if (Array.isArray(node.body) || !node.body)
       throw new InvalidStateException(`Invalid node body for : ${node.type}`);
 

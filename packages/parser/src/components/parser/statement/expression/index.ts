@@ -7,14 +7,12 @@ export default abstract class Expression {
   protected _tokenExecutor: TokenExecutor;
 
   constructor(tokenExecutor: TokenExecutor) {
-    console.log("Parser => Expression");
     this._tokenExecutor = tokenExecutor;
   }
 
   abstract getExpression(): ASTNode;
 
   static getExpressionImpl(expressionType: keyof typeof NodeType): Expression {
-    console.log("Parser => getExpressionImpl");
     switch (expressionType) {
       case NodeType.AdditiveExpression:
         return BroLangModule.getAdditiveExpression();
@@ -52,7 +50,6 @@ export default abstract class Expression {
     downstreamExpressionType: keyof typeof NodeType,
     operatorToken: string
   ) {
-    console.log("Parser => getBinaryExpression");
     return this._getExpression(
       downstreamExpressionType,
       operatorToken,
@@ -64,7 +61,6 @@ export default abstract class Expression {
     downstreamExpressionType: keyof typeof NodeType,
     operatorToken: string
   ) {
-    console.log("Parser => getLogicalExpression");
     return this._getExpression(
       downstreamExpressionType,
       operatorToken,
@@ -77,7 +73,6 @@ export default abstract class Expression {
     operatorToken: string,
     expressionType: keyof typeof NodeType
   ) {
-    console.log("Parser => _getExpression");
     let left = Expression.getExpressionImpl(
       downstreamExpressionType
     ).getExpression();

@@ -9,7 +9,6 @@ import InterpreterModule from "../../module/interpreterModule";
 
 export default class AssignmentExpression implements Visitor {
   visitNode(node: ASTNode) {
-    console.log("AssignmentExpression");
     if (!node.left)
       throw new InvalidStateException(
         `left node not present while executing: ${node.type}`

@@ -6,7 +6,6 @@ import { ASTNode } from "../types/nodeTypes";
 
 export default class BreakStatement extends Statement {
   getStatement(): ASTNode {
-    console.log("Parser => BreakStatement");
     this._tokenExecutor.eatTokenAndForwardLookahead(TokenTypes.BAS_KAR_BHAI);
 
     return {

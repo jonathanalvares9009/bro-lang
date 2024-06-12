@@ -9,16 +9,13 @@ export default class Interpreter {
   _scope: Scope;
 
   constructor(parserObj: typeof parser, scope: Scope) {
-    console.log("Interpreter");
     this._parser = parserObj;
     this._scope = scope;
   }
 
   interpret(code: string) {
-    console.log("interpret");
     try {
       const ast = this._parser.parse(code);
-      console.log(JSON.stringify(ast));
       InterpreterModule.getVisitor(ast.type).visitNode(ast);
     } finally {
       // reset the scope for next run

@@ -2,51 +2,33 @@ import { Parser } from "../components/parser";
 import Program from "../components/parser/program";
 import BlockStatement from "../components/parser/statement/blockStatement";
 import BreakStatement from "../components/parser/statement/breakStatement";
-import ContinueStatement
-  from "../components/parser/statement/continueStatement";
+import ContinueStatement from "../components/parser/statement/continueStatement";
 import EmptyStatement from "../components/parser/statement/emptyStatement";
-import AdditiveExpression
-  from "../components/parser/statement/expression/addititveExpression";
-import AssignmentExpression
-  from "../components/parser/statement/expression/assignmentExpression";
-import EqualityExpression
-  from "../components/parser/statement/expression/equalityExpression";
-import IdentifierExpression
-  from "../components/parser/statement/expression/identifierExpression";
-import BooleanLiteral
-  from "../components/parser/statement/expression/literals/booleanLiteral";
-import NullLiteral
-  from "../components/parser/statement/expression/literals/nullLiteral";
-import NumericLiteral
-  from "../components/parser/statement/expression/literals/numericLiteral";
-import StringLiteral
-  from "../components/parser/statement/expression/literals/stringLiteral";
-import LogicalANDExpression
-  from "../components/parser/statement/expression/logicalANDExpression";
-import LogicalORExpression
-  from "../components/parser/statement/expression/logicalORExpression";
-import MultiplicativeExpression
-  from "../components/parser/statement/expression/multiplicativeExpression";
-import ParanthesizedExpression
-  from "../components/parser/statement/expression/paranthesizedExpression";
-import PrimaryExpression
-  from "../components/parser/statement/expression/primaryExpression";
-import RelationalExpression
-  from "../components/parser/statement/expression/relationalExpression";
-import ExpressionStatement
-  from "../components/parser/statement/expressionStatement";
+import AdditiveExpression from "../components/parser/statement/expression/addititveExpression";
+import AssignmentExpression from "../components/parser/statement/expression/assignmentExpression";
+import EqualityExpression from "../components/parser/statement/expression/equalityExpression";
+import IdentifierExpression from "../components/parser/statement/expression/identifierExpression";
+import BooleanLiteral from "../components/parser/statement/expression/literals/booleanLiteral";
+import NullLiteral from "../components/parser/statement/expression/literals/nullLiteral";
+import NumericLiteral from "../components/parser/statement/expression/literals/numericLiteral";
+import StringLiteral from "../components/parser/statement/expression/literals/stringLiteral";
+import LogicalANDExpression from "../components/parser/statement/expression/logicalANDExpression";
+import LogicalORExpression from "../components/parser/statement/expression/logicalORExpression";
+import MultiplicativeExpression from "../components/parser/statement/expression/multiplicativeExpression";
+import ParanthesizedExpression from "../components/parser/statement/expression/paranthesizedExpression";
+import PrimaryExpression from "../components/parser/statement/expression/primaryExpression";
+import RelationalExpression from "../components/parser/statement/expression/relationalExpression";
+import ExpressionStatement from "../components/parser/statement/expressionStatement";
 import IfStatement from "../components/parser/statement/ifStatement";
 import InitStatement from "../components/parser/statement/initStatement";
 import PrintStatement from "../components/parser/statement/printStatement";
-import VariableStatement
-  from "../components/parser/statement/variableStatement";
+import VariableStatement from "../components/parser/statement/variableStatement";
 import WhileStatement from "../components/parser/statement/whileStatement";
 import StatementList from "../components/parser/statementList";
 import TokenExecutor from "../components/parser/tokenExecutor";
 import TokenizerImpl from "../components/tokenizer";
 import { Tokenizer } from "../components/tokenizer/types";
 import { SPEC } from "../constants/bhaiLangSpec";
-
 
 export default class BroLangModule {
   private static _tokenizer?: Tokenizer;
@@ -80,14 +62,12 @@ export default class BroLangModule {
   private static _whileStatement?: WhileStatement;
 
   static getTokenizer() {
-    console.log("Parser => getTokenizer");
     if (!this._tokenizer) this._tokenizer = new TokenizerImpl(SPEC);
 
     return this._tokenizer;
   }
 
   static getTokenExecutor() {
-    console.log("Parser => getTokenExecutor");
     if (!this._tokenExecutor)
       this._tokenExecutor = new TokenExecutor(this.getTokenizer());
 
@@ -95,7 +75,6 @@ export default class BroLangModule {
   }
 
   static getStatementList() {
-    console.log("Parser => getStatementList");
     if (!this._statementList)
       this._statementList = new StatementList(this.getTokenExecutor());
 
@@ -103,7 +82,6 @@ export default class BroLangModule {
   }
 
   static getInitStatement() {
-    console.log("Parser => getInitStatement");
     if (!this._initStatement)
       this._initStatement = new InitStatement(
         this.getTokenExecutor(),
@@ -114,7 +92,6 @@ export default class BroLangModule {
   }
 
   static getPrintStatement() {
-    console.log("Parser => getPrintStatement");
     if (!this._printStatement) {
       this._printStatement = new PrintStatement(this.getTokenExecutor());
     }
@@ -123,7 +100,6 @@ export default class BroLangModule {
   }
 
   static getIfStatement() {
-    console.log("Parser => getIfStatement");
     if (!this._ifStatement) {
       this._ifStatement = new IfStatement(this.getTokenExecutor());
     }
@@ -132,7 +108,6 @@ export default class BroLangModule {
   }
 
   static getBreakStatement() {
-    console.log("Parser => getBreakStatement");
     if (!this._breakStatement) {
       this._breakStatement = new BreakStatement(this.getTokenExecutor());
     }
@@ -141,8 +116,7 @@ export default class BroLangModule {
   }
 
   static getContinueStatement() {
-    console.log("Parser => getContinueStatement");
-    if(!this._continueStatement){
+    if (!this._continueStatement) {
       this._continueStatement = new ContinueStatement(this.getTokenExecutor());
     }
 
@@ -150,7 +124,6 @@ export default class BroLangModule {
   }
 
   static getWhileStatement() {
-    console.log("Parser => getWhileStatement");
     if (!this._whileStatement) {
       this._whileStatement = new WhileStatement(this.getTokenExecutor());
     }
@@ -159,7 +132,6 @@ export default class BroLangModule {
   }
 
   static getExpressionStatement() {
-    console.log("Parser => getExpressionStatement");
     if (!this._expresionStatement) {
       this._expresionStatement = new ExpressionStatement(
         this.getTokenExecutor()
@@ -170,7 +142,6 @@ export default class BroLangModule {
   }
 
   static getEmptyStatement() {
-    console.log("Parser => getEmptyStatement");
     if (!this._emptyStatement) {
       this._emptyStatement = new EmptyStatement(this.getTokenExecutor());
     }
@@ -179,7 +150,6 @@ export default class BroLangModule {
   }
 
   static getBlockStatement() {
-    console.log("Parser => getBlockStatement");
     if (!this._blockStatement) {
       this._blockStatement = new BlockStatement(
         this.getTokenExecutor(),
@@ -191,7 +161,6 @@ export default class BroLangModule {
   }
 
   static getVariableStatement() {
-    console.log("Parser => getVariableStatement");
     if (!this._variableStatement)
       this._variableStatement = new VariableStatement(
         this.getTokenExecutor(),
@@ -202,7 +171,6 @@ export default class BroLangModule {
   }
 
   static getAdditiveExpression() {
-    console.log("Parser => getAdditiveExpression");
     if (!this._additiveExpression) {
       this._additiveExpression = new AdditiveExpression(
         this.getTokenExecutor()
@@ -213,7 +181,6 @@ export default class BroLangModule {
   }
 
   static getMultiplicativeExpression() {
-    console.log("Parser => getMultiplicativeExpression");
     if (!this._multiplicativeExpression) {
       this._multiplicativeExpression = new MultiplicativeExpression(
         this.getTokenExecutor()
@@ -224,7 +191,6 @@ export default class BroLangModule {
   }
 
   static getPrimaryExpression() {
-    console.log("Parser => getPrimaryExpression");
     if (!this._primaryExpression) {
       this._primaryExpression = new PrimaryExpression(this.getTokenExecutor());
     }
@@ -233,7 +199,6 @@ export default class BroLangModule {
   }
 
   static getParanthesizedExpression() {
-    console.log("Parser => getParanthesizedExpression");
     if (!this._paranthesizedExpression) {
       this._paranthesizedExpression = new ParanthesizedExpression(
         this.getTokenExecutor()
@@ -244,7 +209,6 @@ export default class BroLangModule {
   }
 
   static getIndentifierExpression() {
-    console.log("Parser => getIndentifierExpression");
     if (!this._idetifierExpression)
       this._idetifierExpression = new IdentifierExpression(
         this.getTokenExecutor()
@@ -254,7 +218,6 @@ export default class BroLangModule {
   }
 
   static getEqualityExpression() {
-    console.log("Parser => getEqualityExpression");
     if (!this._equalityExpression)
       this._equalityExpression = new EqualityExpression(
         this.getTokenExecutor()
@@ -264,7 +227,6 @@ export default class BroLangModule {
   }
 
   static getLogicalANDExpression() {
-    console.log("Parser => getLogicalANDExpression");
     if (!this._logicalANDExpression)
       this._logicalANDExpression = new LogicalANDExpression(
         this.getTokenExecutor()
@@ -274,7 +236,6 @@ export default class BroLangModule {
   }
 
   static getLogicalORExpression() {
-    console.log("Parser => getLogicalORExpression");
     if (!this._logicalORExpression)
       this._logicalORExpression = new LogicalORExpression(
         this.getTokenExecutor()
@@ -284,7 +245,6 @@ export default class BroLangModule {
   }
 
   static getRelationalExpression() {
-    console.log("Parser => getRelationalExpression");
     if (!this._relationalExpression)
       this._relationalExpression = new RelationalExpression(
         this.getTokenExecutor()
@@ -294,7 +254,6 @@ export default class BroLangModule {
   }
 
   static getAssignmentExpression() {
-    console.log("Parser => getAssignmentExpression");
     if (!this._assignmentExpression)
       this._assignmentExpression = new AssignmentExpression(
         this.getTokenExecutor()
@@ -304,7 +263,6 @@ export default class BroLangModule {
   }
 
   static getNumericLiteral() {
-    console.log("Parser => getNumericLiteral");
     if (!this._numericLiteral) {
       this._numericLiteral = new NumericLiteral(this.getTokenExecutor());
     }
@@ -313,7 +271,6 @@ export default class BroLangModule {
   }
 
   static getStringLiteral() {
-    console.log("Parser => getStringLiteral");
     if (!this._stringLiteral) {
       this._stringLiteral = new StringLiteral(this.getTokenExecutor());
     }
@@ -321,7 +278,6 @@ export default class BroLangModule {
   }
 
   static getBooleanLiteral() {
-    console.log("Parser => getBooleanLiteral");
     if (!this._booleanLiteral) {
       this._booleanLiteral = new BooleanLiteral(this.getTokenExecutor());
     }
@@ -330,7 +286,6 @@ export default class BroLangModule {
   }
 
   static getNullLiteral() {
-    console.log("Parser => getNullLiteral");
     if (!this._nullLiteral) {
       this._nullLiteral = new NullLiteral(this.getTokenExecutor());
     }
@@ -339,14 +294,12 @@ export default class BroLangModule {
   }
 
   static getProgram() {
-    console.log("Parser => getProgram");
     if (!this._program) this._program = new Program(this.getStatementList());
 
     return this._program;
   }
 
   static getParser() {
-    console.log("Parser => getParser");
     if (!this._parser)
       this._parser = new Parser(
         this.getTokenizer(),

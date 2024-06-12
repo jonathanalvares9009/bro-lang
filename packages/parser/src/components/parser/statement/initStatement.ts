@@ -10,13 +10,11 @@ export default class InitStatement extends Statement {
   _statementList: StatementList;
 
   constructor(tokenExecutor: TokenExecutor, statementList: StatementList) {
-    console.log("Parser => InitStatement");
     super(tokenExecutor);
     this._statementList = statementList;
   }
 
   getStatement(): ASTNode {
-    console.log("Parser => InitStatement");
     this._tokenExecutor.eatTokenAndForwardLookahead(TokenTypes.HI_BHAI_TYPE);
 
     this._tokenExecutor.eatOptionalSemiColonToken();

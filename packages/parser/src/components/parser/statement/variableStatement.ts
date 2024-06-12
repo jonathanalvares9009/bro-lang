@@ -12,13 +12,11 @@ export default class VariableStatement extends Statement {
   _nullLiteral: NullLiteral;
 
   constructor(tokenExecutor: TokenExecutor, nullLiteral: NullLiteral) {
-    console.log("Parser => VariableStatement");
     super(tokenExecutor);
     this._nullLiteral = nullLiteral;
   }
 
   getStatement(): ASTNode {
-    console.log("Parser => VariableStatement");
     this._tokenExecutor.eatTokenAndForwardLookahead(
       TokenTypes.BHAI_YE_HAI_TYPE
     );
@@ -34,7 +32,6 @@ export default class VariableStatement extends Statement {
   }
 
   private _getVariableDeclarationList() {
-    console.log("Parser => VariableStatement => _getVariableDeclarationList");
     const declarations: ASTNode[] = [];
 
     do {
@@ -48,7 +45,6 @@ export default class VariableStatement extends Statement {
   }
 
   private _getVariableDeclaration(): ASTNode {
-    console.log("Parser => VariableStatement => _getVariableDeclaration");
     const id = Expression.getExpressionImpl(
       NodeType.IdentifierExpression
     ).getExpression();
@@ -68,7 +64,6 @@ export default class VariableStatement extends Statement {
   }
 
   private _getVariableInitializer() {
-    console.log("Parser => VariableStatement => _getVariableInitializer");
     this._tokenExecutor.eatTokenAndForwardLookahead(
       TokenTypes.SIMPLE_ASSIGN_TYPE
     );

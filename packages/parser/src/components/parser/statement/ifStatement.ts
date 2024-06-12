@@ -14,12 +14,10 @@ const HANDLED_LOOP_TOKEN_TYPES = [
 
 export default class IfStatement extends Statement {
   constructor(tokenExecutor: TokenExecutor) {
-    console.log("Parser => IfStatement");
     super(tokenExecutor);
   }
 
   private getConditionalStatement(tokenType: string): ASTNode {
-    console.log("Parser => IfStatement => getConditionalStatement");
     this._tokenExecutor.eatTokenAndForwardLookahead(tokenType);
 
     this._tokenExecutor.eatTokenAndForwardLookahead(
@@ -50,7 +48,6 @@ export default class IfStatement extends Statement {
   }
 
   getStatement(): ASTNode {
-    console.log("Parser => IfStatement");
 
     const ifStatement = this.getConditionalStatement(TokenTypes.AGAR_BHAI);
     const alternates: ASTNode[] = [];

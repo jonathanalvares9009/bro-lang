@@ -8,14 +8,12 @@ export default abstract class Statement {
   protected _tokenExecutor: TokenExecutor;
 
   constructor(tokenExecutor: TokenExecutor) {
-    console.log("Parser => Statement");
     this._tokenExecutor = tokenExecutor;
   }
 
   abstract getStatement(): ASTNode;
 
   static getStatementImpl(lookahead: Token): Statement {
-    console.log("Parser => Statement => getStatementImpl");
     switch (lookahead.type) {
       case TokenTypes.BOL_BHAI_TYPE:
         return BroLangModule.getPrintStatement();

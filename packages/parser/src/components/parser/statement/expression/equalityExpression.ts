@@ -6,7 +6,6 @@ import { ASTNode } from "../../types/nodeTypes";
 
 export default class EqualityExpression extends Expression {
   getExpression(): ASTNode {
-    console.log("Parser => EqualityExpression");
     return this.getBinaryExpression(
       NodeType.RelationalExpression,
       TokenTypes.EQUALITY_OPERATOR

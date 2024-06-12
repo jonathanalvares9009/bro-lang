@@ -6,7 +6,6 @@ import { ASTNode } from "../types/nodeTypes";
 
 export default class EmptyStatement extends Statement {
   getStatement(): ASTNode {
-    console.log("Parser => EmptyStatement");
     this._tokenExecutor.eatTokenAndForwardLookahead(TokenTypes.SEMI_COLON_TYPE);
     return {
       type: NodeType.EmptyStatement,

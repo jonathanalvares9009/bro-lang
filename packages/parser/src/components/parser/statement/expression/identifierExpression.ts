@@ -9,7 +9,6 @@ export default class IdentifierExpression extends Expression {
     const name = this._tokenExecutor.eatTokenAndForwardLookahead(
       TokenTypes.IDENTIFIER_TYPE
     ).value;
-    console.log("Parser => IdentifierExpression");
     return {
       type: NodeType.IdentifierExpression,
       name,

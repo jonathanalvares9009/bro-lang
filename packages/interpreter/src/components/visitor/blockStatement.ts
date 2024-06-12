@@ -6,7 +6,6 @@ import Scope from "../scope";
 
 export default class BlockStatement implements Visitor {
   visitNode(node: ASTNode) {
-    console.log("BlockStatement");
     const parentScope = InterpreterModule.getCurrentScope();
     InterpreterModule.setCurrentScope(new Scope(parentScope));
 

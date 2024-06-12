@@ -9,7 +9,6 @@ import InterpreterModule from "../../module/interpreterModule";
 
 export default class BinaryExpression implements Visitor {
   visitNode(node: ASTNode) {
-    console.log("BinaryExpression");
     if (!node.left || !node.right || !node.operator) {
       throw new InvalidStateException(
         `Left , right or operator not found for: ${node.type}`
@@ -47,7 +46,6 @@ export default class BinaryExpression implements Visitor {
   }
 
   private _checknothing(node: ASTNode) {
-    console.log("checknothing");
     if (!node.left || !node.right || !node.operator) {
       throw new InvalidStateException(
         `Left , right or operator not found for: ${node.type}`
@@ -76,8 +74,6 @@ export default class BinaryExpression implements Visitor {
   }
 
   private _checkBoolean(node: ASTNode) {
-    console.log("checkBoolean");
-
     if (!node.left || !node.right || !node.operator) {
       throw new InvalidStateException(
         `Left , right or operator not found for: ${node.type}`
@@ -106,7 +102,6 @@ export default class BinaryExpression implements Visitor {
   }
 
   private _getNodeValue(node: ASTNode) {
-    console.log("getNodeValue");
     if (node.type === NodeType.NullLiteral) return null;
 
     if (node.type === NodeType.BooleanLiteral) {

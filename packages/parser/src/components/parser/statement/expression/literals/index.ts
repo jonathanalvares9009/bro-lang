@@ -8,14 +8,12 @@ export default abstract class Literal {
   protected _tokenExecutor: TokenExecutor;
 
   constructor(tokenExecutor: TokenExecutor) {
-    console.log("Parser => Literal");
     this._tokenExecutor = tokenExecutor;
   }
 
   abstract getLiteral(): ASTNode;
 
   static getLiteralImpl(tokenType?: string): Literal {
-    console.log("Parser => getLiteralImpl");
     switch (tokenType) {
       case TokenTypes.NUMBER_TYPE:
         return BroLangModule.getNumericLiteral();

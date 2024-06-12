@@ -7,7 +7,6 @@ import Scope from "../scope";
 
 export default class WhileStatement implements Visitor {
   visitNode(node: ASTNode) {
-    console.log("WhileStatement");
     const test = node.test;
     if (test) {
       const getConditionValue = () =>

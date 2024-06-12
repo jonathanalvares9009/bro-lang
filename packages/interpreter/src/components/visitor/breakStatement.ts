@@ -5,7 +5,6 @@ import InterpreterModule from "../../module/interpreterModule";
 
 export default class BreakStatement implements Visitor {
   visitNode() {
-    console.log("BreakStatement");
     if (InterpreterModule.getCurrentScope().isLoop()) {
       InterpreterModule.getCurrentScope().setBreakStatement(true);
     } else {

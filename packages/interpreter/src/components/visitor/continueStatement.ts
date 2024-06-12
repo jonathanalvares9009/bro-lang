@@ -5,7 +5,6 @@ import InterpreterModule from "../../module/interpreterModule";
 
 export default class ContinueStatement implements Visitor {
   visitNode() {
-    console.log("ContinueStatement");
     if (InterpreterModule.getCurrentScope().isLoop()) {
       InterpreterModule.getCurrentScope().setContinueStatement(true);
     } else {

@@ -9,33 +9,28 @@ export default class TokenizerImpl implements Tokenizer {
   private _cursor: number;
 
   constructor(spec: Spec) {
-    console.log("Parser => TokenizerImpl");
     this._spec = spec;
     this._cursor = 0;
   }
 
   initTokenizer(stringToTokenize: String) {
-    console.log("Parser => TokenizerImpl => initTokenizer");
     this._string = stringToTokenize;
     this._cursor = 0;
   }
 
   isEOF() {
-    console.log("Parser => TokenizerImpl => isEOF");
     if (!this._string) return true;
 
     return this._cursor === this._string.length;
   }
 
   hasMoreTokens() {
-    console.log("Parser => TokenizerImpl => hasMoreTokens");
     if (!this._string) return false;
 
     return this._cursor < this._string.length;
   }
 
   getNextToken(): Token | null {
-    console.log("Parser => TokenizerImpl => getNextToken");
     if (!this._string)
       throw new InvalidStateException(
         "Tokenizer is not initialized with string. " +
@@ -71,7 +66,6 @@ export default class TokenizerImpl implements Tokenizer {
   }
 
   _matched(regex: RegExp, string: string) {
-    console.log("Parser => TokenizerImpl => _matched");
     const matched = regex.exec(string);
     if (matched === null) {
       return null;
