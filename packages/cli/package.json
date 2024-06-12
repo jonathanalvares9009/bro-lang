@@ -1,6 +1,6 @@
 {
   "name": "brolang-cli",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "CLI for bro-lang",
   "source": "src/index.ts",
   "main": "bin/index.js",
@@ -55,6 +55,6 @@
     "@types/jest": "^27.4.0",
     "config": "*",
     "tsconfig": "*",
-    "bhai-lang-interpreter": "file:../interpreter"
+    "bro-lang-interpreter": "^0.1.0"
   }
 }

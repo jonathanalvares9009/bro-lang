@@ -1,5 +1,5 @@
 {
-  "name": "bhai-lang-interpreter",
+  "name": "bro-lang-interpreter",
   "version": "0.0.1",
   "description": "Interpreter for bhai-lang",
   "source": "src/index.ts",
@@ -13,24 +13,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DulLabs/bhai-lang.git"
+    "url": "git+https://github.com/jonathanalvares9009/bro-lang.git"
   },
   "keywords": [
     "programming",
     "language",
-    "bhai-lang",
+    "bro-lang",
     "bl",
     "javascript",
     "typescript"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DulLabs/bhai-lang/issues"
+    "url": "https://github.com/jonathanalvares9009/bro-lang/issues"
   },
-  "homepage": "https://github.com/DulLabs/bhai-lang#readme",
+  "homepage": "https://github.com/jonathanalvares9009/bro-lang#readme",
   "devDependencies": {
     "@types/jest": "^27.4.0",
-    "bhai-lang-parser": "^0.0.2",
+    "bro-lang-parser": "^0.0.2",
     "config": "*",
     "jest": "^27.4.5",
     "ts-jest": "^27.1.2",
