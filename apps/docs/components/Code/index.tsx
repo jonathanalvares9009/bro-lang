@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import interpreter from "bhai-lang-interpreter";
+import interpreter from "bro-lang-interpreter";
 
 import { sendEvents } from "../../helpers";
 

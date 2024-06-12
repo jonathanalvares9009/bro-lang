@@ -1,4 +1,4 @@
-import parser from "bhai-lang-parser";
+import parser from "bro-lang-parser";
 
 import InterpreterModule from "../module/interpreterModule";
 
