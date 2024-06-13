@@ -6,8 +6,28 @@ export default function Header() {
           <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
             <div className="sm:text-center lg:text-left">
               <h1 className="hidden">BroLang</h1>
-              <div className="p-4 text-orange-950 text-9xl font-semibold">
-                BROLANG
+              <div className="flex justify-center space-x-2">
+                <span className="text-white text-9xl font-bold drop-shadow-lg transform hover:scale-110 transition duration-300 font-bungee-shade">
+                  B
+                </span>
+                <span className="text-white text-9xl font-bold drop-shadow-lg transform hover:rotate-6 transition duration-300 font-permanent-marker">
+                  R
+                </span>
+                <span className="text-white text-9xl font-bold drop-shadow-lg transform hover:-rotate-6 transition duration-300 font-russo-one">
+                  O
+                </span>
+                <span className="text-white text-9xl font-bold drop-shadow-lg transform hover:scale-125 transition duration-300 font-caveat">
+                  L
+                </span>
+                <span className="text-white text-9xl font-bold drop-shadow-lg transform hover:-rotate-12 transition duration-300 font-courgette">
+                  A
+                </span>
+                <span className="text-white text-9xl font-bold drop-shadow-lg transform hover:rotate-12 transition duration-300 font-russo-one">
+                  N
+                </span>
+                <span className="text-white text-9xl font-bold drop-shadow-lg transform hover:scale-110 transition duration-300 font-permanent-marker">
+                  G
+                </span>
               </div>
               <p className="mt-3 text-center text-base text-gray-300 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                 A toy programming language written in Typescript
