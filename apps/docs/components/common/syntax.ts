@@ -18,7 +18,7 @@ export const bhaiLangSyntax = languages.extend("clike", {
     pattern: /(["'])((?:\\\1|(?:(?!\1)).)*)(\1)/,
     greedy: true,
   },
-  keyword: /\b(?:bro listen|bro done|bro say|bro remember|nothing|bro if|bro otherwise if|bro otherwise|bro when|bro stop|bro skip)\b/,
+  keyword: /\b(?:bro listen|bro done|bro say|bro remember|nothing|bro if|bro otherwise if|bro otherwise|bro when|bro stop|bro skip|bro create task|bro execute task)\b/,
   boolean: /\b(?:correct|wrong)\b/,
   number: /(?:(?:\b\d+(?:\.\d*)?|\B\.\d+)(?:e[-+]?\d+)?)i?/i,
   operator:
