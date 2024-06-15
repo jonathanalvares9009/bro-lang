@@ -1,6 +1,6 @@
 {
   "name": "bro-lang-interpreter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Interpreter for bhai-lang",
   "source": "src/index.ts",
   "types": "dist/index.d.ts",
@@ -30,7 +30,7 @@
   "homepage": "https://github.com/jonathanalvares9009/bro-lang#readme",
   "devDependencies": {
     "@types/jest": "^27.4.0",
-    "bro-lang-parser": "^0.0.2",
+    "bro-lang-parser": "^0.0.3",
     "config": "*",
     "jest": "^27.4.5",
     "ts-jest": "^27.1.2",
