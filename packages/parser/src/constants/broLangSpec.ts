@@ -19,7 +19,7 @@ export const TokenTypes = {
 
   BRO_REMEMBER_TASK: "bro create task",
 
-  BRO_EXECUTE_TASK: "bro do",
+  BRO_EXECUTE_TASK: "bro execute",
 
   BAS_KAR_BHAI: "bro stop",
 
