@@ -1,5 +1,5 @@
 import Visitor from ".";
-import { ASTNode } from "bro-lang-parser";
+import { ASTNode, NodeType } from "bro-lang-parser";
 
 import InterpreterModule from "../../module/interpreterModule";
 import Scope from "../scope";
@@ -14,7 +14,10 @@ export default class ExecuteTaskStatement implements Visitor {
   }
   visitNode(node: ASTNode) {
     const parentScope = InterpreterModule.getCurrentScope();
-    const blockStatement = parentScope.get(node.name!) as ASTNode;
+    const blockStatement = parentScope.get(
+      node.name!,
+      NodeType.ExecuteTaskStatement
+    ) as ASTNode;
     this.evaluateNode(blockStatement, parentScope);
   }
 }

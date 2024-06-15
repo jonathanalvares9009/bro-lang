@@ -1,3 +1,4 @@
+import { NodeType } from "bro-lang-parser";
 import RuntimeException from "../exceptions/runtimeException";
 
 export default class Scope {
@@ -35,13 +36,17 @@ export default class Scope {
     return this._isContinueStatement;
   }
 
-  get(identifier: string): unknown {
+  get(identifier: string, type?: string): unknown {
     if (this._variables.has(identifier)) {
       return this._variables.get(identifier);
     }
 
     if (this._parentScope !== null) {
       return this._parentScope.get(identifier);
+    }
+
+    if (type === NodeType.ExecuteTaskStatement) {
+      throw new RuntimeException(`Please create the task "${identifier}" bro.`);
     }
 
     throw new RuntimeException(`Please create variable "${identifier}" bro.`);
