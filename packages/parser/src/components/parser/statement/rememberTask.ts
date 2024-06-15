@@ -18,21 +18,9 @@ export default class RememberTaskStatment extends Statement {
       TokenTypes.IDENTIFIER_TYPE
     ).value;
 
-    this._tokenExecutor.eatTokenAndForwardLookahead(
-      TokenTypes.OPEN_CURLY_BRACE_TYPE
-    );
-
-    const body =
-      this._tokenExecutor.getLookahead()?.type !==
-      TokenTypes.CLOSED_CURLY_BRACE_TYPE
-        ? Statement.getStatementImpl(
-            this._tokenExecutor.getLookahead()!
-          ).getStatement()
-        : [];
-
-    this._tokenExecutor.eatTokenAndForwardLookahead(
-      TokenTypes.CLOSED_CURLY_BRACE_TYPE
-    );
+    const body = Statement.getStatementImpl(
+      this._tokenExecutor.getLookahead()!
+    ).getStatement();
 
     return {
       type: NodeType.RememberTaskStatment,
