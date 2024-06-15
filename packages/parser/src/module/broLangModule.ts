@@ -4,6 +4,7 @@ import BlockStatement from "../components/parser/statement/blockStatement";
 import BreakStatement from "../components/parser/statement/breakStatement";
 import ContinueStatement from "../components/parser/statement/continueStatement";
 import EmptyStatement from "../components/parser/statement/emptyStatement";
+import ExecuteTaskStatement from "../components/parser/statement/executeTaskStatment";
 import AdditiveExpression from "../components/parser/statement/expression/addititveExpression";
 import AssignmentExpression from "../components/parser/statement/expression/assignmentExpression";
 import EqualityExpression from "../components/parser/statement/expression/equalityExpression";
@@ -62,6 +63,7 @@ export default class BroLangModule {
   private static _continueStatement?: ContinueStatement;
   private static _whileStatement?: WhileStatement;
   private static _rememberTask?: RememberTaskStatment;
+  private static _executeTask?: ExecuteTaskStatement;
 
   static getTokenizer() {
     if (!this._tokenizer) this._tokenizer = new TokenizerImpl(SPEC);
@@ -139,6 +141,14 @@ export default class BroLangModule {
     }
 
     return this._rememberTask;
+  }
+
+  static getExecuteTask() {
+    if (!this._executeTask) {
+      this._executeTask = new ExecuteTaskStatement(this.getTokenExecutor());
+    }
+
+    return this._executeTask;
   }
 
   static getExpressionStatement() {

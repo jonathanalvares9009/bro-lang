@@ -19,6 +19,8 @@ export const TokenTypes = {
 
   BRO_REMEMBER_TASK: "bro create task",
 
+  BRO_EXECUTE_TASK: "bro do",
+
   BAS_KAR_BHAI: "bro stop",
 
   AGLA_DEKH_BHAI: "bro skip",
@@ -93,7 +95,7 @@ export const SPEC = [
   { regex: /^\bbro stop\b/, tokenType: TokenTypes.BAS_KAR_BHAI },
   { regex: /^\bbro skip\b/, tokenType: TokenTypes.AGLA_DEKH_BHAI },
   { regex: /^\bbro create task\b/, tokenType: TokenTypes.BRO_REMEMBER_TASK },
-
+  { regex: /^\bbro do\b/, tokenType: TokenTypes.BRO_EXECUTE_TASK },
   // Number
   { regex: /^[+-]?([\d]*[.])?[\d]+/, tokenType: TokenTypes.NUMBER_TYPE },
 

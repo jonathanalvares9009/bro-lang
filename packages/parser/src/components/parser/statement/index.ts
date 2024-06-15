@@ -36,6 +36,9 @@ export default abstract class Statement {
       case TokenTypes.BRO_REMEMBER_TASK:
         return BroLangModule.getRememberTask();
 
+      case TokenTypes.BRO_EXECUTE_TASK:
+        return BroLangModule.getExecuteTask();
+
       case TokenTypes.BAS_KAR_BHAI:
         return BroLangModule.getBreakStatement();
 
