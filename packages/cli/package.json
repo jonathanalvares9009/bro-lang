@@ -55,6 +55,6 @@
     "@types/jest": "^27.4.0",
     "config": "*",
     "tsconfig": "*",
-    "bro-lang-interpreter": "^0.0.2"
+    "bro-lang-interpreter": "0.0.2"
   }
 }
