@@ -22,6 +22,7 @@ import ExpressionStatement from "../components/parser/statement/expressionStatem
 import IfStatement from "../components/parser/statement/ifStatement";
 import InitStatement from "../components/parser/statement/initStatement";
 import PrintStatement from "../components/parser/statement/printStatement";
+import RememberTaskStatment from "../components/parser/statement/rememberTask";
 import VariableStatement from "../components/parser/statement/variableStatement";
 import WhileStatement from "../components/parser/statement/whileStatement";
 import StatementList from "../components/parser/statementList";
@@ -60,6 +61,7 @@ export default class BroLangModule {
   private static _breakStatement?: BreakStatement;
   private static _continueStatement?: ContinueStatement;
   private static _whileStatement?: WhileStatement;
+  private static _rememberTask?: RememberTaskStatment;
 
   static getTokenizer() {
     if (!this._tokenizer) this._tokenizer = new TokenizerImpl(SPEC);
@@ -129,6 +131,14 @@ export default class BroLangModule {
     }
 
     return this._whileStatement;
+  }
+
+  static getRememberTask() {
+    if (!this._rememberTask) {
+      this._rememberTask = new RememberTaskStatment(this.getTokenExecutor());
+    }
+
+    return this._rememberTask;
   }
 
   static getExpressionStatement() {
