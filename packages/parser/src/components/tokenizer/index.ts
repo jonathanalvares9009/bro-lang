@@ -33,7 +33,7 @@ export default class TokenizerImpl implements Tokenizer {
   getNextToken(): Token | null {
     if (!this._string)
       throw new InvalidStateException(
-        "Tokenizer is not initialized with string. " +
+        "Bro tokenizer is not initialized with string. " +
           "Please call initTokenizer method first."
       );
 

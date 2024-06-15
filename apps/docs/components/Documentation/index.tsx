@@ -1,14 +1,13 @@
 import Snippet from "./Snippet";
 
-
 /* This example requires Tailwind CSS v2.0+ */
 const features = [
   {
     name: "General",
     description: (
       <>
-        <code className="language-cpp">bro listen</code> is the entrypoint for the
-        program and all program must end with{" "}
+        <code className="language-cpp">bro listen</code> is the entrypoint for
+        the program and all program must end with{" "}
         <code className="language-cpp">bro done</code>. Anything outside of it
         will be ignored.
       </>
@@ -84,7 +83,16 @@ bro done
     name: "Conditionals",
     description: (
       <>
-        Bhailang supports if-else-if ladder construct , <code className="language-cpp">bro if</code> block will execute if condition is <code className="language-cpp">correct</code>, otherwise one of the subsequently added <code className="language-cpp">bro otherwise if</code> blocks will execute if their respective condition is <code className="language-cpp">correct</code>, and the <code className="language-cpp">bro otherwise</code> block will eventually execute if all of the above conditions are <code className="language-cpp">wrong</code>.
+        Bhailang supports if-else-if ladder construct ,{" "}
+        <code className="language-cpp">bro if</code> block will execute if
+        condition is <code className="language-cpp">correct</code>, otherwise
+        one of the subsequently added{" "}
+        <code className="language-cpp">bro otherwise if</code> blocks will
+        execute if their respective condition is{" "}
+        <code className="language-cpp">correct</code>, and the{" "}
+        <code className="language-cpp">bro otherwise</code> block will
+        eventually execute if all of the above conditions are{" "}
+        <code className="language-cpp">wrong</code>.
       </>
     ),
     code: `bro listen
@@ -97,14 +105,19 @@ bro done
       bro say "a is greater than or equal to 25";
     }
 bro done
-    `
+    `,
   },
   {
     name: "Loops",
     description: (
       <>
-        Statements inside <code className="language-cpp">bro when</code> blocks are executed as long as a specified condition evaluates to <code className="language-cpp">correct</code>. If the condition becomes <code className="language-cpp">wrong</code>, statement within the loop stops executing and control passes to the statement following the loop. 
-        Use <code className="language-cpp">bro stop</code> to break the loop and <code className="language-cpp">bro skip</code> to continue within loop.
+        Statements inside <code className="language-cpp">bro when</code> blocks
+        are executed as long as a specified condition evaluates to{" "}
+        <code className="language-cpp">correct</code>. If the condition becomes{" "}
+        <code className="language-cpp">wrong</code>, statement within the loop
+        stops executing and control passes to the statement following the loop.
+        Use <code className="language-cpp">bro stop</code> to break the loop and{" "}
+        <code className="language-cpp">bro skip</code> to continue within loop.
       </>
     ),
     code: `bro listen
@@ -122,9 +135,31 @@ bro done
     }
     bro say "done";
 bro done
-    `
-  }
-
+    `,
+  },
+  {
+    name: "Functions",
+    description: (
+      <>
+        Statements inside{" "}
+        <code className="language-cpp">bro create task task_name</code> block
+        are stored for later execution.{" "}
+        <code className="language-cpp">bro execute task task_name</code>, will
+        execute the function. Where{" "}
+        <code className="language-cpp">task_name</code> is the name of the
+        function.
+      </>
+    ),
+    code: `bro listen
+    bro remember name = "BroLang";
+    bro create task printName {
+      bro say "Executing the function";
+      bro say name;
+    }
+    bro execute task printName;
+bro done
+    `,
+  },
 ];
 
 export default function Documentation() {
@@ -136,7 +171,8 @@ export default function Documentation() {
             Documentation
           </h2>
           <p className="mt-4 text-gray-300">
-            Brolang is dynamically typed toy programming language built for tech bros.
+            Brolang is dynamically typed toy programming language built for tech
+            bros.
           </p>
 
           <div className="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">

@@ -29,7 +29,7 @@ export default abstract class Literal {
 
       default:
         throw new UnsupportedTypeException(
-          `Token type not supproted for literal: ${tokenType}`
+          `Bro token type not supproted for literal: ${tokenType}`
         );
     }
   }

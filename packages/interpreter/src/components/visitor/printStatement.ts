@@ -8,7 +8,7 @@ export default class PrintStatement implements Visitor {
   visitNode(node: ASTNode) {
     if (!node.expressions)
       throw new InvalidStateException(
-        `No expressions to print: ${node.expressions}`
+        `No expressions to print: ${node.expressions} bro.`
       );
 
     const value = node.expressions

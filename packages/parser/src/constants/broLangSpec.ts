@@ -17,6 +17,10 @@ export const TokenTypes = {
 
   JAB_TAK_BHAI: "bro when",
 
+  BRO_REMEMBER_TASK: "bro create task",
+
+  BRO_EXECUTE_TASK: "bro execute task",
+
   BAS_KAR_BHAI: "bro stop",
 
   AGLA_DEKH_BHAI: "bro skip",
@@ -57,7 +61,7 @@ export const TokenTypes = {
 
   LOGICAL_AND: "LOGICAL_AND",
 
-  LOGICAL_OR: "LOGICAL_OR"
+  LOGICAL_OR: "LOGICAL_OR",
 };
 
 export const SPEC = [
@@ -90,7 +94,8 @@ export const SPEC = [
   { regex: /^\bbro when\b/, tokenType: TokenTypes.JAB_TAK_BHAI },
   { regex: /^\bbro stop\b/, tokenType: TokenTypes.BAS_KAR_BHAI },
   { regex: /^\bbro skip\b/, tokenType: TokenTypes.AGLA_DEKH_BHAI },
-
+  { regex: /^\bbro create task\b/, tokenType: TokenTypes.BRO_REMEMBER_TASK },
+  { regex: /^\bbro execute task\b/, tokenType: TokenTypes.BRO_EXECUTE_TASK },
   // Number
   { regex: /^[+-]?([\d]*[.])?[\d]+/, tokenType: TokenTypes.NUMBER_TYPE },
 
@@ -102,7 +107,7 @@ export const SPEC = [
   { regex: /^\w+/, tokenType: TokenTypes.IDENTIFIER_TYPE },
 
   // Equality operator: ==, !=
-  {regex: /^[=!]=/, tokenType: TokenTypes.EQUALITY_OPERATOR},
+  { regex: /^[=!]=/, tokenType: TokenTypes.EQUALITY_OPERATOR },
 
   // Assignment operators: =, *=, /=, +=, -=
   { regex: /^=/, tokenType: TokenTypes.SIMPLE_ASSIGN_TYPE },
@@ -111,11 +116,11 @@ export const SPEC = [
   // operator
   { regex: /^[+\-]/, tokenType: TokenTypes.ADDITIVE_OPERATOR_TYPE },
   { regex: /^[*\/\%]/, tokenType: TokenTypes.MULTIPLICATIVE_OPERATOR_TYPE },
-  {regex: /^[><]=?/, tokenType: TokenTypes.RELATIONAL_OPERATOR},
+  { regex: /^[><]=?/, tokenType: TokenTypes.RELATIONAL_OPERATOR },
 
   // logical operators: &&, ||
-  {regex: /^&&/, tokenType: TokenTypes.LOGICAL_AND},
-  {regex: /^\|\|/, tokenType: TokenTypes.LOGICAL_OR},
+  { regex: /^&&/, tokenType: TokenTypes.LOGICAL_AND },
+  { regex: /^\|\|/, tokenType: TokenTypes.LOGICAL_OR },
 
   // String
   { regex: /^"[^"]*"/, tokenType: TokenTypes.STRING_TYPE },

@@ -28,7 +28,7 @@ export default class WhileStatement implements Visitor {
         }
 
         if (executions > 5000) {
-          throw new RuntimeException("Bohot jyada hi chale jaa rha hai loop");
+          throw new RuntimeException("Bro seems like the loop never stops.");
         }
 
         if (InterpreterModule.getCurrentScope().isContinueStatement()) {

@@ -18,6 +18,8 @@ export const NodeType = {
   PrintStatement: "PrintStatement",
   IfStatement: "IfStatement",
   WhileStatement: "WhileStatement",
+  RememberTaskStatment: "RememberTaskStatment",
+  ExecuteTaskStatement: "ExecuteTaskStatement",
   BreakStatement: "BreakStatement",
   ContinueStatement: "ContinueStatement",
   VariableStatement: "VariableStatement",

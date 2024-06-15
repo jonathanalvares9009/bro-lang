@@ -1,6 +1,6 @@
 {
   "name": "bro-lang-parser",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Parser for bro-lang",
   "source": "src/index.ts",
   "types": "dist/index.d.ts",

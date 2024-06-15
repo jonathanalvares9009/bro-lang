@@ -8,7 +8,7 @@ export default class ContinueStatement implements Visitor {
     if (InterpreterModule.getCurrentScope().isLoop()) {
       InterpreterModule.getCurrentScope().setContinueStatement(true);
     } else {
-      throw new RuntimeException(`Kha "bro skip"?? Loop kidhar hai?`);
+      throw new RuntimeException(`Cannot use "bro skip" outside of a loop bro`);
     }
   }
 }

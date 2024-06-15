@@ -7,7 +7,7 @@ import InterpreterModule from "../../module/interpreterModule";
 export default class VariableDeclaration implements Visitor {
   visitNode(node: ASTNode) {
     if (!node.id || !node.init) {
-      throw new InvalidStateException(`id or init not found for ${node.type}`);
+      throw new InvalidStateException(`Bro id or init not found for ${node.type}`);
     }
 
     const identifier = node.id.name;

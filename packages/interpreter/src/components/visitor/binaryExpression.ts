@@ -11,7 +11,7 @@ export default class BinaryExpression implements Visitor {
   visitNode(node: ASTNode) {
     if (!node.left || !node.right || !node.operator) {
       throw new InvalidStateException(
-        `Left , right or operator not found for: ${node.type}`
+        `Bro left , right or operator not found for: ${node.type}`
       );
     }
 
@@ -48,12 +48,12 @@ export default class BinaryExpression implements Visitor {
   private _checknothing(node: ASTNode) {
     if (!node.left || !node.right || !node.operator) {
       throw new InvalidStateException(
-        `Left , right or operator not found for: ${node.type}`
+        `Bro left , right or operator not found for: ${node.type}`
       );
     }
 
     const nothingException = new nothingPointerException(
-      `nothing operand ni jamta "${node.operator}" ke sath`
+      `Cannot use nothing with "${node.operator}" bro.`
     );
 
     if (
@@ -76,12 +76,12 @@ export default class BinaryExpression implements Visitor {
   private _checkBoolean(node: ASTNode) {
     if (!node.left || !node.right || !node.operator) {
       throw new InvalidStateException(
-        `Left , right or operator not found for: ${node.type}`
+        `Bro left , right or operator not found for: ${node.type}`
       );
     }
 
     const runtimeException = new RuntimeException(
-      `Kya kar rha hai tu??..Boolean operand ni jamta "${node.operator}" ke sath`
+      `Cannot use boolean with "${node.operator}" bro`
     );
 
     if (

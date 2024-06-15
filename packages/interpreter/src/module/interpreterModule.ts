@@ -23,6 +23,8 @@ import VariableDeclaration from "../components/visitor/variableDeclaration";
 import VariableStatement from "../components/visitor/variableStatement";
 import WhileStatement from "../components/visitor/whileStatement";
 import InvalidStateException from "../exceptions/invalidStateException";
+import RememberTaskStatement from "src/components/visitor/rememberTaskStatement";
+import ExecuteTaskStatement from "src/components/visitor/executeTaskStatement";
 
 export default class InterpreterModule {
   private static _visitorMap = {
@@ -44,6 +46,8 @@ export default class InterpreterModule {
     [NodeType.NullLiteral]: new NullLiteral(),
     [NodeType.IfStatement]: new IfStatement(),
     [NodeType.WhileStatement]: new WhileStatement(),
+    [NodeType.RememberTaskStatment]: new RememberTaskStatement(),
+    [NodeType.ExecuteTaskStatement]: new ExecuteTaskStatement(),
     [NodeType.BreakStatement]: new BreakStatement(),
     [NodeType.ContinueStatement]: new ContinueStatement(),
   } as Record<string, Visitor>;
@@ -56,7 +60,7 @@ export default class InterpreterModule {
 
     if (!visitor)
       throw new InvalidStateException(
-        `Couldn't find any visitor object for nodeType: ${nodeType}`
+        `Couldn't find any visitor object for nodeType: ${nodeType} bro.`
       );
 
     return visitor;
