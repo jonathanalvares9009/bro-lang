@@ -34,7 +34,7 @@ export function getOperationValue(
   operator: string
 ) {
   const exception = new RuntimeException(
-    `Ye kya kar raha hai: "${operator}" ke sath "${typeof operands.left}" aur "${typeof operands.right}" nahi jamte.`
+    `Cannot use "${typeof operands.left}" and "${typeof operands.right}" with ${operator} bro.`
   );
 
   switch (operator) {
@@ -76,9 +76,7 @@ export function getOperationValue(
     case "/=":
     case "/":
       if (operands.right === 0) {
-        throw new RuntimeException(
-          `Kya kar rha hai tu??...zero se divide ni karte`
-        );
+        throw new RuntimeException(`Bro you cannot divide a number by 0`);
       }
 
       if (checkNumberOperands(operands)) {
@@ -136,6 +134,6 @@ export function getOperationValue(
       return operands.left || operands.right;
 
     default:
-      throw new InvalidStateException(`Unsupported operator: ${operator}`);
+      throw new InvalidStateException(`Unsupported operator: ${operator} bro.`);
   }
 }

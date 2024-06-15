@@ -11,7 +11,7 @@ export default class AssignmentExpression implements Visitor {
   visitNode(node: ASTNode) {
     if (!node.left)
       throw new InvalidStateException(
-        `left node not present while executing: ${node.type}`
+        `Bro left node not present while executing: ${node.type}`
       );
 
     let identifier = node.left.name;
@@ -29,12 +29,12 @@ export default class AssignmentExpression implements Visitor {
 
       if (left === null && node.operator !== "=")
         throw new nothingPointerException(
-          `nothing operand ni jamta "${node.operator}" ke sath`
+          `Cannot use nothing with "${node.operator}" bro.`
         );
 
       if ((left === true || left === false) && node.operator !== "=")
         throw new RuntimeException(
-          `Boolean operand ni jamta "${node.operator}" ke sath`
+          `Cannot use boolean with "${node.operator}" bro`
         );
 
       const newValue = getOperationValue(

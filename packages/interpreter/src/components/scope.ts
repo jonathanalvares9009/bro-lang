@@ -44,7 +44,7 @@ export default class Scope {
       return this._parentScope.get(identifier);
     }
 
-    throw new RuntimeException(`Variable "${identifier}" bana to le pehle.`);
+    throw new RuntimeException(`Please create variable "${identifier}" bro.`);
   }
 
   assign(identifier: string, value: unknown) {
@@ -58,15 +58,13 @@ export default class Scope {
       return;
     }
 
-    throw new RuntimeException(
-      `Variable "${identifier}" bana to le pehle fir assign karna.`
-    );
+    throw new RuntimeException(`Please create variable "${identifier}" bro.`);
   }
 
   declare(identifier: string, value: unknown) {
     if (this._variables.has(identifier)) {
       throw new RuntimeException(
-        `Variable "${identifier}" pehle se exist karta hai bhai. Check karle.`
+        `Variable "${identifier}" already exists bro.`
       );
     }
 

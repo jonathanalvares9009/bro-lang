@@ -8,7 +8,7 @@ export default class BreakStatement implements Visitor {
     if (InterpreterModule.getCurrentScope().isLoop()) {
       InterpreterModule.getCurrentScope().setBreakStatement(true);
     } else {
-      throw new RuntimeException(`Kya "bro stop"?? Loop kahan hai?`);
+      throw new RuntimeException(`Cannot use "bro stop" outside of a loop bro`);
     }
   }
 }

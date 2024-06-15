@@ -8,7 +8,7 @@ export default class VariableStatement implements Visitor {
   visitNode(node: ASTNode) {
     if (!node.declarations)
       throw new InvalidStateException(
-        `variable declarations in variable statement is not present: ${node.declarations}`
+        `Bro variable declarations in variable statement is not present: ${node.declarations}`
       );
 
     node.declarations.forEach((declaration) => {

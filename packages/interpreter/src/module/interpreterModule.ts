@@ -60,7 +60,7 @@ export default class InterpreterModule {
 
     if (!visitor)
       throw new InvalidStateException(
-        `Couldn't find any visitor object for nodeType: ${nodeType}`
+        `Couldn't find any visitor object for nodeType: ${nodeType} bro.`
       );
 
     return visitor;
